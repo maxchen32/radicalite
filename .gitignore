@@ -52,3 +52,7 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+testffi.lua
+build/
+.xmake/
+
