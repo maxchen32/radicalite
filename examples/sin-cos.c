@@ -27,6 +27,6 @@ int main() {
     list = addRad(list, tmp);
     printPoly(list); puts("");
     
-    destoryPoly(&list);
+    destoryPoly(list);
     return 0;
 }

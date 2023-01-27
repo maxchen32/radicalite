@@ -5,35 +5,12 @@
 # project
 cmake_minimum_required(VERSION 3.15.0)
 cmake_policy(SET CMP0091 NEW)
-project(eyyc LANGUAGES C CXX)
-
-# target
+project(radical LANGUAGES C)
 set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_CXX_COMPILER "g++")
-add_executable(eyyc "")
-set_target_properties(eyyc PROPERTIES OUTPUT_NAME "eyyc")
-set_target_properties(eyyc PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
-add_dependencies(eyyc radical)
-target_include_directories(eyyc PRIVATE
-    include
-)
-if(MSVC)
-    set_property(TARGET eyyc PROPERTY
-        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-target_link_libraries(eyyc PRIVATE
-    radical
-)
-target_link_directories(eyyc PRIVATE
-    build/release
-)
-target_sources(eyyc PRIVATE
-    examples/eyyc.c
-)
+
 
 # target
-set(CMAKE_C_COMPILER "gcc")
-set(CMAKE_CXX_COMPILER "g++")
 add_library(radical STATIC "")
 set_target_properties(radical PROPERTIES OUTPUT_NAME "radical")
 set_target_properties(radical PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
@@ -50,8 +27,6 @@ target_sources(radical PRIVATE
 )
 
 # target
-set(CMAKE_C_COMPILER "gcc")
-set(CMAKE_CXX_COMPILER "g++")
 add_library(radical_shared SHARED "")
 set_target_properties(radical_shared PROPERTIES OUTPUT_NAME "radical")
 set_target_properties(radical_shared PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
@@ -69,8 +44,6 @@ target_sources(radical_shared PRIVATE
 )
 
 # target
-set(CMAKE_C_COMPILER "gcc")
-set(CMAKE_CXX_COMPILER "g++")
 add_executable(sin-cos "")
 set_target_properties(sin-cos PROPERTIES OUTPUT_NAME "sin-cos")
 set_target_properties(sin-cos PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
@@ -93,8 +66,6 @@ target_sources(sin-cos PRIVATE
 )
 
 # target
-set(CMAKE_C_COMPILER "gcc")
-set(CMAKE_CXX_COMPILER "g++")
 add_executable(xyline "")
 set_target_properties(xyline PROPERTIES OUTPUT_NAME "xyline")
 set_target_properties(xyline PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
@@ -116,3 +87,46 @@ target_sources(xyline PRIVATE
     examples/xyline.c
 )
 
+# target
+add_executable(eyyc "")
+set_target_properties(eyyc PROPERTIES OUTPUT_NAME "eyyc")
+set_target_properties(eyyc PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
+add_dependencies(eyyc radical)
+target_include_directories(eyyc PRIVATE
+    include
+)
+if(MSVC)
+    set_property(TARGET eyyc PROPERTY
+        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+endif()
+target_link_libraries(eyyc PRIVATE
+    radical
+)
+target_link_directories(eyyc PRIVATE
+    build/release
+)
+target_sources(eyyc PRIVATE
+    examples/eyyc.c
+)
+
+# target
+add_executable(eyyc_new "")
+set_target_properties(eyyc_new PROPERTIES OUTPUT_NAME "eyyc_new")
+set_target_properties(eyyc_new PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
+add_dependencies(eyyc_new radical)
+target_include_directories(eyyc_new PRIVATE
+    include
+)
+if(MSVC)
+    set_property(TARGET eyyc_new PROPERTY
+        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+endif()
+target_link_libraries(eyyc_new PRIVATE
+    radical
+)
+target_link_directories(eyyc_new PRIVATE
+    build/release
+)
+target_sources(eyyc_new PRIVATE
+    examples/eyyc_new.c
+)

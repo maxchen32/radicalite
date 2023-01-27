@@ -9,7 +9,7 @@ target("radical_shared")
 	add_files("src/*.c")
 	set_basename("radical")
 
-local tests = {"eyyc", "xyline", "sin-cos"}
+local tests = {"eyyc", "xyline", "sin-cos", "eyyc_new"}
 for i,filename in pairs(tests) do
 	target(filename)
 		set_kind("binary")

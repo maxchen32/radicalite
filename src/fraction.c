@@ -5,8 +5,10 @@
 #include <errno.h>
 #include "fraction.h"
 
-static void error_print_frac(const char* error_function, const char* error_content) {
-	fprintf(stderr, "Error: Fraction: %s: %s\n", error_function, error_content);
+static void error_print_frac
+(const char* error_function, const char* error_content) {
+	fprintf(stderr, "Error: Fraction: %s: %s\n", 
+			error_function, error_content);
 }
 
 //math
@@ -35,10 +37,19 @@ long long lgcd_frac(long long a, long long b){
 	return b > 0 ? b : -b;
 }
 */
+
+/* Unlike the normal gcd function, this version never returns 0. 
+e.g. gcd(0,0) returns 1;
+	 gcd(1,0) returns 1;
+	 gcd(0,114514) returns 1.
+*/
 int gcd_frac(int a,int b) {
-	if(b)
+	if (a && b) {
 		while((a%=b) && (b%=a));
-	return a+b;
+		return a+b;
+	} else {
+		return 1;
+	}
 }
 int lcm_frac(int a, int b){
 	return a / gcd_frac(a, b) * b ;

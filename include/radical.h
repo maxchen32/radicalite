@@ -15,6 +15,15 @@ struct Node {
 	Polynomial next;
 };
 
+//////////////////
+/*
+typedef struct Node {
+    SLIST_ENTRY(Node) field;
+    Radical num;
+} Node;
+typedef Node* Polynomial;
+*/
+//////////////////
 
 //tool
 Radical	initRad(int up, int down, int in);
@@ -27,6 +36,8 @@ bool	isequalRad(Radical a, Radical b);
 
 //calculation
 Radical		divRad(Radical a, Radical b);
+Radical 	divintRad(Radical a, int b);
+Polynomial  divintPoly(Polynomial ptrl, int x);
 Radical		mulRad(Radical a, Radical b);
 Polynomial 	addRad(Polynomial ptrl, Radical b);
 Polynomial 	subRad(Polynomial ptrl, Radical b);
@@ -35,11 +46,12 @@ Polynomial 	_PolyIntReduce(Polynomial ptrl, int* x);
 
 //list
 Polynomial	initPoly();
-void 		destoryPoly(Polynomial* ptrl);
+void 		destoryPoly(Polynomial ptrl);
 int 		lenPoly(Polynomial ptrl);
 Polynomial	findPoly(Radical x, Polynomial ptrl);
 Polynomial	findkthPoly(int k, Polynomial ptrl);
-Polynomial	insertPoly(Radical x,int i, Polynomial ptrl );
+Polynomial	insertPoly(Radical x, int i, Polynomial ptrl);
+Polynomial  insertheadPoly(Radical x, Polynomial ptrl);
 Polynomial	deletePoly(int i, Polynomial ptrl);
 
 #endif

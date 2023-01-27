@@ -19,28 +19,17 @@ void eyyc(int a, int b, int c){	 //0=ax^2+bx+c
 	Polynomial list2 = initPoly();
 	int delta = b * b - 4 * a * c;
 	if (delta >= 0){
-		Radical nb = initRad(-b, 1, 1);
-		list = addRad(addRad(list, nb), Radsqrt(delta));
-		int da = 2 * a;
-		_PolyIntReduce(list, &da);
+		Radical rb = initRad(-b, 1, 1);
+		list = addRad(addRad(list, rb), Radsqrt(delta));
+		divintPoly(list, 2 * a);
 		printPoly(list);
-		printf("\n");
-		if (da != 1 && da != 0){
-			printf("----------\n");
-			printf("%d\n",da);
-		}
 		destoryPoly(list);
-		printf("\nor\n\n");
 		
-		da = 2 * a;
-		list2 = subRad(addRad(list2, nb), Radsqrt(delta));
-		_PolyIntReduce(list2, &da);
+		printf("\nor\n");
+		
+		list2 = subRad(addRad(list2, rb), Radsqrt(delta));
+		divintPoly(list2, 2 * a);
 		printPoly(list2);
-		printf("\n");
-		if (da != 1 && da != 0){
-			printf("----------\n");
-			printf("%d\n",da);
-		}
 		destoryPoly(list2);
 	}
 	else {

@@ -16,8 +16,8 @@ _x < _y ? _x : _y;\
 })
 
 #define Fraction0() initFrac(0, 1)
-#define FractionN(up) initFrac(up, 1)
-#define Fraction(up, down) initFrac(up, down)
+#define FractionN(up) initFrac((up), 1)
+#define Fraction(up, down) initFrac((up), (down))
 #define iszeroFrac(a) ((a).up == 0 ? 1 : 0)
 
 typedef struct Fraction{

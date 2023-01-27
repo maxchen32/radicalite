@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <wchar.h>
+#include <locale.h>
 #include "radical.h"
 #include "fraction.h"
 
@@ -17,6 +18,7 @@ Radical initRad(int up, int down, int in){
     return res;
 }
 void printRad(Radical a){
+	setlocale(LC_ALL, "chs");
     int len_up   = num_len_frac(a.out.up);
     int len_in   = num_len_frac(a.in);
     if (a.out.down != 1) {
@@ -24,9 +26,9 @@ void printRad(Radical a){
         int len_max  = MAX(len_up, len_down);
         int len_min  = MIN(len_up, len_down);        
         
-        bool sym = 0;   // >0
+        bool sym = false;   // >0
         if (a.out.up<0) { 
-            sym = 1;    // <0
+            sym = true;     // <0
             putchar(' ');
         }
         printf("%d\n", abs(a.out.up));
@@ -36,6 +38,9 @@ void printRad(Radical a){
         for (int i = 0; i < len_max; i++)
             putchar('_');
         putchar(' ');
+#ifdef _WIN32
+		putchar(' ');
+#endif
         for (int i = 0; i < len_in; i++)
             putchar('_');
         putchar('\n');
@@ -66,7 +71,7 @@ void printRad(Radical a){
             putchar('_');
         putchar('\n');
     }
-    printf("\u221a%d", a.in);
+    wprintf(L"√%d", a.in);
 }
 Radical Radsqrt( int radicand ){
     Radical res = {.out.up = 0, .out.down = 1, .in = 1};
@@ -101,6 +106,7 @@ Radical sqrtFrac(Fraction a) {
 	return u;
 }
 void printPoly(Polynomial ptrl){
+	setlocale(LC_ALL, "chs");
     Polynomial p = ptrl;
     if (p == NULL|| p->next == NULL){
         return;
@@ -110,7 +116,7 @@ void printPoly(Polynomial ptrl){
     }
 
     if (p->num.out.up < 0)
-        printf("- ");
+        printf("-");
     while(1){
         if (p->num.in == 1){
             if (p->num.out.down == 1)
@@ -208,17 +214,17 @@ Polynomial addRad(Polynomial ptrl, Radical b) {
         return NULL;
     }
     else if (p->next == NULL){
-        insertPoly( b ,1 , ptrl );
+        insertheadPoly(b, ptrl);
         return ptrl;
     }
 
-    int flag = 0;
+    bool flag = false;
     int i = 1;
     do {
         p = p->next;
         if (p->num.in == b.in){
             p->num.out = addFrac(p->num.out, b.out);
-            flag = 1;
+            flag = true;
             if (p->num.out.up == 0){
                 deletePoly(i, ptrl);
             }
@@ -228,7 +234,7 @@ Polynomial addRad(Polynomial ptrl, Radical b) {
     }while (p->next != NULL);
 
     if (!flag) {
-        insertPoly( b , lenPoly(ptrl) , ptrl );
+        insertheadPoly(b, ptrl);
     }
     return ptrl;
 }
@@ -268,31 +274,47 @@ Polynomial _PolyIntReduce(Polynomial ptrl, int* x){
     }while (p->next != NULL);
     return ptrl;
 }
-//TODO Raddivint()
+
+Radical divintRad(Radical a, int b) {
+	a.out = divFrac(a.out, initFrac(b, 1));
+	return a;
+}
+
+Polynomial divintPoly(Polynomial ptrl, int x) {
+	Polynomial p = ptrl;
+    if (p == NULL || p->next == NULL){
+        return ptrl;
+    }
+    do {
+        p = p->next;
+        p->num = divintRad(p->num, x);
+    }while (p->next != NULL);
+	return ptrl;
+}
 
 //list
 Polynomial initPoly(){
-    Polynomial head = (Polynomial)malloc(sizeof(Node));
+    Polynomial head = (Node *)malloc(sizeof(Node));
     if (head == NULL){
-        printf("initPoly: failed\n");
+        fprintf(stderr, "initPoly: failed\n");
         return NULL;
     }
     head->next = NULL;
     return head;
 }
-void destoryPoly(Polynomial* ptrl){
+void destoryPoly(Polynomial ptrl) {
     if (ptrl == NULL) {
-        printf("destoryPoly: failed\n");
+        fprintf(stderr, "destoryPoly: Polynomial doesn't exist.\n");
 		return;
     }
-    Polynomial p = *ptrl;
+    Polynomial p = ptrl;
     Polynomial q; 
-    while (p){
-   	q = p->next;
+    while (p) {
+		q = p->next;
         free(p);	
-	p = q;
+		p = q;
     }
-    *ptrl = NULL;
+    ptrl = NULL;
 }
 int lenPoly(Polynomial ptrl){
     Polynomial p = ptrl;
@@ -325,15 +347,44 @@ Polynomial findPoly(Radical x, Polynomial ptrl){
     return p;
 }
 
-Polynomial insertPoly(Radical x,int i, Polynomial ptrl ){
+/*
+Polynomial insertheadPoly(Radical x, Polynomial ptrl) {
+	Node* s = (Node *)malloc(sizeof(Node));
+	if (s == NULL) {
+		fprintf(stderr, "insertheadPoly: allocate memory failed.\n");
+		return ptrl;
+	}
+	s->num = x;
+	s->next = ptrl;
+	ptrl = s;
+	return ptrl;
+}
+*/
+
+Polynomial insertheadPoly(Radical x, Polynomial ptrl) {
+	if (ptrl == NULL) {
+		return ptrl;
+	}
+	Node* s = (Node *)malloc(sizeof(Node));
+	if (s == NULL) {
+		fprintf(stderr, "insertheadPoly: allocate memory failed.\n");
+		return ptrl;
+	}
+	s->num = x;
+	s->next = ptrl->next;
+	ptrl->next = s;
+	return ptrl;
+}
+
+Polynomial insertPoly(Radical x, int i, Polynomial ptrl) {
     Polynomial p,s;
     p = findkthPoly(i-1, ptrl);
-    if (p == NULL){
-        fprintf(stderr, "insertPloy: value of i error\n");
+    if (p == NULL) {
+        fprintf(stderr, "insertPoly: value of i error\n");
         return NULL;
     }
     else {
-        s = (Polynomial)malloc(sizeof(Node));
+        s = (Node *)malloc(sizeof(Node));
         s->num = x;
         s->next = p->next;
         p->next = s;
