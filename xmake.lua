@@ -1,3 +1,9 @@
+if is_mode("debug") then
+    add_defines("DEBUG")
+    set_symbols("debug")
+elseif is_mode("release") then
+end
+
 target("radical") 
     set_kind("static")
     add_includedirs("include")
@@ -10,6 +16,9 @@ target("radical_shared")
 	set_basename("radical")
 
 local tests = {"eyyc", "xyline", "sin-cos", "eyyc_new"}
+if is_mode("debug") then
+	table.insert(tests, "test")
+end
 for i,filename in pairs(tests) do
 	target(filename)
 		set_kind("binary")

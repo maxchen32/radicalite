@@ -29,7 +29,7 @@ typedef struct Fraction{
 int       gcd_frac(int a, int b);						//最大公因数
 long long lgcd_frac(long long a, long long b);
 int       lcm_frac(int a, int b);						//最小公倍数
-int       qpow_frac(int base, int expt);				//快速幂
+Fraction  qpow_frac(int base, int expt);				//快速幂
 void      reduce_num_frac(int* a, int* b);		//数约分
 int       num_len_frac(int n);					//数的绝对值的长度
 

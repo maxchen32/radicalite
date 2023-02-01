@@ -12,31 +12,6 @@ static void error_print_frac
 }
 
 //math
-/*
-int gcd_frac(int a, int b){
-	if (0 == a || 0 == b){
-		return 1;
-	}
-	int tmp;
-	while ((tmp = a % b)){
-		a = b;
-		b = tmp;
-	}
-	return b > 0 ? b : -b;
-}
-
-long long lgcd_frac(long long a, long long b){
-	if (0 == a || 0 == b){
-		return 1;
-	}
-	long long tmp;
-	while ((tmp = a % b)){
-		a = b;
-		b = tmp;
-	}
-	return b > 0 ? b : -b;
-}
-*/
 
 /* Unlike the normal gcd function, this version never returns 0. 
 e.g. gcd(0,0) returns 1;
@@ -54,15 +29,22 @@ int gcd_frac(int a,int b) {
 int lcm_frac(int a, int b){
 	return a / gcd_frac(a, b) * b ;
 }
-int qpow_frac(int base, int expt){
+Fraction qpow_frac(int base, int expt){
+	if(base == 0)
+		return initFrac(0, 1);
 	int res = 1;
+	bool flag = true;
+	if (expt < 0) {
+		expt = -expt;
+		flag = false;
+	}
 	while (expt){
 		if (expt & 1)
 			res *= base ;
 		base *= base;
 		expt >>= 1;
 	}
-	return res;
+	return flag ? initFrac(res, 1) : initFrac(1, res);
 }
 
 //tool
@@ -124,33 +106,44 @@ void pprintFrac(Fraction a) {
 	int len_up   = num_len_frac(a.up);
 	int len_down = num_len_frac(a.down);
 	int len_max  = MAX(len_up, len_down);
-	int len_min  = MIN(len_up, len_down);
 	
-	bool sym = 0;   // >0
+	bool sym = false;   // >0
 	if (a.up < 0) { 
-		sym = 1;	// <0
-		putchar(' ');
+		sym = true;	// <0
+		//putchar(' ');
 	}
-	printf("%d\n", abs(a.up));
-	if (sym)
-		putchar('-');
-	for (int i = 0; i < len_max; i++)
-		putchar('_');
-	putchar('\n');
-		
-	int len_down_right = (len_max - len_min) / 2;
-	int len_down_left  = len_max - len_min - len_down_right;
+	//printf("%d\n", abs(a.up));
+	int* aptr = &(a.up);
+	pprint_up2down:
+	int len_aptr = num_len_frac(*aptr);
 	if (sym)
 		putchar(' ');
-	for (int i = 0; i < len_down_left; i++)
-		putchar(' ');
-	printf("%d", a.down);
-	for (int i = 0; i < len_down_right; i++)
-		putchar(' ');
+	if (len_max == len_aptr) {
+		printf("%d", abs(*aptr));
+	} else {
+		int len_right = (len_max - len_aptr) / 2;
+		int len_left = len_max - len_aptr - len_right;		
+		for (int i = 0; i < len_left; i++)
+			putchar(' ');
+		printf("%d", abs(*aptr));
+		for (int i = 0; i < len_right; i++)
+			putchar(' ');
+	}
+	if (aptr == &(a.up)) {
+		putchar('\n');
+		if (sym)
+			putchar('-');
+		for (int i = 0; i < len_max; i++)
+			putchar('_');
+		putchar('\n');
+		aptr = &(a.down);
+		goto pprint_up2down;
+	}
 }
 int cmpFrac(Fraction a, Fraction b){
-	if (b.down == 0){
-		return 2;
+	if (!(a.down && b.down)){
+		error_print_frac("cmpFrac", "Zero in denominators.");
+		exit(EDOM);
 	}
 	if ((a.up == b.up && a.down == b.down) || (a.up == 0 && b.up == 0))
 		return 0;
@@ -237,8 +230,8 @@ Fraction divFrac(Fraction a, Fraction b){
 	return mulFrac(a, b);
 }
 Fraction powFrac(Fraction a, int expt){
-	a.up = qpow_frac(a.up, expt);
-	a.down = qpow_frac(a.down, expt);
-	return a;
+	Fraction up = qpow_frac(a.up, expt);
+	Fraction down = qpow_frac(a.down, expt);
+	return divFrac(up, down);
 }
 

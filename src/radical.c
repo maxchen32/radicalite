@@ -5,7 +5,7 @@
 #include <wchar.h>
 #include <locale.h>
 #include "radical.h"
-#include "fraction.h"
+
 
 //tool
 Radical initRad(int up, int down, int in){
