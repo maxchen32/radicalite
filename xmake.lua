@@ -4,16 +4,17 @@ if is_mode("debug") then
 elseif is_mode("release") then
 end
 
-target("radical") 
+target("radicalite") 
     set_kind("static")
     add_includedirs("include")
     add_files("src/*.c")
+	set_basename("libradicalite")
 
-target("radical_shared")
+target("radicalite_shared")
 	set_kind("shared")
 	add_includedirs("include")
 	add_files("src/*.c")
-	set_basename("radical")
+	set_basename("libradicalite")
 
 local tests = {"eyyc", "xyline", "sin-cos", "eyyc_new"}
 if is_mode("debug") then
@@ -24,5 +25,5 @@ for i,filename in pairs(tests) do
 		set_kind("binary")
 		add_includedirs("include")
 		add_files("examples/"..filename..".c")
-		add_deps("radical")
+		add_deps("radicalite")
 end
