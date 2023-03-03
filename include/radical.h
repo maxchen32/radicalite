@@ -58,6 +58,6 @@ Polynomial	findkthPoly(int k, Polynomial ptrl);
 Polynomial	insertPoly(Radical x, int i, Polynomial ptrl);
 Polynomial  insertheadPoly(Radical x, Polynomial ptrl);
 Polynomial	deletePoly(int i, Polynomial ptrl);
-Polynomial  Poly_next(Polynomial p);
+//Polynomial  Poly_next(Polynomial p);
 
 #endif

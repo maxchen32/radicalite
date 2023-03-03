@@ -555,6 +555,7 @@ Polynomial deletePoly(int i, Polynomial ptrl){
     }
 }
 
+/*
 Polynomial Poly_begin(Polynomial p) {
 	return p->next;
 }
@@ -562,4 +563,4 @@ Polynomial Poly_begin(Polynomial p) {
 Polynomial Poly_next(Polynomial p) {
 	return p->next;
 }
-
+*/
