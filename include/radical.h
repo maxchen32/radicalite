@@ -27,7 +27,11 @@ typedef Node* Polynomial;
 
 //tool
 Radical	initRad(int up, int down, int in);
+Radical Frac2Rad(Fraction a);
+Radical int2Rad(int a);
 void	printRad(Radical a);
+Str     toStrRad(Radical a);
+//void	pprintRad(Radical a);				// pprintRad is not usable at the time
 Radical	Radsqrt(int radicand);
 Radical	sqrtFrac(Fraction a);               //分数开方
 void	printPoly(Polynomial ptrl);
@@ -43,6 +47,7 @@ Polynomial 	addRad(Polynomial ptrl, Radical b);
 Polynomial 	subRad(Polynomial ptrl, Radical b);
 int			gcdPoly(Polynomial ptrl);
 Polynomial 	_PolyIntReduce(Polynomial ptrl, int* x);
+Fraction    squareRad(Radical a);
 
 //list
 Polynomial	initPoly();
@@ -53,5 +58,6 @@ Polynomial	findkthPoly(int k, Polynomial ptrl);
 Polynomial	insertPoly(Radical x, int i, Polynomial ptrl);
 Polynomial  insertheadPoly(Radical x, Polynomial ptrl);
 Polynomial	deletePoly(int i, Polynomial ptrl);
+Polynomial  Poly_next(Polynomial p);
 
 #endif

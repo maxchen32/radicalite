@@ -13,7 +13,8 @@ static void error_print_frac
 
 //math
 
-/* Unlike the normal gcd function, this version never returns 0. 
+/* Unlike the normal gcd function, 
+   this version never returns 0 and negative number. 
 e.g. gcd(0,0) returns 1;
 	 gcd(1,0) returns 1;
 	 gcd(0,114514) returns 1.
@@ -21,7 +22,7 @@ e.g. gcd(0,0) returns 1;
 int gcd_frac(int a,int b) {
 	if (a && b) {
 		while((a%=b) && (b%=a));
-		return a+b;
+		return abs(a+b);
 	} else {
 		return 1;
 	}
@@ -54,6 +55,13 @@ Fraction initFrac(int up, int down){
 		reduceFrac(&res);
 	return res;
 }
+
+Fraction int2Frac(int up) {
+	Fraction res = {up , 1};
+	reduceFrac(&res);
+	return res;
+}
+
 void fixsignFrac(Fraction* a){
 	if (0 == a->down){
 		//fprintf(stderr, "Fraction: fixsignFrac: Fatal error: Zero in denominators.\n");
@@ -83,11 +91,20 @@ void reduce_num_frac(int* a, int* b){
 }
 void printFrac(Fraction a){
 	//printf("(%d/%d)%s", a.up, a.down, end);
-	printf("(%d", a.up);
+	printf("%d", a.up);
 	if (a.down != 1) {
 		printf("/%d", a.down);
 	}
-	printf(")");
+}
+
+Str toStrFrac(Fraction a){
+	Str str;
+	str.s[0] = '\0';
+    snprintf(str.s, TYPE_STR_LEN,"%d", a.up);
+	if (a.down != 1) {
+		snprintf(str.s+strlen(str.s), TYPE_STR_LEN-strlen(str.s),"/%d", a.down);
+	}
+	return str;
 }
 int num_len_frac(int n) {
 	/* int len = n <= 0 ? 1 : 0; */
@@ -114,8 +131,9 @@ void pprintFrac(Fraction a) {
 	}
 	//printf("%d\n", abs(a.up));
 	int* aptr = &(a.up);
+	int len_aptr;
 	pprint_up2down:
-	int len_aptr = num_len_frac(*aptr);
+	len_aptr = num_len_frac(*aptr);
 	if (sym)
 		putchar(' ');
 	if (len_max == len_aptr) {

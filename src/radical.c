@@ -4,8 +4,8 @@
 #include <stdbool.h>
 #include <wchar.h>
 #include <locale.h>
+#include <string.h>
 #include "radical.h"
-
 
 //tool
 Radical initRad(int up, int down, int in){
@@ -17,8 +17,64 @@ Radical initRad(int up, int down, int in){
     res.out = mulFrac(res.out, tmp.out);
     return res;
 }
-void printRad(Radical a){
-	setlocale(LC_ALL, "chs");
+Radical Frac2Rad(Fraction a) {
+	Radical num = {{ a.up , a.down }, 1};
+	reduceFrac(&(num.out));
+	return num;
+}
+Radical int2Rad(int a) {
+	Radical num = {a, 1, 1};
+	return num;
+}
+
+void printRad(Radical a) {
+	setlocale(LC_ALL, "");
+	if (a.out.up < 0)
+        printf("-");
+	if (a.in == 1) {
+		if (a.out.down == 1)
+			printf("%d",abs(a.out.up));
+		else
+			printf("%d/%d", abs(a.out.up), a.out.down);
+	} else {
+		if (a.out.down == 1) {
+			if (a.out.up == 1 || a.out.up == -1)
+				wprintf(L"√(%d)", a.in);
+			else
+				wprintf(L"%d√(%d)", abs(a.out.up), a.in);
+		}
+		else
+			wprintf(L"(%d/%d)√(%d)", abs(a.out.up), a.out.down, a.in);
+	}
+}
+
+Str toStrRad(Radical a) {
+	Str str;
+	str.s[0] = '\0';
+	if (a.out.up < 0)
+		snprintf(str.s, TYPE_STR_LEN, "-");
+	if (a.in == 1) {
+		if (a.out.down == 1) {
+			snprintf(str.s+strlen(str.s), TYPE_STR_LEN-strlen(str.s), "%d", abs(a.out.up));
+		}
+		else
+			snprintf(str.s+strlen(str.s), TYPE_STR_LEN-strlen(str.s), "%d/%d", abs(a.out.up), a.out.down);
+	} else {
+		if (a.out.down == 1) {
+			if (a.out.up == 1 || a.out.up == -1)
+				snprintf(str.s+strlen(str.s), TYPE_STR_LEN-strlen(str.s), "sqrt(%d)", a.in);
+			else
+				snprintf(str.s+strlen(str.s), TYPE_STR_LEN-strlen(str.s), "%dsqrt(%d)", abs(a.out.up), a.in);
+		}
+		else
+			snprintf(str.s+strlen(str.s), TYPE_STR_LEN-strlen(str.s), "(%d/%d)sqrt(%d)", abs(a.out.up), a.out.down, a.in);
+	}
+	return str;
+}
+
+void pprintRad(Radical a){
+	setlocale(LC_ALL, "");
+/*
     int len_up   = num_len_frac(a.out.up);
     int len_in   = num_len_frac(a.in);
     if (a.out.down != 1) {
@@ -72,6 +128,82 @@ void printRad(Radical a){
         putchar('\n');
     }
     wprintf(L"√%d", a.in);
+*/
+	if (a.in == 1) {
+		pprintFrac(a.out);
+	} else if (a.out.up == 1 || a.out.up == -1) {
+		bool sym = false;   // >0
+		if (a.out.up < 0) { 
+			sym = true;	// <0
+		}
+
+	// 1
+		if (sym)
+			putchar(' ');
+
+		putchar(' ');
+	#ifdef _WIN32
+		putchar(' ');
+	#endif
+		for (int i = 0; i < num_len_frac(a.in); ++i)
+			putchar('_');
+	// end 1
+		putchar('\n');
+		if (a.out.down == 1) {
+	// 2
+			if (sym)
+				putchar('-');
+			wprintf(L"√%d", a.in);
+	//end 2
+		} else {
+			int len_up   = num_len_frac(a.in) + 1;
+	#ifdef _WIN32
+			++len_up;
+	#endif
+			int len_down = num_len_frac(a.out.down);
+			int len_max  = MAX(len_up, len_down);
+			
+			int* aptr = &(a.in);
+			int len_aptr;
+			pprint_up2down:
+			len_aptr = num_len_frac(*aptr);
+			if (aptr == &(a.in)) {
+				++len_aptr;
+	#ifdef _WIN32
+				++len_aptr;
+	#endif
+			}
+			if (sym)
+				putchar(' ');
+			if (len_max == len_aptr) {
+				if (aptr == &(a.in)) {
+					wprintf(L"√");
+				}
+				printf("%d", abs(*aptr));
+			} else {
+				int len_right = (len_max - len_aptr) / 2;
+				int len_left = len_max - len_aptr - len_right;
+				for (int i = 0; i < len_left; i++)
+					putchar(' ');
+				if (aptr == &(a.in)) {
+					wprintf(L"√");
+				}
+				printf("%d", abs(*aptr));
+				for (int i = 0; i < len_right; i++)
+					putchar(' ');
+			}
+			if (aptr == &(a.in)) {
+				putchar('\n');
+				if (sym)
+					putchar('-');
+				for (int i = 0; i < len_max; i++)
+					putchar('_');
+				putchar('\n');
+				aptr = &(a.out.down);
+				goto pprint_up2down;
+			}
+		}
+	}	
 }
 Radical Radsqrt( int radicand ){
     Radical res = {.out.up = 0, .out.down = 1, .in = 1};
@@ -106,7 +238,7 @@ Radical sqrtFrac(Fraction a) {
 	return u;
 }
 void printPoly(Polynomial ptrl){
-	setlocale(LC_ALL, "chs");
+	setlocale(LC_ALL, "");
     Polynomial p = ptrl;
     if (p == NULL|| p->next == NULL){
         return;
@@ -225,8 +357,8 @@ Polynomial addRad(Polynomial ptrl, Radical b) {
         if (p->num.in == b.in){
             p->num.out = addFrac(p->num.out, b.out);
             flag = true;
-            if (p->num.out.up == 0){
-                deletePoly(i, ptrl);
+            if (p->num.out.up == 0 && lenPoly(ptrl) != 1) {
+				deletePoly(i, ptrl);
             }
             break;
         }
@@ -290,6 +422,17 @@ Polynomial divintPoly(Polynomial ptrl, int x) {
         p->num = divintRad(p->num, x);
     }while (p->next != NULL);
 	return ptrl;
+}
+
+Fraction squareRad(Radical a) {
+	Fraction res;
+	if (!(a.in % a.out.down)) {
+		a.in /= a.out.down;
+		res = initFrac(a.out.up * a.out.up * a.in, a.out.down);
+	} else {
+		res = initFrac(a.out.up * a.out.up * a.in, a.out.down * a.out.down);
+	}
+	return res;
 }
 
 //list
@@ -411,3 +554,12 @@ Polynomial deletePoly(int i, Polynomial ptrl){
         return ptrl;
     }
 }
+
+Polynomial Poly_begin(Polynomial p) {
+	return p->next;
+}
+
+Polynomial Poly_next(Polynomial p) {
+	return p->next;
+}
+

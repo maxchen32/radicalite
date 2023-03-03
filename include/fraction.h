@@ -1,6 +1,8 @@
 #ifndef _FRACTION_H
 #define _FRACTION_H
 
+#define TYPE_STR_LEN 45
+
 #define MAX(x, y)  ({\
 typeof(x) _x = x;\
 typeof(y) _y = y;\
@@ -25,9 +27,12 @@ typedef struct Fraction{
 	int down;
 } Fraction;                 //分数
 
+typedef struct Str {
+    char s[TYPE_STR_LEN];
+}Str;
+
 //数学 math
 int       gcd_frac(int a, int b);						//最大公因数
-long long lgcd_frac(long long a, long long b);
 int       lcm_frac(int a, int b);						//最小公倍数
 Fraction  qpow_frac(int base, int expt);				//快速幂
 void      reduce_num_frac(int* a, int* b);		//数约分
@@ -35,9 +40,11 @@ int       num_len_frac(int n);					//数的绝对值的长度
 
 //工具 tool
 Fraction initFrac(int up ,int down);       //初始化
+Fraction int2Frac(int up);
 void     fixsignFrac(Fraction* a);				//符号修正、错误处理
 void     reduceFrac(Fraction* a);				//分数约分
 void     printFrac(Fraction a);    //打印
+Str      toStrFrac(Fraction a);
 void     pprintFrac(Fraction a);   //（实验性的）美观打印
 int      cmpFrac(Fraction a, Fraction b);       //比较 返回-1 , 0 , 1
 Fraction calcFrac(char myope, ...);               //运算器
