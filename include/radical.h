@@ -29,7 +29,7 @@ typedef Node* Polynomial;
 Radical	initRad(int up, int down, int in);
 Radical Frac2Rad(Fraction a);
 Radical int2Rad(int a);
-void	printRad(Radical a);
+bool	printRad(Radical a);
 Str     toStrRad(Radical a);
 //void	pprintRad(Radical a);				// pprintRad is not usable at the time
 Radical	Radsqrt(int radicand);
