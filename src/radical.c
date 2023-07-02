@@ -15,6 +15,9 @@ Radical initRad(int up, int down, int in){
 	}
 	Radical res = Radsqrt( tmp.in );
 	res.out = mulFrac(res.out, tmp.out);
+	if (res.out.up == 0) {
+		res.in = 1;
+	}
 	return res;
 }
 Radical Frac2Rad(Fraction a) {

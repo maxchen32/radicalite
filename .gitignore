@@ -56,3 +56,4 @@ testffi.lua
 build/
 .xmake/
 
+examples/test.c

@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include <stdbool.h>
 #include <errno.h>
+#include <string.h>
 #include "fraction.h"
 
 static void error_print_frac
