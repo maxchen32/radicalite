@@ -27,6 +27,6 @@ cmake ..
 
 ## Usage
 
-### [fraction.h](include/fraction.h)
+[fraction.h](include/fraction.h)
 
-### [radical.h](include/radical.h)
+[radical.h](include/radical.h)

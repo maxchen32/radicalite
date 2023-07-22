@@ -57,3 +57,4 @@ build/
 .xmake/
 
 examples/test.c
+docs/html
