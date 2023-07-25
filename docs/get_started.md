@@ -1,0 +1,138 @@
+# 入门
+
+## 介绍
+
+radicalite 是一个用C语言编写的基础分数、二次根式和多项式类库。
+
+## 获取源代码
+
+确保你已经安装了[git](https://git-scm.com/)，如果没有的话，请在官网下载或者使用软件包管理器。
+
+然后执行
+
+	git clone https://codeberg.org/maxchen32/radicalite.git
+
+来获取代码，
+
+	cd radicalite
+
+来进入源代码目录。
+
+## 编译
+
+确保你安装了GCC，如果没有的话，Windows用户建议使用[这个编译好的GCC](https://winlibs.com/)，Linux用户请通过所用发行版的包管理器安装。
+
+建议使用 **[xmake](https://xmake.io/#/)** ，但是我们也提供 **[CMake](https://cmake.org/)** 支持。
+
+### xmake:  
+```bash
+xmake f --m release
+xmake
+```
+
+如果你想要安装到系统的话（默认 `/usr/local/lib` ）：  
+If you want to install into the system (default is `/usr/local/lib` ):  
+```bash
+xmake install --admin
+```
+
+如果你想要编译示例程序的话：
+
+	xmake -a
+
+### CMake:  
+```bash
+mkdir build
+cd build 
+cmake ..
+cmake --build .
+```
+
+如果你想要安装到系统的话（默认 `/usr/local/lib` ）：  
+If you want to install into the system (default is `/usr/local/lib` ):  
+```bash
+sudo cmake --install .
+```
+
+## 开始写程序
+
+本次教程将编写一个计算 $\frac{1}{2}\sqrt{3}$ 与 $\frac{4}{5}\sqrt{6}$ 乘积的程序。
+
+创建一个 `test.c` 源码文件。打开文件。
+
+## 包含头文件
+
+写入：
+
+```C
+#include<stdio.h>
+#include<radical.h>
+```
+
+## 程序主体
+
+初始化一个Radical类型的变量 `a` 为 $\frac{1}{2}\sqrt{3}$ ：
+```C
+Radical a = initRad(1, 2, 3);
+```
+
+`initRad(1, 2, 3)` 的三个参数分别表示分子、分母和被开根数。
+
+再声明一个 `b` ：
+```C
+Radical a = initRad(1, 2, 3);
+Radical b = initRad(4, 5, 6);
+```
+
+计算a与b的乘积赋值给 `c` ：
+```C
+Radical c = mulRad(a, b);
+```
+
+在控制台输出 `c` 和一个回车：
+```C
+printRad(c);
+putchar('\n');
+```
+
+`printRad(c)` 向控制台打印一个Radical类型的变量，但**不会**换行。
+
+### 完整程序：
+
+```C
+#include<stdio.h>
+#include<radical.h>
+
+int main() {
+	Radical a = initRad(1, 2, 3);
+	Radical b = initRad(4, 5, 6);
+	Radical c = mulRad(a, b);
+	printRad(c);
+	putchar('\n');
+	return 0;
+}
+```
+
+## 编译并运行测试程序
+
+如果你已经安装了，事情就非常简单：
+```bash
+gcc test.c -o test -lradical -lm
+./test
+```
+
+如果你在windows上使用MinGW：
+```batch
+gcc test.c -o test.exe -Ipath\to\radicalite\include -Lpath\to\radicalite\build\windows\x64\release -l:radical.lib
+test.exe
+```
+
+我暂时没有使用MSVC的经验，没法给出相应的方法。
+
+### 输出
+
+不出意外的话将输出
+
+	(6/5)√(2)
+	
+是正确的结果。
