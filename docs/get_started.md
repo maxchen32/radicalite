@@ -65,8 +65,8 @@ sudo cmake --install .
 写入：
 
 ```C
-#include<stdio.h>
-#include<radical.h>
+#include <stdio.h>
+#include "radical.h"
 ```
 
 ## 程序主体
@@ -100,8 +100,8 @@ putchar('\n');
 ### 完整程序：
 
 ```C
-#include<stdio.h>
-#include<radical.h>
+#include <stdio.h>
+#include "radical.h"
 
 int main() {
 	Radical a = initRad(1, 2, 3);
