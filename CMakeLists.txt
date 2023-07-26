@@ -10,11 +10,22 @@ project(radical LANGUAGES C)
 set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_CXX_COMPILER "g++")
 
+if (NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE "Release")
+endif()
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -Wall")
+    message("Debug mode:${CMAKE_C_FLAGS_DEBUG}")
+elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -Wall -s")
+    message("Release mode:${CMAKE_C_FLAGS_RELEASE}")
+endif()
 
 # target
 add_library(radical STATIC "")
 set_target_properties(radical PROPERTIES OUTPUT_NAME "radical")
-set_target_properties(radical PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
+set_target_properties(radical PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/${CMAKE_BUILD_TYPE}")
+#set_target_properties(radical PROPERTIES LINK_FLAGS_RELEASE  "-s")
 target_include_directories(radical PRIVATE
     include
 )
@@ -36,9 +47,10 @@ target_sources(radical PRIVATE
 # target
 add_library(radical_shared SHARED "")
 set_target_properties(radical_shared PROPERTIES OUTPUT_NAME "radical")
-set_target_properties(radical_shared PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
-set_target_properties(radical_shared PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
-set_target_properties(radical_shared PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
+set_target_properties(radical_shared PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/${CMAKE_BUILD_TYPE}")
+set_target_properties(radical_shared PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/${CMAKE_BUILD_TYPE}")
+set_target_properties(radical_shared PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/${CMAKE_BUILD_TYPE}")
+#set_target_properties(radical_shared PROPERTIES LINK_FLAGS_RELEASE  "-s")
 target_include_directories(radical_shared PRIVATE
     include
 )
@@ -53,119 +65,34 @@ if(MSVC)
         MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
 target_sources(radical_shared PRIVATE
-    src/fraction.c
-    src/radical.c
+    $<TARGET_OBJECTS:radical>
 )
 
-# target
-add_executable(sin-cos "")
-set_target_properties(sin-cos PROPERTIES OUTPUT_NAME "sin-cos")
-set_target_properties(sin-cos PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
-add_dependencies(sin-cos radical)
-target_include_directories(sin-cos PRIVATE
-    include
-)
-if(MSVC)
-    set_property(TARGET sin-cos PROPERTY
-        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-target_link_libraries(sin-cos PRIVATE
-    radical
-)
-target_link_directories(sin-cos PRIVATE
-    build/release
-)
-target_sources(sin-cos PRIVATE
-    examples/sin-cos.c
-)
-
-# target
-add_executable(xyline "")
-set_target_properties(xyline PROPERTIES OUTPUT_NAME "xyline")
-set_target_properties(xyline PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
-add_dependencies(xyline radical)
-target_include_directories(xyline PRIVATE
-    include
-)
-if(MSVC)
-    set_property(TARGET xyline PROPERTY
-        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-target_link_libraries(xyline PRIVATE
-    radical
-)
-target_link_directories(xyline PRIVATE
-    build/release
-)
-target_sources(xyline PRIVATE
-    examples/xyline.c
-)
-
-# target
-add_executable(eyyc "")
-set_target_properties(eyyc PROPERTIES OUTPUT_NAME "eyyc")
-set_target_properties(eyyc PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
-add_dependencies(eyyc radical)
-target_include_directories(eyyc PRIVATE
-    include
-)
-if(MSVC)
-    set_property(TARGET eyyc PROPERTY
-        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-target_link_libraries(eyyc PRIVATE
-    radical
-)
-target_link_directories(eyyc PRIVATE
-    build/release
-)
-target_sources(eyyc PRIVATE
-    examples/eyyc.c
-)
-
-# target
-add_executable(eyyc_new "")
-set_target_properties(eyyc_new PROPERTIES OUTPUT_NAME "eyyc_new")
-set_target_properties(eyyc_new PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
-add_dependencies(eyyc_new radical)
-target_include_directories(eyyc_new PRIVATE
-    include
-)
-if(MSVC)
-    set_property(TARGET eyyc_new PROPERTY
-        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-target_link_libraries(eyyc_new PRIVATE
-    radical
-)
-target_link_directories(eyyc_new PRIVATE
-    build/release
-)
-target_sources(eyyc_new PRIVATE
-    examples/eyyc_new.c
-)
-
-# target
-add_executable(simple_vector_calcs "")
-set_target_properties(simple_vector_calcs PROPERTIES OUTPUT_NAME "simple_vector_calcs")
-set_target_properties(simple_vector_calcs PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/release")
-add_dependencies(simple_vector_calcs radical)
-target_include_directories(simple_vector_calcs PRIVATE
-    include
-)
-if(MSVC)
-    set_property(TARGET simple_vector_calcs PROPERTY
-        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-target_link_libraries(simple_vector_calcs PRIVATE
-    radical
-)
-target_link_directories(simple_vector_calcs PRIVATE
-    build/release
-)
-target_sources(simple_vector_calcs PRIVATE
-    examples/simple_vector_calcs.c
-)
+set(tests "eyyc" "xyline" "sin-cos" "eyyc_new" "simple_vector_calcs")
+foreach(_var ${tests})
+	# target
+	add_executable(${_var} "")
+	set_target_properties(${_var} PROPERTIES OUTPUT_NAME "${_var}")
+	set_target_properties(${_var} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/${CMAKE_BUILD_TYPE}")
+	set_target_properties(${_var} PROPERTIES LINK_FLAGS_RELEASE  "-s")
+	add_dependencies(${_var} radical)
+	target_include_directories(${_var} PRIVATE
+		include
+	)
+	if(MSVC)
+		set_property(TARGET ${_var} PROPERTY
+			MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+	endif()
+	target_link_libraries(${_var} PRIVATE
+		radical
+	)
+	target_link_directories(${_var} PRIVATE
+		build/release
+	)
+	target_sources(${_var} PRIVATE
+		examples/${_var}.c
+	)
+endforeach()
 
 install(TARGETS radical radical_shared
         EXPORT radicalTargets
@@ -173,4 +100,4 @@ install(TARGETS radical radical_shared
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION lib
         PUBLIC_HEADER DESTINATION include
-        )
+)

@@ -26,7 +26,7 @@ Radical Frac2Rad(Fraction a) {
 	return num;
 }
 Radical int2Rad(int a) {
-	Radical num = {a, 1, 1};
+	Radical num = {{a, 1}, 1};
 	return num;
 }
 

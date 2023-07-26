@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include <wchar.h>
-#include <locale.h>
+//#include <wchar.h>
+//#include <locale.h>
 #include "radical.h"
 
 int main() {
-	setlocale(LC_ALL, "chs");
+	//setlocale(LC_ALL, "chs");
 #ifdef _WIN32
     putchar(' ');
 #endif
-	printf("         _\n");
-    wprintf(L"输入a/b*√c中的三个参数：\n");
+	puts("         _");
+    puts("Please input the 3 arguments of (a/b)sqrt(c)");
     fflush(stdout);
     int a, b, c;
     scanf("%d%d%d", &a, &b, &c);

@@ -245,7 +245,10 @@ Fraction mulFrac(Fraction a, Fraction b){
 	return a;
 }
 Fraction divFrac(Fraction a, Fraction b){
-	b.up ^= b.down ^= b.up ^= b.down;
+	int temp = b.up;
+	//b.up ^= b.down ^= b.up ^= b.down;
+	b.up = b.down;
+	b.down = temp;
 	return mulFrac(a, b);
 }
 Fraction powFrac(Fraction a, int expt){

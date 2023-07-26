@@ -28,7 +28,7 @@ Svector Frac2Svec(Fraction x, Fraction y, Fraction z) {
 
 // 内积
 Polynomial innerSvec(Svector a, Svector b) {
-	Radical res;
+	//Radical res;
 	Polynomial list = initPoly();
 	list = addRad(list, mulRad(a.x, b.x));
 	list = addRad(list, mulRad(a.y, b.y));
@@ -49,7 +49,7 @@ Polynomial cosSvec(Svector a, Svector b) {
 	Radical norms_product = mulRad(normSvec(a), normSvec(b));
 	Polynomial ptrl = mul_res;
 	if (ptrl) {
-		while (ptrl = ptrl->next) {
+		while ((ptrl = ptrl->next)) {
 			ptrl->num = divRad(ptrl->num, norms_product);
 		}
 	}
@@ -235,40 +235,6 @@ int scan_rad(int argcnt, ...) {
 // 示例
 int main() {
 	setlocale(LC_ALL, "");
-	//Svector test1 = input_Svector();
-	/*
-	// (2, 1, -2)
-	Svector num1 = int2Svec(-1, 0, 0);
-	//Svector num1 = {initRad(1, 1, 2), initRad(1, 1, 3), initRad(1, 1, 4)};
-	// (-1/2, -1/2, 0)
-	//Svector num2 = Frac2Svec(initFrac(-1, 2), initFrac(-1, 2), int2Frac(0));
-	Svector num2 = int2Svec(0, -1, 2);
-	//Svector num2 = {initRad(1, 1, 5), initRad(1, 1, 6), initRad(1, 1, 7)};
-	//printf("toStrRad: %s\n", toStrRad(num1.x).s);
-	wprintf(L"向量num1: (%s, %s, %s)\n", toStrRad(num1.x).s,
-			toStrRad(num1.y).s, toStrRad(num1.z).s);
-	wprintf(L"向量num2：(%s, %s, %s)\n", toStrRad(num2.x).s,
-			toStrRad(num2.y).s, toStrRad(num2.z).s);
-	
-	Svector normal = normalSvec(num1, num2);
-	wprintf(L"法向量：(%s, %s, %s)\n", toStrRad(normal.x).s,
-			toStrRad(normal.y).s, toStrRad(normal.z).s);
-	*/
-	/*
-	Polynomial cosres = cosSvec(num1, num2);
-	wprintf(L"角度的cos值：");
-	printPoly(cosres);
-	destoryPoly(cosres);
-	putchar('\n');
-	*/
-	
-	/*
-	Polynomial mulres = innerSvec(num1, num2);
-	wprintf(L"内积：");
-	printPoly(mulres);
-	destoryPoly(mulres);
-	putchar('\n');
-	*/
 
 choose_mode:
 	wprintf(L"1. 内积\n");

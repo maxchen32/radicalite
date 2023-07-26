@@ -1,25 +1,39 @@
 add_rules("mode.debug", "mode.release")
 
 if is_mode("debug") then
-    add_defines("DEBUG")
-    set_symbols("debug")
+	add_defines("DEBUG")
+	set_symbols("debug")
+	set_warnings("all")
+elseif is_mode("release") then
+	set_strip("all")
 end
 
 add_syslinks("m")
 
-target("radicalite")
-    set_kind("static")
+target("objs")
+	set_kind("object")
 	set_warnings("all")
-    add_includedirs("include")
-    add_files("src/*.c")
+	add_includedirs("include")
+	add_files("src/*.c")
+
+target("radicalite")
+	set_kind("static")
+	set_warnings("all")
+	add_includedirs("include")
+	--add_files("src/*.c")
+	add_deps("objs")
 	set_basename("radical")
+	set_prefixname("lib")
+
 
 target("radicalite_shared")
 	set_kind("shared")
 	set_warnings("all")
 	add_includedirs("include")
-	add_files("src/*.c")
+	--add_files("src/*.c")
+	add_deps("objs")
 	set_basename("radical")
+	set_prefixname("lib")
 
 target("headers")
 	set_kind("headeronly")
