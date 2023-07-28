@@ -15,6 +15,7 @@ target("objs")
 	set_warnings("all")
 	add_includedirs("include")
 	add_files("src/*.c")
+	add_cflags("-fPIC")
 
 target("radicalite")
 	set_kind("static")

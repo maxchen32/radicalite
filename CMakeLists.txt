@@ -40,8 +40,7 @@ if(MSVC)
         MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
 target_sources(radical PRIVATE
-    src/fraction.c
-    src/radical.c
+    $<TARGET_OBJECTS:radical_shared>
 )
 
 # target
@@ -65,7 +64,8 @@ if(MSVC)
         MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
 target_sources(radical_shared PRIVATE
-    $<TARGET_OBJECTS:radical>
+    src/fraction.c
+    src/radical.c
 )
 
 set(tests "eyyc" "xyline" "sin-cos" "eyyc_new" "simple_vector_calcs")
