@@ -14,12 +14,12 @@ static void error_print_frac
 
 //math
 
-/* Unlike the normal gcd function, 
-   this version never returns 0 and negative number. 
-e.g. gcd(0,0) returns 1;
-	 gcd(1,0) returns 1;
-	 gcd(0,114514) returns 1.
-*/
+/** @warning Unlike the normal gcd function, \n
+ *  this function never returns 0 and negative number. \n
+ *	e.g. gcd(0,0) returns 1; \n
+ *		 gcd(1,0) returns 1; \n
+ *		 gcd(0,114514) returns 1.
+ */
 int gcd_frac(int a,int b) {
 	if (a && b) {
 		while((a%=b) && (b%=a));

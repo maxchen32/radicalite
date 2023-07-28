@@ -1,3 +1,12 @@
+/**
+ * @file radical.h
+ * @brief radical.c的头文件
+ * @details 包含Radical结构体、Node结构体和各种处理Radical和Polynomial的函数。
+ * @author maxchen32
+ * @version 1.0.2
+ * @copyright 2020-2023 maxchen32
+ */
+
 #ifndef _RADICAL_H
 #define _RADICAL_H
 #include "fraction.h"
