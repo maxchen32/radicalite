@@ -1,0 +1,12 @@
+<map id="addFrac" name="addFrac">
+<area shape="rect" id="Node000001" title="加法" alt="" coords="241,56,309,83"/>
+<area shape="rect" id="Node000002" href="$radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="126,5,192,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,52,190,35,192,30,230,47"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="5,81,77,108"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="227,77,77,94,77,88,226,72"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="125,107,193,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="230,92,192,109,190,104,228,87"/>
+<area shape="rect" id="Node000003" href="$radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="8,5,74,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,21,74,21,74,16,112,16"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="110,112,77,105,78,100,111,107"/>
+</map>

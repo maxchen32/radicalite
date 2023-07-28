@@ -1,0 +1,9 @@
+<map id="divFrac" name="divFrac">
+<area shape="rect" id="Node000001" title="除法" alt="" coords="5,31,68,57"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="116,31,184,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,41,101,41,101,47,68,47"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="232,5,316,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="184,34,217,28,218,33,185,40"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="239,56,309,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="185,48,225,57,224,62,184,54"/>
+</map>

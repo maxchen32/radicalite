@@ -1,0 +1,32 @@
+<map id="reduceFrac" name="reduceFrac">
+<area shape="rect" id="Node000001" title="分数约分" alt="" coords="386,195,473,221"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="266,68,334,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,186,313,97,317,93,406,182"/>
+<area shape="rect" id="Node000007" href="$radical_8c.html#ad0d381b2735f4ea3f7b6216a0536bc86" title=" " alt="" coords="261,144,338,171"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="379,191,335,174,337,169,381,186"/>
+<area shape="rect" id="Node000008" href="$fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="268,195,332,221"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="371,211,332,211,332,205,371,205"/>
+<area shape="rect" id="Node000014" href="$radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title=" " alt="" coords="269,245,330,272"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="381,230,332,249,330,244,379,225"/>
+<area shape="rect" id="Node000015" href="$fraction_8c.html#a5216e2cb92d69f73df24f3030c6978e0" title="转换int类型到Fraction" alt="" coords="266,296,334,323"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="404,233,340,286,324,298,321,293,337,282,400,229"/>
+<area shape="rect" id="Node000003" href="$radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="139,5,204,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="256,63,199,35,202,30,259,59"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="8,81,79,108"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="251,87,80,96,79,90,251,81"/>
+<area shape="rect" id="Node000006" href="$fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="137,107,206,133"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="252,98,207,112,205,107,251,93"/>
+<area shape="rect" id="Node000004" href="$radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="11,5,76,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="124,21,76,21,76,16,124,16"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="122,113,79,104,80,99,123,108"/>
+<area shape="rect" id="Node000009" href="$radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="135,157,208,184"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="253,197,208,184,209,179,254,192"/>
+<area shape="rect" id="Node000011" href="$fraction_8c.html#a1bc734dd793adf13b48e21d17a29e4f8" title="快速幂" alt="" coords="132,208,211,235"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="253,215,212,220,211,215,253,210"/>
+<area shape="rect" id="Node000013" href="$radical_8c.html#afa2287c6e6f3f7a44154872f73581c97" title=" " alt="" coords="130,259,213,285"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="260,231,201,261,199,256,257,226"/>
+<area shape="rect" id="Node000010" href="$radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,157,82,184"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="120,173,82,173,82,168,120,168"/>
+<area shape="rect" id="Node000012" href="$fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="8,208,79,235"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="117,224,79,224,79,219,117,219"/>
+</map>

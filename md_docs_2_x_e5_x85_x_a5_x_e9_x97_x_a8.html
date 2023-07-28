@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>radicalite: 入门</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">radicalite
+   </div>
+   <div id="projectbrief">Elemental Fractions, Radicals and Polynomials.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('md_docs_2_x_e5_x85_x_a5_x_e9_x97_x_a8.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">入门</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+介绍</h1>
+<p>radicalite 是一个用C语言编写的基础分数、二次根式和多项式类库。</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+获取源代码</h1>
+<p>确保你已经安装了<a href="https://git-scm.com/">git</a>，如果没有的话，请在官网下载或者使用软件包管理器。</p>
+<p>然后执行 </p><pre class="fragment">git clone https://codeberg.org/maxchen32/radicalite.git
+</pre><p> 来获取代码， </p><pre class="fragment">cd radicalite
+</pre><p> 来进入源代码目录。</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+编译</h1>
+<p>确保你安装了GCC，如果没有的话，Windows用户建议使用<a href="https://winlibs.com/">这个编译好的GCC</a>，Linux用户请通过所用发行版的包管理器安装。</p>
+<p>建议使用 <b><a href="https://xmake.io/#/">xmake</a></b> ，但是我们也提供 <b><a href="https://cmake.org/">CMake</a></b> 支持。</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+xmake:</h2>
+<div class="fragment"><div class="line">xmake f --m release</div>
+<div class="line">xmake</div>
+</div><!-- fragment --><p>如果你在windows上使用MinGW，第一行得写成： </p><pre class="fragment">xmake f --m release --toolchain=mingw
+</pre><p> 如果你想要安装到系统的话（默认 <code>/usr/local/lib</code> ）： <br  />
+</p>
+<div class="fragment"><div class="line">xmake install --admin</div>
+</div><!-- fragment --><p>如果你想要编译示例程序的话： </p><pre class="fragment">xmake -a
+</pre> <h2><a class="anchor" id="autotoc_md5"></a>
+CMake:</h2>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build </div>
+<div class="line">cmake ..</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><p>如果你想要安装到系统的话（默认 <code>/usr/local/lib</code> ）： <br  />
+</p>
+<div class="fragment"><div class="line">sudo cmake --install .</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+开始写程序</h1>
+<p>本次教程将编写一个计算 $\frac{1}{2}\sqrt{3}$ 与 $\frac{4}{5}\sqrt{6}$ 乘积的程序。</p>
+<p>创建一个 <code>test.c</code> 源码文件。打开文件。</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+包含头文件</h1>
+<p>写入：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="radical_8h.html">radical.h</a>&quot;</span></div>
+<div class="ttc" id="aradical_8h_html"><div class="ttname"><a href="radical_8h.html">radical.h</a></div><div class="ttdoc">radical.c的头文件</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+程序主体</h1>
+<p>初始化一个Radical类型的变量 <code>a</code> 为 $\frac{1}{2}\sqrt{3}$ ： </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_radical.html">Radical</a> a = <a class="code hl_function" href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a>(1, 2, 3);</div>
+<div class="ttc" id="aradical_8h_html_ad1fe11aca0a5626b5b635d9d3dea5098"><div class="ttname"><a href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a></div><div class="ttdeci">Radical initRad(int up, int down, int in)</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00011">radical.c:11</a></div></div>
+<div class="ttc" id="astruct_radical_html"><div class="ttname"><a href="struct_radical.html">Radical</a></div><div class="ttdef"><b>Definition</b> <a href="radical_8h_source.html#l00015">radical.h:15</a></div></div>
+</div><!-- fragment --><p><code>initRad(1, 2, 3)</code> 的三个参数分别表示分子、分母和被开根数。</p>
+<p>再声明一个 <code>b</code> ： </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_radical.html">Radical</a> a = <a class="code hl_function" href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a>(1, 2, 3);</div>
+<div class="line"><a class="code hl_struct" href="struct_radical.html">Radical</a> b = <a class="code hl_function" href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a>(4, 5, 6);</div>
+</div><!-- fragment --><p>计算a与b的乘积赋值给 <code>c</code> ： </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_radical.html">Radical</a> c = <a class="code hl_function" href="radical_8h.html#a49d672e8edc7598578f9d22149642356">mulRad</a>(a, b);</div>
+<div class="ttc" id="aradical_8h_html_a49d672e8edc7598578f9d22149642356"><div class="ttname"><a href="radical_8h.html#a49d672e8edc7598578f9d22149642356">mulRad</a></div><div class="ttdeci">Radical mulRad(Radical a, Radical b)</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00346">radical.c:346</a></div></div>
+</div><!-- fragment --><p>在控制台输出 <code>c</code> 和一个回车： </p><div class="fragment"><div class="line"><a class="code hl_function" href="radical_8h.html#a9cbf0f42d9c7730e04f17283c5a9f874">printRad</a>(c);</div>
+<div class="line">putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="ttc" id="aradical_8h_html_a9cbf0f42d9c7730e04f17283c5a9f874"><div class="ttname"><a href="radical_8h.html#a9cbf0f42d9c7730e04f17283c5a9f874">printRad</a></div><div class="ttdeci">bool printRad(Radical a)</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00033">radical.c:33</a></div></div>
+</div><!-- fragment --><p><code>printRad(c)</code> 向控制台打印一个Radical类型的变量，但**不会**换行。</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+完整程序：</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="radical_8h.html">radical.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_struct" href="struct_radical.html">Radical</a> a = <a class="code hl_function" href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a>(1, 2, 3);</div>
+<div class="line">    <a class="code hl_struct" href="struct_radical.html">Radical</a> b = <a class="code hl_function" href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a>(4, 5, 6);</div>
+<div class="line">    <a class="code hl_struct" href="struct_radical.html">Radical</a> c = <a class="code hl_function" href="radical_8h.html#a49d672e8edc7598578f9d22149642356">mulRad</a>(a, b);</div>
+<div class="line">    <a class="code hl_function" href="radical_8h.html#a9cbf0f42d9c7730e04f17283c5a9f874">printRad</a>(c);</div>
+<div class="line">    putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+编译并运行测试程序</h1>
+<p>如果你已经安装了，事情就非常简单： </p><div class="fragment"><div class="line">gcc test.c -o test -lradical -lm</div>
+<div class="line">./test</div>
+</div><!-- fragment --><p>如果你在windows上使用MinGW： </p><div class="fragment"><div class="line">gcc test.c -o test.exe -Ipath\to\radicalite\include -Lpath\to\radicalite\build\windows\x64\release -lradical</div>
+<div class="line">test.exe</div>
+</div><!-- fragment --><p>我暂时没有使用MSVC的经验，没法给出相应的方法。</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+输出</h2>
+<p>不出意外的话将输出 </p><pre class="fragment">(6/5)√(2)
+</pre><p> 是正确的结果。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
+</body>
+</html>

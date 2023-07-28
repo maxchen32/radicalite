@@ -1,0 +1,13 @@
+<map id="initFrac" name="initFrac">
+<area shape="rect" id="Node000001" title="初始化" alt="" coords="261,56,325,83"/>
+<area shape="rect" id="Node000002" href="$radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="135,5,208,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,53,204,35,206,30,248,48"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#a1bc734dd793adf13b48e21d17a29e4f8" title="快速幂" alt="" coords="132,56,211,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,72,211,72,211,67,246,67"/>
+<area shape="rect" id="Node000006" href="$radical_8c.html#afa2287c6e6f3f7a44154872f73581c97" title=" " alt="" coords="130,107,213,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="248,91,206,109,204,104,246,86"/>
+<area shape="rect" id="Node000003" href="$radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,5,82,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="120,21,82,21,82,16,120,16"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="8,56,79,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="117,72,79,72,79,67,117,67"/>
+</map>

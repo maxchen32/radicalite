@@ -1,0 +1,11 @@
+<map id="mulRad" name="mulRad">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,71,83"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="119,31,187,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,60,103,52,104,57,72,65"/>
+<area shape="rect" id="Node000005" href="$radical_8c.html#ac92f83cca79448c0f05983b11ce12cbd" title=" " alt="" coords="120,81,186,108"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="72,74,106,82,105,87,71,79"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="235,5,319,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="187,34,220,28,221,33,188,40"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="242,56,312,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="188,48,228,57,227,62,187,54"/>
+</map>

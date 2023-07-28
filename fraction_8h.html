@@ -1,0 +1,1528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>radicalite: include/fraction.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">radicalite
+   </div>
+   <div id="projectbrief">Elemental Fractions, Radicals and Polynomials.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('fraction_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">fraction.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>fraction.c的头文件  
+<a href="#details">更多...</a></p>
+<div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h__dep__incl.png" border="0" usemap="#ainclude_2fraction_8hdep" alt=""/></div>
+<map name="ainclude_2fraction_8hdep" id="ainclude_2fraction_8hdep">
+<area shape="rect" title="fraction.c的头文件" alt="" coords="67,5,187,32"/>
+<area shape="rect" href="radical_8h.html" title="radical.c的头文件" alt="" coords="5,80,121,107"/>
+<area shape="poly" title=" " alt="" coords="108,45,76,81,72,78,104,41"/>
+<area shape="rect" href="fraction_8c.html" title=" " alt="" coords="144,80,241,107"/>
+<area shape="poly" title=" " alt="" coords="150,41,183,78,179,81,146,45"/>
+<area shape="rect" href="radical_8c.html" title=" " alt="" coords="17,155,109,181"/>
+<area shape="poly" title=" " alt="" coords="66,122,66,154,60,154,60,122"/>
+</map>
+</div>
+</div>
+<p><a href="fraction_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_fraction.html">Fraction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">分数类  <a href="struct_fraction.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_str.html">Str</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Str类，用于接受Fraction或Radical转换成的字符数组  <a href="struct_str.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a8d4bd3526c3773f165ff33095c2bc4ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a8d4bd3526c3773f165ff33095c2bc4ce">TYPE_STR_LEN</a>&#160;&#160;&#160;45</td></tr>
+<tr class="memdesc:a8d4bd3526c3773f165ff33095c2bc4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Str的最大长度  <br /></td></tr>
+<tr class="separator:a8d4bd3526c3773f165ff33095c2bc4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#aacc3ee1a7f283f8ef65cea31f4436a95">MAX</a>(x,  y)</td></tr>
+<tr class="memdesc:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大值宏  <br /></td></tr>
+<tr class="separator:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e75242132eaabbc1c512488a135926"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a74e75242132eaabbc1c512488a135926">MIN</a>(x,  y)</td></tr>
+<tr class="memdesc:a74e75242132eaabbc1c512488a135926"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小值宏  <br /></td></tr>
+<tr class="separator:a74e75242132eaabbc1c512488a135926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea6ce5b6dc27dc40a90fe0b0453ae567"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#aea6ce5b6dc27dc40a90fe0b0453ae567">Fraction0</a>()&#160;&#160;&#160;<a class="el" href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a>(0, 1)</td></tr>
+<tr class="separator:aea6ce5b6dc27dc40a90fe0b0453ae567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd6e3fd8c0a85d9df7b98a6263739e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a1cd6e3fd8c0a85d9df7b98a6263739e3">FractionN</a>(up)&#160;&#160;&#160;<a class="el" href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a>((up), 1)</td></tr>
+<tr class="separator:a1cd6e3fd8c0a85d9df7b98a6263739e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2961f7b76dce3c9885073184d72a6df2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a2961f7b76dce3c9885073184d72a6df2">Fraction</a>(up,  down)&#160;&#160;&#160;<a class="el" href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a>((up), (down))</td></tr>
+<tr class="separator:a2961f7b76dce3c9885073184d72a6df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e396818aa818da767ee2814142aebe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#af6e396818aa818da767ee2814142aebe">iszeroFrac</a>(a)&#160;&#160;&#160;((a).up == 0 ? 1 : 0)</td></tr>
+<tr class="separator:af6e396818aa818da767ee2814142aebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ad8205402a45a5d73f31b7d3b66d23fcb"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#ad8205402a45a5d73f31b7d3b66d23fcb">Fraction</a></td></tr>
+<tr class="memdesc:ad8205402a45a5d73f31b7d3b66d23fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">分数类  <br /></td></tr>
+<tr class="separator:ad8205402a45a5d73f31b7d3b66d23fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839ac354acf276a655aea420f6133406"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_str.html">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a839ac354acf276a655aea420f6133406">Str</a></td></tr>
+<tr class="memdesc:a839ac354acf276a655aea420f6133406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Str类，用于接受Fraction或Radical转换成的字符数组  <br /></td></tr>
+<tr class="separator:a839ac354acf276a655aea420f6133406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ab7f30cc720744dc052d8c2c287b228e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#ab7f30cc720744dc052d8c2c287b228e7">gcd_frac</a> (int a, int b)</td></tr>
+<tr class="memdesc:ab7f30cc720744dc052d8c2c287b228e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大公因数  <br /></td></tr>
+<tr class="separator:ab7f30cc720744dc052d8c2c287b228e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8c0c8f9619d98eb41aea66e753502d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a1d8c0c8f9619d98eb41aea66e753502d">lcm_frac</a> (int a, int b)</td></tr>
+<tr class="memdesc:a1d8c0c8f9619d98eb41aea66e753502d"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小公倍数  <br /></td></tr>
+<tr class="separator:a1d8c0c8f9619d98eb41aea66e753502d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc734dd793adf13b48e21d17a29e4f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a1bc734dd793adf13b48e21d17a29e4f8">qpow_frac</a> (int base, int expt)</td></tr>
+<tr class="memdesc:a1bc734dd793adf13b48e21d17a29e4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">快速幂  <br /></td></tr>
+<tr class="separator:a1bc734dd793adf13b48e21d17a29e4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6c894be2e557622d4d93f770600c6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a7a6c894be2e557622d4d93f770600c6b">reduce_num_frac</a> (int *a, int *b)</td></tr>
+<tr class="memdesc:a7a6c894be2e557622d4d93f770600c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">数约分  <br /></td></tr>
+<tr class="separator:a7a6c894be2e557622d4d93f770600c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe95e092c8a18ab23b80f1804ed41290"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#abe95e092c8a18ab23b80f1804ed41290">num_len_frac</a> (int n)</td></tr>
+<tr class="memdesc:abe95e092c8a18ab23b80f1804ed41290"><td class="mdescLeft">&#160;</td><td class="mdescRight">数的绝对值的长度  <br /></td></tr>
+<tr class="separator:abe95e092c8a18ab23b80f1804ed41290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc31b7b9bb7b17ea51632d1234ed09a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a> (int up, int down)</td></tr>
+<tr class="memdesc:adc31b7b9bb7b17ea51632d1234ed09a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <br /></td></tr>
+<tr class="separator:adc31b7b9bb7b17ea51632d1234ed09a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5216e2cb92d69f73df24f3030c6978e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a5216e2cb92d69f73df24f3030c6978e0">int2Frac</a> (int up)</td></tr>
+<tr class="memdesc:a5216e2cb92d69f73df24f3030c6978e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">转换int类型到Fraction  <br /></td></tr>
+<tr class="separator:a5216e2cb92d69f73df24f3030c6978e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6956d0da839b32d449ade075c2e4fa80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a6956d0da839b32d449ade075c2e4fa80">fixsignFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> *a)</td></tr>
+<tr class="memdesc:a6956d0da839b32d449ade075c2e4fa80"><td class="mdescLeft">&#160;</td><td class="mdescRight">符号修正、错误处理  <br /></td></tr>
+<tr class="separator:a6956d0da839b32d449ade075c2e4fa80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f368f8073aeedffc0fc08e7d22f49ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a0f368f8073aeedffc0fc08e7d22f49ff">reduceFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> *a)</td></tr>
+<tr class="memdesc:a0f368f8073aeedffc0fc08e7d22f49ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">分数约分  <br /></td></tr>
+<tr class="separator:a0f368f8073aeedffc0fc08e7d22f49ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f912db555f7d9a575e26493e4f90e77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a0f912db555f7d9a575e26493e4f90e77">printFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a)</td></tr>
+<tr class="memdesc:a0f912db555f7d9a575e26493e4f90e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">打印  <br /></td></tr>
+<tr class="separator:a0f912db555f7d9a575e26493e4f90e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c95d6df392c2540284953d695db7cbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_str.html">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a3c95d6df392c2540284953d695db7cbb">toStrFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a)</td></tr>
+<tr class="memdesc:a3c95d6df392c2540284953d695db7cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">转换Fraction类型到Str  <br /></td></tr>
+<tr class="separator:a3c95d6df392c2540284953d695db7cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0378701d8ee5c3dc54827e25f566a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a3a0378701d8ee5c3dc54827e25f566a4">pprintFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a)</td></tr>
+<tr class="memdesc:a3a0378701d8ee5c3dc54827e25f566a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">（实验性的）美观打印  <br /></td></tr>
+<tr class="separator:a3a0378701d8ee5c3dc54827e25f566a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e671f494de99177fd6a9c7335433ff8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a9e671f494de99177fd6a9c7335433ff8">cmpFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a, <a class="el" href="struct_fraction.html">Fraction</a> b)</td></tr>
+<tr class="memdesc:a9e671f494de99177fd6a9c7335433ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">比较 返回-1 , 0 , 1  <br /></td></tr>
+<tr class="separator:a9e671f494de99177fd6a9c7335433ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ac94367d3f94c0293cce94b6ae592b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#aa5ac94367d3f94c0293cce94b6ae592b">calcFrac</a> (char myope,...)</td></tr>
+<tr class="memdesc:aa5ac94367d3f94c0293cce94b6ae592b"><td class="mdescLeft">&#160;</td><td class="mdescRight">运算器  <br /></td></tr>
+<tr class="separator:aa5ac94367d3f94c0293cce94b6ae592b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d78608db5f9250a7a9cee8b037a2fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a11d78608db5f9250a7a9cee8b037a2fb">addFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a, <a class="el" href="struct_fraction.html">Fraction</a> b)</td></tr>
+<tr class="memdesc:a11d78608db5f9250a7a9cee8b037a2fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">加法  <br /></td></tr>
+<tr class="separator:a11d78608db5f9250a7a9cee8b037a2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c8c9d78589ee229be2ec3c5d812a9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#aa9c8c9d78589ee229be2ec3c5d812a9c">subFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a, <a class="el" href="struct_fraction.html">Fraction</a> b)</td></tr>
+<tr class="memdesc:aa9c8c9d78589ee229be2ec3c5d812a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">减法  <br /></td></tr>
+<tr class="separator:aa9c8c9d78589ee229be2ec3c5d812a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06cbb9a050a38ed45844da8074321b8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#a06cbb9a050a38ed45844da8074321b8f">mulFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a, <a class="el" href="struct_fraction.html">Fraction</a> b)</td></tr>
+<tr class="memdesc:a06cbb9a050a38ed45844da8074321b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">乘法  <br /></td></tr>
+<tr class="separator:a06cbb9a050a38ed45844da8074321b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab15376ccb388421a906012634ef7ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#aab15376ccb388421a906012634ef7ef9">divFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a, <a class="el" href="struct_fraction.html">Fraction</a> b)</td></tr>
+<tr class="memdesc:aab15376ccb388421a906012634ef7ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">除法  <br /></td></tr>
+<tr class="separator:aab15376ccb388421a906012634ef7ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1a426ece13a0a55d0e559dbe42b5e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fraction_8h.html#afc1a426ece13a0a55d0e559dbe42b5e7">powFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a, int expt)</td></tr>
+<tr class="memdesc:afc1a426ece13a0a55d0e559dbe42b5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">乘方  <br /></td></tr>
+<tr class="separator:afc1a426ece13a0a55d0e559dbe42b5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>fraction.c的头文件 </p>
+<p>包含Fraction结构体、Str结构体、通用的宏和各种处理Fraction的函数。 </p><dl class="section author"><dt>作者</dt><dd>maxchen32 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0.2 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>2020-2023 maxchen32 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="fraction_8h_source.html">fraction.h</a> 中定义.</p>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a2961f7b76dce3c9885073184d72a6df2" name="a2961f7b76dce3c9885073184d72a6df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2961f7b76dce3c9885073184d72a6df2">&#9670;&#160;</a></span>Fraction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="struct_fraction.html">Fraction</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">up, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">down&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a>((up), (down))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="fraction_8h_source.html">fraction.h</a> 第 <a class="el" href="fraction_8h_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aea6ce5b6dc27dc40a90fe0b0453ae567" name="aea6ce5b6dc27dc40a90fe0b0453ae567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6ce5b6dc27dc40a90fe0b0453ae567">&#9670;&#160;</a></span>Fraction0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Fraction0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a>(0, 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="fraction_8h_source.html">fraction.h</a> 第 <a class="el" href="fraction_8h_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1cd6e3fd8c0a85d9df7b98a6263739e3" name="a1cd6e3fd8c0a85d9df7b98a6263739e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd6e3fd8c0a85d9df7b98a6263739e3">&#9670;&#160;</a></span>FractionN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FractionN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">up</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a>((up), 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="fraction_8h_source.html">fraction.h</a> 第 <a class="el" href="fraction_8h_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af6e396818aa818da767ee2814142aebe" name="af6e396818aa818da767ee2814142aebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e396818aa818da767ee2814142aebe">&#9670;&#160;</a></span>iszeroFrac</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define iszeroFrac</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a</td><td>)</td>
+          <td>&#160;&#160;&#160;((a).up == 0 ? 1 : 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="fraction_8h_source.html">fraction.h</a> 第 <a class="el" href="fraction_8h_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aacc3ee1a7f283f8ef65cea31f4436a95" name="aacc3ee1a7f283f8ef65cea31f4436a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc3ee1a7f283f8ef65cea31f4436a95">&#9670;&#160;</a></span>MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">({\</div>
+<div class="line">typeof(x) _x = x;\</div>
+<div class="line">typeof(y) _y = y;\</div>
+<div class="line">(void)(&amp;_x == &amp;_y);\</div>
+<div class="line">_x &gt; _y ? _x : _y;\</div>
+<div class="line">})</div>
+</div><!-- fragment -->
+<p>最大值宏 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8h_source.html">fraction.h</a> 第 <a class="el" href="fraction_8h_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a74e75242132eaabbc1c512488a135926" name="a74e75242132eaabbc1c512488a135926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e75242132eaabbc1c512488a135926">&#9670;&#160;</a></span>MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">({\</div>
+<div class="line">typeof(x) _x = x;\</div>
+<div class="line">typeof(y) _y = y;\</div>
+<div class="line">(void)(&amp;_x == &amp;_y);\</div>
+<div class="line">_x &lt; _y ? _x : _y;\</div>
+<div class="line">})</div>
+</div><!-- fragment -->
+<p>最小值宏 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8h_source.html">fraction.h</a> 第 <a class="el" href="fraction_8h_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8d4bd3526c3773f165ff33095c2bc4ce" name="a8d4bd3526c3773f165ff33095c2bc4ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4bd3526c3773f165ff33095c2bc4ce">&#9670;&#160;</a></span>TYPE_STR_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TYPE_STR_LEN&#160;&#160;&#160;45</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Str的最大长度 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8h_source.html">fraction.h</a> 第 <a class="el" href="fraction_8h_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ad8205402a45a5d73f31b7d3b66d23fcb" name="ad8205402a45a5d73f31b7d3b66d23fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8205402a45a5d73f31b7d3b66d23fcb">&#9670;&#160;</a></span>Fraction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_fraction.html">Fraction</a> <a class="el" href="struct_fraction.html">Fraction</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分数类 </p>
+
+</div>
+</div>
+<a id="a839ac354acf276a655aea420f6133406" name="a839ac354acf276a655aea420f6133406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839ac354acf276a655aea420f6133406">&#9670;&#160;</a></span>Str</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_str.html">Str</a> <a class="el" href="struct_str.html">Str</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Str类，用于接受Fraction或Radical转换成的字符数组 </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a11d78608db5f9250a7a9cee8b037a2fb" name="a11d78608db5f9250a7a9cee8b037a2fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d78608db5f9250a7a9cee8b037a2fb">&#9670;&#160;</a></span>addFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> addFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>加法 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00224">224</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a11d78608db5f9250a7a9cee8b037a2fb_cgraph.png" border="0" usemap="#afraction_8h_a11d78608db5f9250a7a9cee8b037a2fb_cgraph" alt=""/></div>
+<map name="afraction_8h_a11d78608db5f9250a7a9cee8b037a2fb_cgraph" id="afraction_8h_a11d78608db5f9250a7a9cee8b037a2fb_cgraph">
+<area shape="rect" title="加法" alt="" coords="5,31,74,57"/>
+<area shape="rect" href="fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="130,5,200,32"/>
+<area shape="poly" title=" " alt="" coords="73,35,115,26,116,31,74,40"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="122,56,208,83"/>
+<area shape="poly" title=" " alt="" coords="74,48,108,55,107,60,73,53"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="263,5,333,32"/>
+<area shape="poly" title=" " alt="" coords="200,16,248,16,248,21,200,21"/>
+<area shape="poly" title=" " alt="" coords="201,53,249,35,250,40,203,58"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="256,56,340,83"/>
+<area shape="poly" title=" " alt="" coords="209,67,241,67,241,72,209,72"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a11d78608db5f9250a7a9cee8b037a2fb_icgraph.png" border="0" usemap="#afraction_8h_a11d78608db5f9250a7a9cee8b037a2fb_icgraph" alt=""/></div>
+<map name="afraction_8h_a11d78608db5f9250a7a9cee8b037a2fb_icgraph" id="afraction_8h_a11d78608db5f9250a7a9cee8b037a2fb_icgraph">
+<area shape="rect" title="加法" alt="" coords="241,56,309,83"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="126,5,192,32"/>
+<area shape="poly" title=" " alt="" coords="228,52,190,35,192,30,230,47"/>
+<area shape="rect" href="fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="5,81,77,108"/>
+<area shape="poly" title=" " alt="" coords="227,77,77,94,77,88,226,72"/>
+<area shape="rect" href="fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="125,107,193,133"/>
+<area shape="poly" title=" " alt="" coords="230,92,192,109,190,104,228,87"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="8,5,74,32"/>
+<area shape="poly" title=" " alt="" coords="112,21,74,21,74,16,112,16"/>
+<area shape="poly" title=" " alt="" coords="110,112,77,105,78,100,111,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa5ac94367d3f94c0293cce94b6ae592b" name="aa5ac94367d3f94c0293cce94b6ae592b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ac94367d3f94c0293cce94b6ae592b">&#9670;&#160;</a></span>calcFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> calcFrac </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>myope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>运算器 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00183">183</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_aa5ac94367d3f94c0293cce94b6ae592b_cgraph.png" border="0" usemap="#afraction_8h_aa5ac94367d3f94c0293cce94b6ae592b_cgraph" alt=""/></div>
+<map name="afraction_8h_aa5ac94367d3f94c0293cce94b6ae592b_cgraph" id="afraction_8h_aa5ac94367d3f94c0293cce94b6ae592b_cgraph">
+<area shape="rect" title="运算器" alt="" coords="5,88,77,115"/>
+<area shape="rect" href="fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="241,37,309,64"/>
+<area shape="poly" title=" " alt="" coords="57,85,87,65,124,48,177,40,226,41,226,47,177,46,125,53,89,69,60,90"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="128,164,190,191"/>
+<area shape="poly" title=" " alt="" coords="65,113,126,153,123,158,62,117"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="241,145,309,172"/>
+<area shape="poly" title=" " alt="" coords="78,107,227,144,226,149,76,113"/>
+<area shape="rect" href="fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="125,63,193,89"/>
+<area shape="poly" title=" " alt="" coords="76,91,109,84,111,89,77,96"/>
+<area shape="rect" href="fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="365,5,436,32"/>
+<area shape="poly" title=" " alt="" coords="309,40,350,29,352,34,310,45"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="357,56,444,83"/>
+<area shape="poly" title=" " alt="" coords="310,53,343,58,342,63,309,58"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="499,56,569,83"/>
+<area shape="poly" title=" " alt="" coords="437,29,486,48,484,53,435,34"/>
+<area shape="poly" title=" " alt="" coords="444,67,484,67,484,72,444,72"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="492,132,576,159"/>
+<area shape="poly" title=" " alt="" coords="427,81,498,122,495,127,424,86"/>
+<area shape="poly" title=" " alt="" coords="190,170,226,164,227,169,191,175"/>
+<area shape="poly" title=" " alt="" coords="309,144,484,84,486,89,311,150"/>
+<area shape="poly" title=" " alt="" coords="310,154,477,146,477,151,310,160"/>
+<area shape="poly" title=" " alt="" coords="193,66,226,59,227,64,194,71"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9e671f494de99177fd6a9c7335433ff8" name="a9e671f494de99177fd6a9c7335433ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e671f494de99177fd6a9c7335433ff8">&#9670;&#160;</a></span>cmpFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cmpFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比较 返回-1 , 0 , 1 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00162">162</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a9e671f494de99177fd6a9c7335433ff8_cgraph.png" border="0" usemap="#afraction_8h_a9e671f494de99177fd6a9c7335433ff8_cgraph" alt=""/></div>
+<map name="afraction_8h_a9e671f494de99177fd6a9c7335433ff8_cgraph" id="afraction_8h_a9e671f494de99177fd6a9c7335433ff8_cgraph">
+<area shape="rect" title="比较 返回&#45;1 , 0 , 1" alt="" coords="5,5,78,32"/>
+<area shape="rect" href="fraction_8c.html#a7a6c894be2e557622d4d93f770600c6b" title="数约分" alt="" coords="126,5,246,32"/>
+<area shape="poly" title=" " alt="" coords="78,16,111,16,111,21,78,21"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="294,5,364,32"/>
+<area shape="poly" title=" " alt="" coords="246,16,279,16,279,21,246,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aab15376ccb388421a906012634ef7ef9" name="aab15376ccb388421a906012634ef7ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab15376ccb388421a906012634ef7ef9">&#9670;&#160;</a></span>divFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> divFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>除法 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00247">247</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_aab15376ccb388421a906012634ef7ef9_cgraph.png" border="0" usemap="#afraction_8h_aab15376ccb388421a906012634ef7ef9_cgraph" alt=""/></div>
+<map name="afraction_8h_aab15376ccb388421a906012634ef7ef9_cgraph" id="afraction_8h_aab15376ccb388421a906012634ef7ef9_cgraph">
+<area shape="rect" title="除法" alt="" coords="5,31,68,57"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="116,31,184,57"/>
+<area shape="poly" title=" " alt="" coords="68,41,101,41,101,47,68,47"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="232,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="184,34,217,28,218,33,185,40"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="239,56,309,83"/>
+<area shape="poly" title=" " alt="" coords="185,48,225,57,224,62,184,54"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_aab15376ccb388421a906012634ef7ef9_icgraph.png" border="0" usemap="#afraction_8h_aab15376ccb388421a906012634ef7ef9_icgraph" alt=""/></div>
+<map name="afraction_8h_aab15376ccb388421a906012634ef7ef9_icgraph" id="afraction_8h_aab15376ccb388421a906012634ef7ef9_icgraph">
+<area shape="rect" title="除法" alt="" coords="251,107,313,133"/>
+<area shape="rect" href="fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="131,5,202,32"/>
+<area shape="poly" title=" " alt="" coords="256,98,201,46,187,35,190,31,205,42,260,94"/>
+<area shape="rect" href="radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="130,56,203,83"/>
+<area shape="poly" title=" " alt="" coords="236,103,198,86,200,81,238,98"/>
+<area shape="rect" href="radical_8c.html#af24a24cfec9515de58fb1a1c5390740e" title=" " alt="" coords="137,107,196,133"/>
+<area shape="poly" title=" " alt="" coords="236,123,197,123,197,117,236,117"/>
+<area shape="rect" href="fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="131,157,202,184"/>
+<area shape="poly" title=" " alt="" coords="238,142,200,159,198,154,236,137"/>
+<area shape="rect" href="radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title=" " alt="" coords="132,208,201,235"/>
+<area shape="poly" title=" " alt="" coords="260,146,205,198,190,209,187,205,201,194,256,142"/>
+<area shape="rect" href="radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,56,82,83"/>
+<area shape="poly" title=" " alt="" coords="115,72,82,72,82,67,115,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6956d0da839b32d449ade075c2e4fa80" name="a6956d0da839b32d449ade075c2e4fa80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6956d0da839b32d449ade075c2e4fa80">&#9670;&#160;</a></span>fixsignFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fixsignFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a> *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>符号修正、错误处理 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00066">66</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a6956d0da839b32d449ade075c2e4fa80_icgraph.png" border="0" usemap="#afraction_8h_a6956d0da839b32d449ade075c2e4fa80_icgraph" alt=""/></div>
+<map name="afraction_8h_a6956d0da839b32d449ade075c2e4fa80_icgraph" id="afraction_8h_a6956d0da839b32d449ade075c2e4fa80_icgraph">
+<area shape="rect" title="符号修正、错误处理" alt="" coords="521,284,605,311"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="395,360,464,387"/>
+<area shape="poly" title=" " alt="" coords="526,321,456,362,453,357,524,316"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="386,183,473,209"/>
+<area shape="poly" title=" " alt="" coords="531,277,447,212,450,208,534,273"/>
+<area shape="rect" href="fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="8,157,79,184"/>
+<area shape="poly" title=" " alt="" coords="380,360,321,334,259,299,235,276,211,253,142,213,78,186,81,181,145,209,215,249,239,272,263,295,323,329,382,355"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="269,411,331,437"/>
+<area shape="poly" title=" " alt="" coords="382,395,332,414,330,410,380,390"/>
+<area shape="rect" href="radical_8c.html#af24a24cfec9515de58fb1a1c5390740e" title=" " alt="" coords="142,461,201,488"/>
+<area shape="poly" title=" " alt="" coords="408,400,378,428,339,452,304,464,266,472,202,478,201,472,266,467,302,459,337,447,374,423,405,396"/>
+<area shape="rect" href="radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title=" " alt="" coords="137,512,206,539"/>
+<area shape="poly" title=" " alt="" coords="414,401,382,440,340,477,306,495,271,508,207,523,205,518,269,503,304,490,337,472,379,436,410,397"/>
+<area shape="rect" href="radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title=" " alt="" coords="269,259,330,285"/>
+<area shape="poly" title=" " alt="" coords="398,353,317,288,320,284,401,349"/>
+<area shape="rect" href="radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="267,360,332,387"/>
+<area shape="poly" title=" " alt="" coords="380,376,333,376,333,371,380,371"/>
+<area shape="poly" title=" " alt="" coords="261,402,259,400,242,373,234,349,227,325,211,299,191,280,173,268,128,242,59,186,62,182,131,238,175,264,194,276,215,296,232,323,240,347,247,371,263,397,265,399"/>
+<area shape="rect" href="radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="135,360,208,387"/>
+<area shape="poly" title=" " alt="" coords="253,409,206,390,208,385,255,404"/>
+<area shape="poly" title=" " alt="" coords="255,444,203,466,201,461,253,439"/>
+<area shape="rect" href="fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="8,411,79,437"/>
+<area shape="poly" title=" " alt="" coords="254,427,79,427,79,421,254,421"/>
+<area shape="poly" title=" " alt="" coords="276,450,215,502,198,514,195,509,211,498,272,446"/>
+<area shape="rect" href="radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,360,82,387"/>
+<area shape="poly" title=" " alt="" coords="120,376,82,376,82,371,120,371"/>
+<area shape="poly" title=" " alt="" coords="394,219,326,260,323,256,391,215"/>
+<area shape="rect" href="fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="266,56,334,83"/>
+<area shape="poly" title=" " alt="" coords="407,173,375,135,337,97,322,85,325,81,340,93,379,132,411,169"/>
+<area shape="rect" href="radical_8c.html#ad0d381b2735f4ea3f7b6216a0536bc86" title=" " alt="" coords="261,107,338,133"/>
+<area shape="poly" title=" " alt="" coords="391,177,323,136,326,132,394,173"/>
+<area shape="rect" href="fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="268,208,332,235"/>
+<area shape="poly" title=" " alt="" coords="372,210,333,218,332,212,371,205"/>
+<area shape="rect" href="fraction_8c.html#a5216e2cb92d69f73df24f3030c6978e0" title="转换int类型到Fraction" alt="" coords="266,157,334,184"/>
+<area shape="poly" title=" " alt="" coords="371,187,334,180,335,175,372,182"/>
+<area shape="poly" title=" " alt="" coords="253,90,81,159,79,154,251,85"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="139,5,204,32"/>
+<area shape="poly" title=" " alt="" coords="251,53,204,34,206,29,253,48"/>
+<area shape="rect" href="fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="137,56,206,83"/>
+<area shape="poly" title=" " alt="" coords="251,72,206,72,206,67,251,67"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="11,5,76,32"/>
+<area shape="poly" title=" " alt="" coords="124,21,76,21,76,16,124,16"/>
+<area shape="poly" title=" " alt="" coords="143,94,131,103,63,159,60,155,128,99,139,90"/>
+<area shape="poly" title=" " alt="" coords="265,246,263,248,247,274,240,298,232,323,215,350,201,362,198,357,211,346,227,321,235,297,242,272,259,245,261,243"/>
+<area shape="rect" href="fraction_8c.html#a1bc734dd793adf13b48e21d17a29e4f8" title="快速幂" alt="" coords="132,309,211,336"/>
+<area shape="poly" title=" " alt="" coords="267,245,263,249,189,311,186,307,259,245,264,241"/>
+<area shape="rect" href="radical_8c.html#afa2287c6e6f3f7a44154872f73581c97" title=" " alt="" coords="130,157,213,184"/>
+<area shape="poly" title=" " alt="" coords="253,206,206,187,208,182,255,201"/>
+<area shape="poly" title=" " alt="" coords="136,347,131,350,107,375,83,401,68,412,65,408,80,397,104,371,128,346,132,342"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab7f30cc720744dc052d8c2c287b228e7" name="ab7f30cc720744dc052d8c2c287b228e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f30cc720744dc052d8c2c287b228e7">&#9670;&#160;</a></span>gcd_frac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gcd_frac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大公因数 </p>
+<dl class="section warning"><dt>警告</dt><dd>Unlike the normal gcd function, <br  />
+this function never returns 0 and negative number. <br  />
+e.g. gcd(0,0) returns 1; <br  />
+ gcd(1,0) returns 1; <br  />
+ gcd(0,114514) returns 1. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00023">23</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_ab7f30cc720744dc052d8c2c287b228e7_icgraph.png" border="0" usemap="#afraction_8h_ab7f30cc720744dc052d8c2c287b228e7_icgraph" alt=""/></div>
+<map name="afraction_8h_ab7f30cc720744dc052d8c2c287b228e7_icgraph" id="afraction_8h_ab7f30cc720744dc052d8c2c287b228e7_icgraph">
+<area shape="rect" title="最大公因数" alt="" coords="590,271,660,298"/>
+<area shape="rect" href="radical_8c.html#afbcc1cdcbecc81aba0999069f688e238" title=" " alt="" coords="261,18,373,45"/>
+<area shape="poly" title=" " alt="" coords="622,257,619,206,607,144,597,113,583,83,564,56,540,34,520,22,498,14,451,8,404,12,363,20,362,15,403,6,451,3,499,9,522,17,543,29,568,52,587,80,602,111,613,143,624,206,627,256"/>
+<area shape="rect" href="radical_8c.html#af24a24cfec9515de58fb1a1c5390740e" title=" " alt="" coords="142,145,201,171"/>
+<area shape="poly" title=" " alt="" coords="592,265,551,238,498,206,437,177,373,155,326,148,280,147,201,155,201,150,279,142,327,143,374,150,439,172,500,202,554,233,595,261"/>
+<area shape="rect" href="radical_8c.html#a4b9deb43cab94127888cb8a90babaa5c" title=" " alt="" coords="447,43,516,70"/>
+<area shape="poly" title=" " alt="" coords="615,258,606,221,591,177,569,131,540,91,515,72,518,68,544,87,573,129,596,175,611,219,621,256"/>
+<area shape="rect" href="fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="446,626,517,653"/>
+<area shape="poly" title=" " alt="" coords="622,313,596,426,573,496,544,565,521,600,498,628,494,624,517,597,539,562,568,494,591,424,616,312"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="447,271,516,298"/>
+<area shape="poly" title=" " alt="" coords="575,287,516,287,516,282,575,282"/>
+<area shape="rect" href="fraction_8c.html#a7a6c894be2e557622d4d93f770600c6b" title="数约分" alt="" coords="421,373,542,399"/>
+<area shape="poly" title=" " alt="" coords="594,309,504,374,500,370,591,305"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="438,525,525,551"/>
+<area shape="poly" title=" " alt="" coords="611,313,493,526,488,523,606,310"/>
+<area shape="poly" title=" " alt="" coords="432,52,373,43,374,37,433,47"/>
+<area shape="rect" href="fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="283,651,351,678"/>
+<area shape="poly" title=" " alt="" coords="432,650,352,662,351,657,431,644"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="139,651,204,678"/>
+<area shape="poly" title=" " alt="" coords="268,667,204,667,204,662,268,662"/>
+<area shape="rect" href="fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="8,499,79,526"/>
+<area shape="poly" title=" " alt="" coords="268,653,200,628,128,591,87,559,56,529,59,525,90,555,131,586,202,623,270,648"/>
+<area shape="rect" href="fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="137,550,206,577"/>
+<area shape="poly" title=" " alt="" coords="268,647,259,642,234,620,211,597,189,579,192,575,215,593,238,616,263,637,271,642"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="11,651,76,678"/>
+<area shape="poly" title=" " alt="" coords="124,667,76,667,76,662,124,662"/>
+<area shape="poly" title=" " alt="" coords="123,547,78,529,80,524,125,542"/>
+<area shape="poly" title=" " alt="" coords="460,262,422,221,398,202,372,186,328,170,281,162,201,159,202,154,282,157,329,165,374,181,401,197,426,217,464,258"/>
+<area shape="poly" title=" " alt="" coords="439,307,374,338,316,360,292,370,263,388,248,401,239,413,230,426,215,439,181,460,145,478,81,504,79,499,143,473,178,455,211,435,226,422,235,410,244,397,259,384,289,366,314,355,372,333,437,302"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="286,297,348,323"/>
+<area shape="poly" title=" " alt="" coords="433,295,349,308,348,303,432,290"/>
+<area shape="rect" href="radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title=" " alt="" coords="137,195,206,222"/>
+<area shape="poly" title=" " alt="" coords="432,277,260,237,206,221,207,216,262,232,433,272"/>
+<area shape="rect" href="radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title=" " alt="" coords="287,398,348,425"/>
+<area shape="poly" title=" " alt="" coords="458,311,420,345,375,382,346,400,343,395,372,377,416,341,454,307"/>
+<area shape="rect" href="radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="285,195,350,222"/>
+<area shape="poly" title=" " alt="" coords="436,267,347,225,349,220,439,262"/>
+<area shape="poly" title=" " alt="" coords="297,286,260,237,211,185,196,174,199,170,215,181,264,233,301,283"/>
+<area shape="poly" title=" " alt="" coords="271,308,238,307,201,311,164,320,131,338,112,355,96,375,72,421,57,465,50,499,44,498,52,464,67,419,92,372,108,351,128,333,162,315,200,306,237,302,271,302"/>
+<area shape="rect" href="radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="135,347,208,374"/>
+<area shape="poly" title=" " alt="" coords="273,328,209,351,208,346,271,323"/>
+<area shape="rect" href="fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="8,271,79,298"/>
+<area shape="poly" title=" " alt="" coords="271,303,213,294,141,289,79,287,79,282,142,284,213,289,272,298"/>
+<area shape="poly" title=" " alt="" coords="277,291,259,280,188,225,192,220,263,276,279,287"/>
+<area shape="rect" href="radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,347,82,374"/>
+<area shape="poly" title=" " alt="" coords="120,363,82,363,82,358,120,358"/>
+<area shape="rect" href="fraction_8c.html#a9e671f494de99177fd6a9c7335433ff8" title="比较 返回&#45;1 , 0 , 1" alt="" coords="281,449,353,475"/>
+<area shape="poly" title=" " alt="" coords="439,408,374,439,350,451,348,446,372,434,437,404"/>
+<area shape="poly" title=" " alt="" coords="461,564,422,603,375,642,353,654,351,649,372,637,419,599,457,561"/>
+<area shape="poly" title=" " alt="" coords="457,515,419,477,372,439,347,425,350,421,375,435,422,473,461,512"/>
+<area shape="rect" href="radical_8c.html#ad0d381b2735f4ea3f7b6216a0536bc86" title=" " alt="" coords="279,601,356,627"/>
+<area shape="poly" title=" " alt="" coords="439,560,374,591,350,603,348,598,372,586,437,556"/>
+<area shape="rect" href="fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="285,499,349,526"/>
+<area shape="poly" title=" " alt="" coords="423,532,350,520,350,515,424,527"/>
+<area shape="rect" href="fraction_8c.html#a5216e2cb92d69f73df24f3030c6978e0" title="转换int类型到Fraction" alt="" coords="283,550,351,577"/>
+<area shape="poly" title=" " alt="" coords="424,550,352,561,351,556,423,544"/>
+<area shape="poly" title=" " alt="" coords="270,498,259,489,241,463,234,438,227,414,211,388,198,377,201,373,215,384,232,412,239,437,246,461,263,486,273,494"/>
+<area shape="rect" href="fraction_8c.html#a1bc734dd793adf13b48e21d17a29e4f8" title="快速幂" alt="" coords="132,398,211,425"/>
+<area shape="poly" title=" " alt="" coords="271,496,260,490,217,457,184,427,188,423,221,453,262,485,273,492"/>
+<area shape="rect" href="radical_8c.html#afa2287c6e6f3f7a44154872f73581c97" title=" " alt="" coords="130,499,213,526"/>
+<area shape="poly" title=" " alt="" coords="270,515,213,515,213,510,270,510"/>
+<area shape="poly" title=" " alt="" coords="132,391,128,388,84,342,52,300,56,297,88,338,131,384,135,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adc31b7b9bb7b17ea51632d1234ed09a4" name="adc31b7b9bb7b17ea51632d1234ed09a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc31b7b9bb7b17ea51632d1234ed09a4">&#9670;&#160;</a></span>initFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> initFrac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>up</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>down</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00053">53</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_adc31b7b9bb7b17ea51632d1234ed09a4_cgraph.png" border="0" usemap="#afraction_8h_adc31b7b9bb7b17ea51632d1234ed09a4_cgraph" alt=""/></div>
+<map name="afraction_8h_adc31b7b9bb7b17ea51632d1234ed09a4_cgraph" id="afraction_8h_adc31b7b9bb7b17ea51632d1234ed09a4_cgraph">
+<area shape="rect" title="初始化" alt="" coords="5,31,70,57"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="118,31,204,57"/>
+<area shape="poly" title=" " alt="" coords="70,41,103,41,103,47,70,47"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="252,5,336,32"/>
+<area shape="poly" title=" " alt="" coords="204,33,237,27,238,32,205,38"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="259,56,329,83"/>
+<area shape="poly" title=" " alt="" coords="205,50,245,57,244,63,204,55"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_adc31b7b9bb7b17ea51632d1234ed09a4_icgraph.png" border="0" usemap="#afraction_8h_adc31b7b9bb7b17ea51632d1234ed09a4_icgraph" alt=""/></div>
+<map name="afraction_8h_adc31b7b9bb7b17ea51632d1234ed09a4_icgraph" id="afraction_8h_adc31b7b9bb7b17ea51632d1234ed09a4_icgraph">
+<area shape="rect" title="初始化" alt="" coords="261,56,325,83"/>
+<area shape="rect" href="radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="135,5,208,32"/>
+<area shape="poly" title=" " alt="" coords="246,53,204,35,206,30,248,48"/>
+<area shape="rect" href="fraction_8c.html#a1bc734dd793adf13b48e21d17a29e4f8" title="快速幂" alt="" coords="132,56,211,83"/>
+<area shape="poly" title=" " alt="" coords="246,72,211,72,211,67,246,67"/>
+<area shape="rect" href="radical_8c.html#afa2287c6e6f3f7a44154872f73581c97" title=" " alt="" coords="130,107,213,133"/>
+<area shape="poly" title=" " alt="" coords="248,91,206,109,204,104,246,86"/>
+<area shape="rect" href="radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,5,82,32"/>
+<area shape="poly" title=" " alt="" coords="120,21,82,21,82,16,120,16"/>
+<area shape="rect" href="fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="8,56,79,83"/>
+<area shape="poly" title=" " alt="" coords="117,72,79,72,79,67,117,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5216e2cb92d69f73df24f3030c6978e0" name="a5216e2cb92d69f73df24f3030c6978e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5216e2cb92d69f73df24f3030c6978e0">&#9670;&#160;</a></span>int2Frac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> int2Frac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>up</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>转换int类型到Fraction </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00060">60</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a5216e2cb92d69f73df24f3030c6978e0_cgraph.png" border="0" usemap="#afraction_8h_a5216e2cb92d69f73df24f3030c6978e0_cgraph" alt=""/></div>
+<map name="afraction_8h_a5216e2cb92d69f73df24f3030c6978e0_cgraph" id="afraction_8h_a5216e2cb92d69f73df24f3030c6978e0_cgraph">
+<area shape="rect" title="转换int类型到Fraction" alt="" coords="5,31,74,57"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="122,31,208,57"/>
+<area shape="poly" title=" " alt="" coords="74,41,107,41,107,47,74,47"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="256,5,340,32"/>
+<area shape="poly" title=" " alt="" coords="208,33,241,27,242,32,209,38"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="263,56,333,83"/>
+<area shape="poly" title=" " alt="" coords="209,50,249,57,248,63,208,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1d8c0c8f9619d98eb41aea66e753502d" name="a1d8c0c8f9619d98eb41aea66e753502d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8c0c8f9619d98eb41aea66e753502d">&#9670;&#160;</a></span>lcm_frac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lcm_frac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最小公倍数 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00031">31</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a1d8c0c8f9619d98eb41aea66e753502d_cgraph.png" border="0" usemap="#afraction_8h_a1d8c0c8f9619d98eb41aea66e753502d_cgraph" alt=""/></div>
+<map name="afraction_8h_a1d8c0c8f9619d98eb41aea66e753502d_cgraph" id="afraction_8h_a1d8c0c8f9619d98eb41aea66e753502d_cgraph">
+<area shape="rect" title="最小公倍数" alt="" coords="5,5,76,32"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="124,5,194,32"/>
+<area shape="poly" title=" " alt="" coords="76,16,109,16,109,21,76,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a1d8c0c8f9619d98eb41aea66e753502d_icgraph.png" border="0" usemap="#afraction_8h_a1d8c0c8f9619d98eb41aea66e753502d_icgraph" alt=""/></div>
+<map name="afraction_8h_a1d8c0c8f9619d98eb41aea66e753502d_icgraph" id="afraction_8h_a1d8c0c8f9619d98eb41aea66e753502d_icgraph">
+<area shape="rect" title="最小公倍数" alt="" coords="357,56,428,83"/>
+<area shape="rect" href="fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="241,56,309,83"/>
+<area shape="poly" title=" " alt="" coords="342,72,310,72,310,67,342,67"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="126,5,192,32"/>
+<area shape="poly" title=" " alt="" coords="228,52,190,35,192,30,230,47"/>
+<area shape="rect" href="fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="5,81,77,108"/>
+<area shape="poly" title=" " alt="" coords="227,77,77,94,77,88,226,72"/>
+<area shape="rect" href="fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="125,107,193,133"/>
+<area shape="poly" title=" " alt="" coords="230,92,192,109,190,104,228,87"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="8,5,74,32"/>
+<area shape="poly" title=" " alt="" coords="112,21,74,21,74,16,112,16"/>
+<area shape="poly" title=" " alt="" coords="110,112,77,105,78,100,111,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06cbb9a050a38ed45844da8074321b8f" name="a06cbb9a050a38ed45844da8074321b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06cbb9a050a38ed45844da8074321b8f">&#9670;&#160;</a></span>mulFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> mulFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>乘法 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00235">235</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a06cbb9a050a38ed45844da8074321b8f_cgraph.png" border="0" usemap="#afraction_8h_a06cbb9a050a38ed45844da8074321b8f_cgraph" alt=""/></div>
+<map name="afraction_8h_a06cbb9a050a38ed45844da8074321b8f_cgraph" id="afraction_8h_a06cbb9a050a38ed45844da8074321b8f_cgraph">
+<area shape="rect" title="乘法" alt="" coords="5,31,74,57"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="122,5,206,32"/>
+<area shape="poly" title=" " alt="" coords="74,34,106,28,108,33,75,40"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="129,56,199,83"/>
+<area shape="poly" title=" " alt="" coords="75,48,115,57,113,62,74,54"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a06cbb9a050a38ed45844da8074321b8f_icgraph.png" border="0" usemap="#afraction_8h_a06cbb9a050a38ed45844da8074321b8f_icgraph" alt=""/></div>
+<map name="afraction_8h_a06cbb9a050a38ed45844da8074321b8f_icgraph" id="afraction_8h_a06cbb9a050a38ed45844da8074321b8f_icgraph">
+<area shape="rect" title="乘法" alt="" coords="364,183,433,209"/>
+<area shape="rect" href="fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="131,5,202,32"/>
+<area shape="poly" title=" " alt="" coords="379,172,351,134,315,97,257,60,201,34,204,29,260,55,318,93,355,131,384,169"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="253,107,315,133"/>
+<area shape="poly" title=" " alt="" coords="363,176,304,136,307,132,366,172"/>
+<area shape="rect" href="radical_8c.html#af24a24cfec9515de58fb1a1c5390740e" title=" " alt="" coords="137,157,196,184"/>
+<area shape="poly" title=" " alt="" coords="349,193,196,176,197,171,350,188"/>
+<area shape="rect" href="radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title=" " alt="" coords="132,208,201,235"/>
+<area shape="poly" title=" " alt="" coords="350,204,202,220,201,215,349,199"/>
+<area shape="rect" href="radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title=" " alt="" coords="253,259,314,285"/>
+<area shape="poly" title=" " alt="" coords="366,220,307,260,304,256,363,216"/>
+<area shape="rect" href="radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="251,309,316,336"/>
+<area shape="poly" title=" " alt="" coords="382,223,353,260,318,299,305,311,302,307,314,295,349,257,377,220"/>
+<area shape="poly" title=" " alt="" coords="257,98,201,46,187,35,190,31,205,42,261,94"/>
+<area shape="rect" href="radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="130,107,203,133"/>
+<area shape="poly" title=" " alt="" coords="238,123,203,123,203,117,238,117"/>
+<area shape="poly" title=" " alt="" coords="240,142,197,160,195,156,238,137"/>
+<area shape="rect" href="fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="131,56,202,83"/>
+<area shape="poly" title=" " alt="" coords="238,103,198,86,200,81,240,98"/>
+<area shape="poly" title=" " alt="" coords="261,146,205,198,190,209,187,205,201,194,257,142"/>
+<area shape="rect" href="radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,107,82,133"/>
+<area shape="poly" title=" " alt="" coords="115,123,82,123,82,117,115,117"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abe95e092c8a18ab23b80f1804ed41290" name="abe95e092c8a18ab23b80f1804ed41290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe95e092c8a18ab23b80f1804ed41290">&#9670;&#160;</a></span>num_len_frac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int num_len_frac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>数的绝对值的长度 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00110">110</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_abe95e092c8a18ab23b80f1804ed41290_icgraph.png" border="0" usemap="#afraction_8h_abe95e092c8a18ab23b80f1804ed41290_icgraph" alt=""/></div>
+<map name="afraction_8h_abe95e092c8a18ab23b80f1804ed41290_icgraph" id="afraction_8h_abe95e092c8a18ab23b80f1804ed41290_icgraph">
+<area shape="rect" title="数的绝对值的长度" alt="" coords="257,31,355,57"/>
+<area shape="rect" href="fraction_8c.html#a3a0378701d8ee5c3dc54827e25f566a4" title="（实验性的）美观打印" alt="" coords="130,5,209,32"/>
+<area shape="poly" title=" " alt="" coords="242,35,209,29,210,23,243,30"/>
+<area shape="rect" href="radical_8c.html#a6604043a281955b5a80a0b693b6f6e7a" title=" " alt="" coords="5,31,82,57"/>
+<area shape="poly" title=" " alt="" coords="242,47,82,47,82,41,242,41"/>
+<area shape="poly" title=" " alt="" coords="115,32,83,39,82,34,114,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc1a426ece13a0a55d0e559dbe42b5e7" name="afc1a426ece13a0a55d0e559dbe42b5e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1a426ece13a0a55d0e559dbe42b5e7">&#9670;&#160;</a></span>powFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> powFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>expt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>乘方 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00254">254</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_afc1a426ece13a0a55d0e559dbe42b5e7_cgraph.png" border="0" usemap="#afraction_8h_afc1a426ece13a0a55d0e559dbe42b5e7_cgraph" alt=""/></div>
+<map name="afraction_8h_afc1a426ece13a0a55d0e559dbe42b5e7_cgraph" id="afraction_8h_afc1a426ece13a0a55d0e559dbe42b5e7_cgraph">
+<area shape="rect" title="乘方" alt="" coords="5,31,76,57"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="132,5,195,32"/>
+<area shape="poly" title=" " alt="" coords="75,34,117,25,118,31,76,39"/>
+<area shape="rect" href="fraction_8c.html#a1bc734dd793adf13b48e21d17a29e4f8" title="快速幂" alt="" coords="124,56,203,83"/>
+<area shape="poly" title=" " alt="" coords="76,49,109,56,108,61,75,54"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="372,5,441,32"/>
+<area shape="poly" title=" " alt="" coords="195,16,358,16,358,21,195,21"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="498,5,582,32"/>
+<area shape="poly" title=" " alt="" coords="441,16,483,16,483,21,441,21"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="505,56,575,83"/>
+<area shape="poly" title=" " alt="" coords="442,29,492,48,490,53,440,34"/>
+<area shape="rect" href="fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="251,56,315,83"/>
+<area shape="poly" title=" " alt="" coords="203,67,236,67,236,72,203,72"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="363,56,450,83"/>
+<area shape="poly" title=" " alt="" coords="316,67,348,67,348,72,316,72"/>
+<area shape="poly" title=" " alt="" coords="443,53,488,35,490,40,445,58"/>
+<area shape="poly" title=" " alt="" coords="450,67,490,67,490,72,450,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3a0378701d8ee5c3dc54827e25f566a4" name="a3a0378701d8ee5c3dc54827e25f566a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0378701d8ee5c3dc54827e25f566a4">&#9670;&#160;</a></span>pprintFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pprintFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>（实验性的）美观打印 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00119">119</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a3a0378701d8ee5c3dc54827e25f566a4_cgraph.png" border="0" usemap="#afraction_8h_a3a0378701d8ee5c3dc54827e25f566a4_cgraph" alt=""/></div>
+<map name="afraction_8h_a3a0378701d8ee5c3dc54827e25f566a4_cgraph" id="afraction_8h_a3a0378701d8ee5c3dc54827e25f566a4_cgraph">
+<area shape="rect" title="（实验性的）美观打印" alt="" coords="5,5,85,32"/>
+<area shape="rect" href="fraction_8c.html#abe95e092c8a18ab23b80f1804ed41290" title="数的绝对值的长度" alt="" coords="133,5,231,32"/>
+<area shape="poly" title=" " alt="" coords="85,16,118,16,118,21,85,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a3a0378701d8ee5c3dc54827e25f566a4_icgraph.png" border="0" usemap="#afraction_8h_a3a0378701d8ee5c3dc54827e25f566a4_icgraph" alt=""/></div>
+<map name="afraction_8h_a3a0378701d8ee5c3dc54827e25f566a4_icgraph" id="afraction_8h_a3a0378701d8ee5c3dc54827e25f566a4_icgraph">
+<area shape="rect" title="（实验性的）美观打印" alt="" coords="130,5,209,32"/>
+<area shape="rect" href="radical_8c.html#a6604043a281955b5a80a0b693b6f6e7a" title=" " alt="" coords="5,5,82,32"/>
+<area shape="poly" title=" " alt="" coords="115,21,82,21,82,16,115,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f912db555f7d9a575e26493e4f90e77" name="a0f912db555f7d9a575e26493e4f90e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f912db555f7d9a575e26493e4f90e77">&#9670;&#160;</a></span>printFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>打印 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00093">93</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1bc734dd793adf13b48e21d17a29e4f8" name="a1bc734dd793adf13b48e21d17a29e4f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc734dd793adf13b48e21d17a29e4f8">&#9670;&#160;</a></span>qpow_frac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> qpow_frac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>expt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>快速幂 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00034">34</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a1bc734dd793adf13b48e21d17a29e4f8_cgraph.png" border="0" usemap="#afraction_8h_a1bc734dd793adf13b48e21d17a29e4f8_cgraph" alt=""/></div>
+<map name="afraction_8h_a1bc734dd793adf13b48e21d17a29e4f8_cgraph" id="afraction_8h_a1bc734dd793adf13b48e21d17a29e4f8_cgraph">
+<area shape="rect" title="快速幂" alt="" coords="5,31,85,57"/>
+<area shape="rect" href="fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="133,31,197,57"/>
+<area shape="poly" title=" " alt="" coords="85,41,118,41,118,47,85,47"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="245,31,331,57"/>
+<area shape="poly" title=" " alt="" coords="197,41,230,41,230,47,197,47"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="379,5,464,32"/>
+<area shape="poly" title=" " alt="" coords="331,33,364,27,365,32,332,38"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="386,56,457,83"/>
+<area shape="poly" title=" " alt="" coords="332,50,372,57,371,63,331,55"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a1bc734dd793adf13b48e21d17a29e4f8_icgraph.png" border="0" usemap="#afraction_8h_a1bc734dd793adf13b48e21d17a29e4f8_icgraph" alt=""/></div>
+<map name="afraction_8h_a1bc734dd793adf13b48e21d17a29e4f8_icgraph" id="afraction_8h_a1bc734dd793adf13b48e21d17a29e4f8_icgraph">
+<area shape="rect" title="快速幂" alt="" coords="124,5,203,32"/>
+<area shape="rect" href="fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="5,5,76,32"/>
+<area shape="poly" title=" " alt="" coords="109,21,76,21,76,16,109,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7a6c894be2e557622d4d93f770600c6b" name="a7a6c894be2e557622d4d93f770600c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6c894be2e557622d4d93f770600c6b">&#9670;&#160;</a></span>reduce_num_frac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reduce_num_frac </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>数约分 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00088">88</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a7a6c894be2e557622d4d93f770600c6b_cgraph.png" border="0" usemap="#afraction_8h_a7a6c894be2e557622d4d93f770600c6b_cgraph" alt=""/></div>
+<map name="afraction_8h_a7a6c894be2e557622d4d93f770600c6b_cgraph" id="afraction_8h_a7a6c894be2e557622d4d93f770600c6b_cgraph">
+<area shape="rect" title="数约分" alt="" coords="5,5,126,32"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="174,5,244,32"/>
+<area shape="poly" title=" " alt="" coords="126,16,159,16,159,21,126,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a7a6c894be2e557622d4d93f770600c6b_icgraph.png" border="0" usemap="#afraction_8h_a7a6c894be2e557622d4d93f770600c6b_icgraph" alt=""/></div>
+<map name="afraction_8h_a7a6c894be2e557622d4d93f770600c6b_icgraph" id="afraction_8h_a7a6c894be2e557622d4d93f770600c6b_icgraph">
+<area shape="rect" title="数约分" alt="" coords="126,5,246,32"/>
+<area shape="rect" href="fraction_8c.html#a9e671f494de99177fd6a9c7335433ff8" title="比较 返回&#45;1 , 0 , 1" alt="" coords="5,5,78,32"/>
+<area shape="poly" title=" " alt="" coords="111,21,78,21,78,16,111,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f368f8073aeedffc0fc08e7d22f49ff" name="a0f368f8073aeedffc0fc08e7d22f49ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f368f8073aeedffc0fc08e7d22f49ff">&#9670;&#160;</a></span>reduceFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reduceFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a> *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分数约分 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00082">82</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a0f368f8073aeedffc0fc08e7d22f49ff_cgraph.png" border="0" usemap="#afraction_8h_a0f368f8073aeedffc0fc08e7d22f49ff_cgraph" alt=""/></div>
+<map name="afraction_8h_a0f368f8073aeedffc0fc08e7d22f49ff_cgraph" id="afraction_8h_a0f368f8073aeedffc0fc08e7d22f49ff_cgraph">
+<area shape="rect" title="分数约分" alt="" coords="5,31,92,57"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="140,5,224,32"/>
+<area shape="poly" title=" " alt="" coords="92,33,125,27,126,32,93,38"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="147,56,217,83"/>
+<area shape="poly" title=" " alt="" coords="93,50,132,57,131,63,92,55"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_a0f368f8073aeedffc0fc08e7d22f49ff_icgraph.png" border="0" usemap="#afraction_8h_a0f368f8073aeedffc0fc08e7d22f49ff_icgraph" alt=""/></div>
+<map name="afraction_8h_a0f368f8073aeedffc0fc08e7d22f49ff_icgraph" id="afraction_8h_a0f368f8073aeedffc0fc08e7d22f49ff_icgraph">
+<area shape="rect" title="分数约分" alt="" coords="386,195,473,221"/>
+<area shape="rect" href="fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="266,68,334,95"/>
+<area shape="poly" title=" " alt="" coords="402,186,313,97,317,93,406,182"/>
+<area shape="rect" href="radical_8c.html#ad0d381b2735f4ea3f7b6216a0536bc86" title=" " alt="" coords="261,144,338,171"/>
+<area shape="poly" title=" " alt="" coords="379,191,335,174,337,169,381,186"/>
+<area shape="rect" href="fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="268,195,332,221"/>
+<area shape="poly" title=" " alt="" coords="371,211,332,211,332,205,371,205"/>
+<area shape="rect" href="radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title=" " alt="" coords="269,245,330,272"/>
+<area shape="poly" title=" " alt="" coords="381,230,332,249,330,244,379,225"/>
+<area shape="rect" href="fraction_8c.html#a5216e2cb92d69f73df24f3030c6978e0" title="转换int类型到Fraction" alt="" coords="266,296,334,323"/>
+<area shape="poly" title=" " alt="" coords="404,233,340,286,324,298,321,293,337,282,400,229"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="139,5,204,32"/>
+<area shape="poly" title=" " alt="" coords="256,63,199,35,202,30,259,59"/>
+<area shape="rect" href="fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="8,81,79,108"/>
+<area shape="poly" title=" " alt="" coords="251,87,80,96,79,90,251,81"/>
+<area shape="rect" href="fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="137,107,206,133"/>
+<area shape="poly" title=" " alt="" coords="252,98,207,112,205,107,251,93"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="11,5,76,32"/>
+<area shape="poly" title=" " alt="" coords="124,21,76,21,76,16,124,16"/>
+<area shape="poly" title=" " alt="" coords="122,113,79,104,80,99,123,108"/>
+<area shape="rect" href="radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="135,157,208,184"/>
+<area shape="poly" title=" " alt="" coords="253,197,208,184,209,179,254,192"/>
+<area shape="rect" href="fraction_8c.html#a1bc734dd793adf13b48e21d17a29e4f8" title="快速幂" alt="" coords="132,208,211,235"/>
+<area shape="poly" title=" " alt="" coords="253,215,212,220,211,215,253,210"/>
+<area shape="rect" href="radical_8c.html#afa2287c6e6f3f7a44154872f73581c97" title=" " alt="" coords="130,259,213,285"/>
+<area shape="poly" title=" " alt="" coords="260,231,201,261,199,256,257,226"/>
+<area shape="rect" href="radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,157,82,184"/>
+<area shape="poly" title=" " alt="" coords="120,173,82,173,82,168,120,168"/>
+<area shape="rect" href="fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="8,208,79,235"/>
+<area shape="poly" title=" " alt="" coords="117,224,79,224,79,219,117,219"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa9c8c9d78589ee229be2ec3c5d812a9c" name="aa9c8c9d78589ee229be2ec3c5d812a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c8c9d78589ee229be2ec3c5d812a9c">&#9670;&#160;</a></span>subFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> subFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>减法 </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00231">231</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_aa9c8c9d78589ee229be2ec3c5d812a9c_cgraph.png" border="0" usemap="#afraction_8h_aa9c8c9d78589ee229be2ec3c5d812a9c_cgraph" alt=""/></div>
+<map name="afraction_8h_aa9c8c9d78589ee229be2ec3c5d812a9c_cgraph" id="afraction_8h_aa9c8c9d78589ee229be2ec3c5d812a9c_cgraph">
+<area shape="rect" title="减法" alt="" coords="5,31,74,57"/>
+<area shape="rect" href="fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="122,31,190,57"/>
+<area shape="poly" title=" " alt="" coords="74,41,107,41,107,47,74,47"/>
+<area shape="rect" href="fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="246,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="189,35,231,26,232,31,191,40"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="238,56,324,83"/>
+<area shape="poly" title=" " alt="" coords="191,48,224,55,223,60,189,53"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="379,5,450,32"/>
+<area shape="poly" title=" " alt="" coords="317,16,364,16,364,21,317,21"/>
+<area shape="poly" title=" " alt="" coords="318,53,365,35,367,40,320,58"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="372,56,457,83"/>
+<area shape="poly" title=" " alt="" coords="325,67,357,67,357,72,325,72"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="fraction_8h_aa9c8c9d78589ee229be2ec3c5d812a9c_icgraph.png" border="0" usemap="#afraction_8h_aa9c8c9d78589ee229be2ec3c5d812a9c_icgraph" alt=""/></div>
+<map name="afraction_8h_aa9c8c9d78589ee229be2ec3c5d812a9c_icgraph" id="afraction_8h_aa9c8c9d78589ee229be2ec3c5d812a9c_icgraph">
+<area shape="rect" title="减法" alt="" coords="125,5,193,32"/>
+<area shape="rect" href="fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="5,5,77,32"/>
+<area shape="poly" title=" " alt="" coords="110,21,77,21,77,16,110,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c95d6df392c2540284953d695db7cbb" name="a3c95d6df392c2540284953d695db7cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c95d6df392c2540284953d695db7cbb">&#9670;&#160;</a></span>toStrFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_str.html">Str</a> toStrFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>转换Fraction类型到Str </p>
+
+<p class="definition">在文件 <a class="el" href="fraction_8c_source.html">fraction.c</a> 第 <a class="el" href="fraction_8c_source.html#l00101">101</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="fraction_8h.html">fraction.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
+</body>
+</html>

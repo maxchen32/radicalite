@@ -1,0 +1,12 @@
+<map id="addFrac" name="addFrac">
+<area shape="rect" id="Node000001" title="加法" alt="" coords="5,31,74,57"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="130,5,200,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,35,115,26,116,31,74,40"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="122,56,208,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="74,48,108,55,107,60,73,53"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="263,5,333,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="200,16,248,16,248,21,200,21"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="201,53,249,35,250,40,203,58"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="256,56,340,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="209,67,241,67,241,72,209,72"/>
+</map>

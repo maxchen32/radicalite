@@ -1,0 +1,19 @@
+<map id="powFrac" name="powFrac">
+<area shape="rect" id="Node000001" title="乘方" alt="" coords="5,31,76,57"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="132,5,195,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,34,117,25,118,31,76,39"/>
+<area shape="rect" id="Node000006" href="$fraction_8c.html#a1bc734dd793adf13b48e21d17a29e4f8" title="快速幂" alt="" coords="124,56,203,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="76,49,109,56,108,61,75,54"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="372,5,441,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,16,358,16,358,21,195,21"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="498,5,582,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="441,16,483,16,483,21,441,21"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="505,56,575,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="442,29,492,48,490,53,440,34"/>
+<area shape="rect" id="Node000007" href="$fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="251,56,315,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="203,67,236,67,236,72,203,72"/>
+<area shape="rect" id="Node000008" href="$fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="363,56,450,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="316,67,348,67,348,72,316,72"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="443,53,488,35,490,40,445,58"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="450,67,490,67,490,72,450,72"/>
+</map>

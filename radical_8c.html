@@ -1,0 +1,1256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>radicalite: src/radical.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">radicalite
+   </div>
+   <div id="projectbrief">Elemental Fractions, Radicals and Polynomials.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('radical_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">radical.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;wchar.h&gt;</code><br />
+<code>#include &lt;locale.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="radical_8h_source.html">radical.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+radical.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c__incl.png" border="0" usemap="#asrc_2radical_8c" alt=""/></div>
+<map name="asrc_2radical_8c" id="asrc_2radical_8c">
+<area shape="rect" title=" " alt="" coords="265,5,358,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,66,107"/>
+<area shape="poly" title=" " alt="" coords="266,34,81,82,79,77,264,29"/>
+<area shape="rect" title=" " alt="" coords="90,80,152,107"/>
+<area shape="poly" title=" " alt="" coords="279,35,166,78,164,73,277,30"/>
+<area shape="rect" title=" " alt="" coords="176,80,239,107"/>
+<area shape="poly" title=" " alt="" coords="295,35,239,73,236,69,292,30"/>
+<area shape="rect" title=" " alt="" coords="362,155,437,181"/>
+<area shape="poly" title=" " alt="" coords="309,33,299,67,299,87,305,105,324,129,351,146,348,150,321,133,300,108,294,88,294,67,303,31"/>
+<area shape="rect" title=" " alt="" coords="314,80,381,107"/>
+<area shape="poly" title=" " alt="" coords="320,31,337,65,332,68,315,34"/>
+<area shape="rect" title=" " alt="" coords="405,80,471,107"/>
+<area shape="poly" title=" " alt="" coords="335,30,405,70,402,75,332,35"/>
+<area shape="rect" title=" " alt="" coords="495,80,560,107"/>
+<area shape="poly" title=" " alt="" coords="350,30,482,74,480,79,348,35"/>
+<area shape="rect" href="radical_8h.html" title="radical.c的头文件" alt="" coords="584,80,655,107"/>
+<area shape="poly" title=" " alt="" coords="359,28,570,77,569,82,357,33"/>
+<area shape="poly" title=" " alt="" coords="585,109,452,152,450,147,583,104"/>
+<area shape="rect" href="fraction_8h.html" title="fraction.c的头文件" alt="" coords="582,155,657,181"/>
+<area shape="poly" title=" " alt="" coords="622,107,622,140,617,140,617,107"/>
+</map>
+</div>
+</div>
+<p><a href="radical_8c_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad1fe11aca0a5626b5b635d9d3dea5098"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radical.html">Radical</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a> (int up, int down, int in)</td></tr>
+<tr class="separator:ad1fe11aca0a5626b5b635d9d3dea5098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d381b2735f4ea3f7b6216a0536bc86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radical.html">Radical</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#ad0d381b2735f4ea3f7b6216a0536bc86">Frac2Rad</a> (<a class="el" href="struct_fraction.html">Fraction</a> a)</td></tr>
+<tr class="separator:ad0d381b2735f4ea3f7b6216a0536bc86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b61ede71c4d12bb3033df150c1b3dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radical.html">Radical</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#af3b61ede71c4d12bb3033df150c1b3dc">int2Rad</a> (int a)</td></tr>
+<tr class="separator:af3b61ede71c4d12bb3033df150c1b3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cbf0f42d9c7730e04f17283c5a9f874"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a9cbf0f42d9c7730e04f17283c5a9f874">printRad</a> (<a class="el" href="struct_radical.html">Radical</a> a)</td></tr>
+<tr class="separator:a9cbf0f42d9c7730e04f17283c5a9f874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de3abbf07b4230b4c5431d136cc23d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_str.html">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a8de3abbf07b4230b4c5431d136cc23d9">toStrRad</a> (<a class="el" href="struct_radical.html">Radical</a> a)</td></tr>
+<tr class="separator:a8de3abbf07b4230b4c5431d136cc23d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6604043a281955b5a80a0b693b6f6e7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a6604043a281955b5a80a0b693b6f6e7a">pprintRad</a> (<a class="el" href="struct_radical.html">Radical</a> a)</td></tr>
+<tr class="separator:a6604043a281955b5a80a0b693b6f6e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92f83cca79448c0f05983b11ce12cbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radical.html">Radical</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#ac92f83cca79448c0f05983b11ce12cbd">Radsqrt</a> (int radicand)</td></tr>
+<tr class="separator:ac92f83cca79448c0f05983b11ce12cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d969e44570dbabf1b3e862a1c77341"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radical.html">Radical</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a36d969e44570dbabf1b3e862a1c77341">sqrtFrac</a> (<a class="el" href="struct_fraction.html">Fraction</a> a)</td></tr>
+<tr class="separator:a36d969e44570dbabf1b3e862a1c77341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a9c1f8086b6b73af8c9de5c275958b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#ad4a9c1f8086b6b73af8c9de5c275958b">printPoly</a> (<a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:ad4a9c1f8086b6b73af8c9de5c275958b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff2c050df4f7eb1166da265707af0cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a6ff2c050df4f7eb1166da265707af0cc">isequalRad</a> (<a class="el" href="struct_radical.html">Radical</a> a, <a class="el" href="struct_radical.html">Radical</a> b)</td></tr>
+<tr class="separator:a6ff2c050df4f7eb1166da265707af0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24a24cfec9515de58fb1a1c5390740e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radical.html">Radical</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#af24a24cfec9515de58fb1a1c5390740e">divRad</a> (<a class="el" href="struct_radical.html">Radical</a> a, <a class="el" href="struct_radical.html">Radical</a> b)</td></tr>
+<tr class="separator:af24a24cfec9515de58fb1a1c5390740e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d672e8edc7598578f9d22149642356"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radical.html">Radical</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a49d672e8edc7598578f9d22149642356">mulRad</a> (<a class="el" href="struct_radical.html">Radical</a> a, <a class="el" href="struct_radical.html">Radical</a> b)</td></tr>
+<tr class="separator:a49d672e8edc7598578f9d22149642356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cb655bfb4dad804a6ec88eeb219475"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475">addRad</a> (<a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl, <a class="el" href="struct_radical.html">Radical</a> b)</td></tr>
+<tr class="separator:ac5cb655bfb4dad804a6ec88eeb219475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efd562f0be05a19d1f0c1c0b24089b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9">subRad</a> (<a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl, <a class="el" href="struct_radical.html">Radical</a> b)</td></tr>
+<tr class="separator:a5efd562f0be05a19d1f0c1c0b24089b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b9deb43cab94127888cb8a90babaa5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a4b9deb43cab94127888cb8a90babaa5c">gcdPoly</a> (<a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:a4b9deb43cab94127888cb8a90babaa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbcc1cdcbecc81aba0999069f688e238"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#afbcc1cdcbecc81aba0999069f688e238">_PolyIntReduce</a> (<a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl, int *x)</td></tr>
+<tr class="separator:afbcc1cdcbecc81aba0999069f688e238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a77eb2101227370e2f591fffd03409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radical.html">Radical</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a20a77eb2101227370e2f591fffd03409">divintRad</a> (<a class="el" href="struct_radical.html">Radical</a> a, int b)</td></tr>
+<tr class="separator:a20a77eb2101227370e2f591fffd03409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1abc308c085c5eedaa0bd364825dd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9">divintPoly</a> (<a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl, int x)</td></tr>
+<tr class="separator:acf1abc308c085c5eedaa0bd364825dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2287c6e6f3f7a44154872f73581c97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#afa2287c6e6f3f7a44154872f73581c97">squareRad</a> (<a class="el" href="struct_radical.html">Radical</a> a)</td></tr>
+<tr class="separator:afa2287c6e6f3f7a44154872f73581c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af305d0174aace266dac1ea4b4da9ceef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#af305d0174aace266dac1ea4b4da9ceef">initPoly</a> ()</td></tr>
+<tr class="separator:af305d0174aace266dac1ea4b4da9ceef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f620f1a448fa1bc348f8af8ee85020"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#af4f620f1a448fa1bc348f8af8ee85020">destoryPoly</a> (<a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:af4f620f1a448fa1bc348f8af8ee85020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5292c7884f0dee8331791b569fc48921"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a5292c7884f0dee8331791b569fc48921">lenPoly</a> (<a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:a5292c7884f0dee8331791b569fc48921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4cd1ec06aa0382c22fb8c7cabc300f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#acd4cd1ec06aa0382c22fb8c7cabc300f">findkthPoly</a> (int k, <a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:acd4cd1ec06aa0382c22fb8c7cabc300f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14772a1e4621a0f83156ee3f44eee61d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a14772a1e4621a0f83156ee3f44eee61d">findPoly</a> (<a class="el" href="struct_radical.html">Radical</a> x, <a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:a14772a1e4621a0f83156ee3f44eee61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117d83b635d90672c837ae76c9418a5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a117d83b635d90672c837ae76c9418a5a">insertheadPoly</a> (<a class="el" href="struct_radical.html">Radical</a> x, <a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:a117d83b635d90672c837ae76c9418a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2110a15dcc49658540eed464df20a476"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#a2110a15dcc49658540eed464df20a476">insertPoly</a> (<a class="el" href="struct_radical.html">Radical</a> x, int i, <a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:a2110a15dcc49658540eed464df20a476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad0f5c0c53befcdacdba33b7005560e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radical_8c.html#adad0f5c0c53befcdacdba33b7005560e">deletePoly</a> (int i, <a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> ptrl)</td></tr>
+<tr class="separator:adad0f5c0c53befcdacdba33b7005560e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="afbcc1cdcbecc81aba0999069f688e238" name="afbcc1cdcbecc81aba0999069f688e238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbcc1cdcbecc81aba0999069f688e238">&#9670;&#160;</a></span>_PolyIntReduce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> _PolyIntReduce </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00409">409</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_afbcc1cdcbecc81aba0999069f688e238_cgraph.png" border="0" usemap="#aradical_8c_afbcc1cdcbecc81aba0999069f688e238_cgraph" alt=""/></div>
+<map name="aradical_8c_afbcc1cdcbecc81aba0999069f688e238_cgraph" id="aradical_8c_afbcc1cdcbecc81aba0999069f688e238_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,118,32"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="282,5,352,32"/>
+<area shape="poly" title=" " alt="" coords="118,16,267,16,267,21,118,21"/>
+<area shape="rect" href="radical_8c.html#a4b9deb43cab94127888cb8a90babaa5c" title=" " alt="" coords="166,31,234,57"/>
+<area shape="poly" title=" " alt="" coords="119,26,151,32,150,38,118,32"/>
+<area shape="poly" title=" " alt="" coords="234,34,267,27,268,32,235,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac5cb655bfb4dad804a6ec88eeb219475" name="ac5cb655bfb4dad804a6ec88eeb219475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cb655bfb4dad804a6ec88eeb219475">&#9670;&#160;</a></span>addRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> addRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00355">355</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_ac5cb655bfb4dad804a6ec88eeb219475_cgraph.png" border="0" usemap="#aradical_8c_ac5cb655bfb4dad804a6ec88eeb219475_cgraph" alt=""/></div>
+<map name="aradical_8c_ac5cb655bfb4dad804a6ec88eeb219475_cgraph" id="aradical_8c_ac5cb655bfb4dad804a6ec88eeb219475_cgraph">
+<area shape="rect" title=" " alt="" coords="5,107,71,133"/>
+<area shape="rect" href="fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="138,56,207,83"/>
+<area shape="poly" title=" " alt="" coords="70,105,123,85,125,90,72,110"/>
+<area shape="rect" href="radical_8c.html#adad0f5c0c53befcdacdba33b7005560e" title=" " alt="" coords="131,107,214,133"/>
+<area shape="poly" title=" " alt="" coords="71,117,117,117,117,123,71,123"/>
+<area shape="rect" href="radical_8c.html#a117d83b635d90672c837ae76c9418a5a" title=" " alt="" coords="119,157,226,184"/>
+<area shape="poly" title=" " alt="" coords="72,130,122,149,120,154,70,135"/>
+<area shape="rect" href="fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="282,5,352,32"/>
+<area shape="poly" title=" " alt="" coords="206,55,267,33,269,38,208,60"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="274,56,360,83"/>
+<area shape="poly" title=" " alt="" coords="207,67,259,67,259,72,207,72"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="415,5,486,32"/>
+<area shape="poly" title=" " alt="" coords="353,16,400,16,400,21,353,21"/>
+<area shape="poly" title=" " alt="" coords="354,53,401,35,403,40,356,58"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="408,56,493,83"/>
+<area shape="poly" title=" " alt="" coords="361,67,393,67,393,72,361,72"/>
+<area shape="rect" href="radical_8c.html#acd4cd1ec06aa0382c22fb8c7cabc300f" title=" " alt="" coords="275,107,360,133"/>
+<area shape="poly" title=" " alt="" coords="214,117,260,117,260,123,214,123"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_ac5cb655bfb4dad804a6ec88eeb219475_icgraph.png" border="0" usemap="#aradical_8c_ac5cb655bfb4dad804a6ec88eeb219475_icgraph" alt=""/></div>
+<map name="aradical_8c_ac5cb655bfb4dad804a6ec88eeb219475_icgraph" id="aradical_8c_ac5cb655bfb4dad804a6ec88eeb219475_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,184,32"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="104,21,71,21,71,16,104,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adad0f5c0c53befcdacdba33b7005560e" name="adad0f5c0c53befcdacdba33b7005560e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad0f5c0c53befcdacdba33b7005560e">&#9670;&#160;</a></span>deletePoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> deletePoly </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00551">551</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_adad0f5c0c53befcdacdba33b7005560e_cgraph.png" border="0" usemap="#aradical_8c_adad0f5c0c53befcdacdba33b7005560e_cgraph" alt=""/></div>
+<map name="aradical_8c_adad0f5c0c53befcdacdba33b7005560e_cgraph" id="aradical_8c_adad0f5c0c53befcdacdba33b7005560e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,88,32"/>
+<area shape="rect" href="radical_8c.html#acd4cd1ec06aa0382c22fb8c7cabc300f" title=" " alt="" coords="136,5,221,32"/>
+<area shape="poly" title=" " alt="" coords="88,16,120,16,120,21,88,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_adad0f5c0c53befcdacdba33b7005560e_icgraph.png" border="0" usemap="#aradical_8c_adad0f5c0c53befcdacdba33b7005560e_icgraph" alt=""/></div>
+<map name="aradical_8c_adad0f5c0c53befcdacdba33b7005560e_icgraph" id="aradical_8c_adad0f5c0c53befcdacdba33b7005560e_icgraph">
+<area shape="rect" title=" " alt="" coords="232,5,314,32"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="119,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="217,21,184,21,184,16,217,16"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="104,21,71,21,71,16,104,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af4f620f1a448fa1bc348f8af8ee85020" name="af4f620f1a448fa1bc348f8af8ee85020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f620f1a448fa1bc348f8af8ee85020">&#9670;&#160;</a></span>destoryPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destoryPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00461">461</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acf1abc308c085c5eedaa0bd364825dd9" name="acf1abc308c085c5eedaa0bd364825dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1abc308c085c5eedaa0bd364825dd9">&#9670;&#160;</a></span>divintPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> divintPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00428">428</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_acf1abc308c085c5eedaa0bd364825dd9_cgraph.png" border="0" usemap="#aradical_8c_acf1abc308c085c5eedaa0bd364825dd9_cgraph" alt=""/></div>
+<map name="aradical_8c_acf1abc308c085c5eedaa0bd364825dd9_cgraph" id="aradical_8c_acf1abc308c085c5eedaa0bd364825dd9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,82,57"/>
+<area shape="rect" href="radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="130,31,203,57"/>
+<area shape="poly" title=" " alt="" coords="82,41,115,41,115,47,82,47"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="252,5,314,32"/>
+<area shape="poly" title=" " alt="" coords="203,34,237,26,238,31,204,39"/>
+<area shape="rect" href="fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="251,56,315,83"/>
+<area shape="poly" title=" " alt="" coords="204,49,237,57,236,62,203,54"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="372,5,441,32"/>
+<area shape="poly" title=" " alt="" coords="315,16,357,16,357,21,315,21"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="498,5,582,32"/>
+<area shape="poly" title=" " alt="" coords="441,16,483,16,483,21,441,21"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="505,56,575,83"/>
+<area shape="poly" title=" " alt="" coords="442,29,492,48,490,53,440,34"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="363,56,450,83"/>
+<area shape="poly" title=" " alt="" coords="316,67,348,67,348,72,316,72"/>
+<area shape="poly" title=" " alt="" coords="443,53,488,35,490,40,445,58"/>
+<area shape="poly" title=" " alt="" coords="450,67,490,67,490,72,450,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a20a77eb2101227370e2f591fffd03409" name="a20a77eb2101227370e2f591fffd03409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a77eb2101227370e2f591fffd03409">&#9670;&#160;</a></span>divintRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radical.html">Radical</a> divintRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00423">423</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a20a77eb2101227370e2f591fffd03409_cgraph.png" border="0" usemap="#aradical_8c_a20a77eb2101227370e2f591fffd03409_cgraph" alt=""/></div>
+<map name="aradical_8c_a20a77eb2101227370e2f591fffd03409_cgraph" id="aradical_8c_a20a77eb2101227370e2f591fffd03409_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,79,57"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="128,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="78,34,112,26,113,31,79,39"/>
+<area shape="rect" href="fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="127,56,191,83"/>
+<area shape="poly" title=" " alt="" coords="79,49,113,57,112,62,78,54"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="248,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="191,16,233,16,233,21,191,21"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="373,5,458,32"/>
+<area shape="poly" title=" " alt="" coords="317,16,359,16,359,21,317,21"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="380,56,451,83"/>
+<area shape="poly" title=" " alt="" coords="318,29,368,48,366,53,316,34"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="239,56,325,83"/>
+<area shape="poly" title=" " alt="" coords="191,67,224,67,224,72,191,72"/>
+<area shape="poly" title=" " alt="" coords="319,53,364,35,366,40,321,58"/>
+<area shape="poly" title=" " alt="" coords="326,67,365,67,365,72,326,72"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a20a77eb2101227370e2f591fffd03409_icgraph.png" border="0" usemap="#aradical_8c_a20a77eb2101227370e2f591fffd03409_icgraph" alt=""/></div>
+<map name="aradical_8c_a20a77eb2101227370e2f591fffd03409_icgraph" id="aradical_8c_a20a77eb2101227370e2f591fffd03409_icgraph">
+<area shape="rect" title=" " alt="" coords="130,5,203,32"/>
+<area shape="rect" href="radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,5,82,32"/>
+<area shape="poly" title=" " alt="" coords="115,21,82,21,82,16,115,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af24a24cfec9515de58fb1a1c5390740e" name="af24a24cfec9515de58fb1a1c5390740e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24a24cfec9515de58fb1a1c5390740e">&#9670;&#160;</a></span>divRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radical.html">Radical</a> divRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00335">335</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_af24a24cfec9515de58fb1a1c5390740e_cgraph.png" border="0" usemap="#aradical_8c_af24a24cfec9515de58fb1a1c5390740e_cgraph" alt=""/></div>
+<map name="aradical_8c_af24a24cfec9515de58fb1a1c5390740e_cgraph" id="aradical_8c_af24a24cfec9515de58fb1a1c5390740e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,65,83"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="113,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="64,53,99,36,101,41,66,58"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="223,56,291,83"/>
+<area shape="poly" title=" " alt="" coords="65,67,208,67,208,72,65,72"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="346,107,417,133"/>
+<area shape="poly" title=" " alt="" coords="65,71,332,110,331,115,65,76"/>
+<area shape="poly" title=" " alt="" coords="177,30,214,47,211,52,174,35"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="339,56,424,83"/>
+<area shape="poly" title=" " alt="" coords="292,67,324,67,324,72,292,72"/>
+<area shape="poly" title=" " alt="" coords="293,81,335,98,332,103,291,86"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acd4cd1ec06aa0382c22fb8c7cabc300f" name="acd4cd1ec06aa0382c22fb8c7cabc300f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4cd1ec06aa0382c22fb8c7cabc300f">&#9670;&#160;</a></span>findkthPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> findkthPoly </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00485">485</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_acd4cd1ec06aa0382c22fb8c7cabc300f_icgraph.png" border="0" usemap="#aradical_8c_acd4cd1ec06aa0382c22fb8c7cabc300f_icgraph" alt=""/></div>
+<map name="aradical_8c_acd4cd1ec06aa0382c22fb8c7cabc300f_icgraph" id="aradical_8c_acd4cd1ec06aa0382c22fb8c7cabc300f_icgraph">
+<area shape="rect" title=" " alt="" coords="362,31,448,57"/>
+<area shape="rect" href="radical_8c.html#adad0f5c0c53befcdacdba33b7005560e" title=" " alt="" coords="232,5,314,32"/>
+<area shape="poly" title=" " alt="" coords="347,36,314,29,315,24,348,30"/>
+<area shape="rect" href="radical_8c.html#a2110a15dcc49658540eed464df20a476" title=" " alt="" coords="234,56,313,83"/>
+<area shape="poly" title=" " alt="" coords="348,58,314,64,313,59,347,52"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="119,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="217,21,184,21,184,16,217,16"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="104,21,71,21,71,16,104,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a14772a1e4621a0f83156ee3f44eee61d" name="a14772a1e4621a0f83156ee3f44eee61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14772a1e4621a0f83156ee3f44eee61d">&#9670;&#160;</a></span>findPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> findPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00498">498</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a14772a1e4621a0f83156ee3f44eee61d_cgraph.png" border="0" usemap="#aradical_8c_a14772a1e4621a0f83156ee3f44eee61d_cgraph" alt=""/></div>
+<map name="aradical_8c_a14772a1e4621a0f83156ee3f44eee61d_cgraph" id="aradical_8c_a14772a1e4621a0f83156ee3f44eee61d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,73,32"/>
+<area shape="rect" href="radical_8c.html#a6ff2c050df4f7eb1166da265707af0cc" title=" " alt="" coords="121,5,206,32"/>
+<area shape="poly" title=" " alt="" coords="73,16,106,16,106,21,73,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0d381b2735f4ea3f7b6216a0536bc86" name="ad0d381b2735f4ea3f7b6216a0536bc86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d381b2735f4ea3f7b6216a0536bc86">&#9670;&#160;</a></span>Frac2Rad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radical.html">Radical</a> Frac2Rad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00023">23</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_ad0d381b2735f4ea3f7b6216a0536bc86_cgraph.png" border="0" usemap="#aradical_8c_ad0d381b2735f4ea3f7b6216a0536bc86_cgraph" alt=""/></div>
+<map name="aradical_8c_ad0d381b2735f4ea3f7b6216a0536bc86_cgraph" id="aradical_8c_ad0d381b2735f4ea3f7b6216a0536bc86_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,83,57"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="131,31,217,57"/>
+<area shape="poly" title=" " alt="" coords="83,41,115,41,115,47,83,47"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="265,5,349,32"/>
+<area shape="poly" title=" " alt="" coords="217,33,250,27,251,32,218,38"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="272,56,342,83"/>
+<area shape="poly" title=" " alt="" coords="218,50,258,57,257,63,217,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b9deb43cab94127888cb8a90babaa5c" name="a4b9deb43cab94127888cb8a90babaa5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b9deb43cab94127888cb8a90babaa5c">&#9670;&#160;</a></span>gcdPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gcdPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00390">390</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a4b9deb43cab94127888cb8a90babaa5c_cgraph.png" border="0" usemap="#aradical_8c_a4b9deb43cab94127888cb8a90babaa5c_cgraph" alt=""/></div>
+<map name="aradical_8c_a4b9deb43cab94127888cb8a90babaa5c_cgraph" id="aradical_8c_a4b9deb43cab94127888cb8a90babaa5c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,74,32"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="122,5,192,32"/>
+<area shape="poly" title=" " alt="" coords="74,16,107,16,107,21,74,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a4b9deb43cab94127888cb8a90babaa5c_icgraph.png" border="0" usemap="#aradical_8c_a4b9deb43cab94127888cb8a90babaa5c_icgraph" alt=""/></div>
+<map name="aradical_8c_a4b9deb43cab94127888cb8a90babaa5c_icgraph" id="aradical_8c_a4b9deb43cab94127888cb8a90babaa5c_icgraph">
+<area shape="rect" title=" " alt="" coords="166,5,234,32"/>
+<area shape="rect" href="radical_8c.html#afbcc1cdcbecc81aba0999069f688e238" title=" " alt="" coords="5,5,118,32"/>
+<area shape="poly" title=" " alt="" coords="151,21,118,21,118,16,151,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af305d0174aace266dac1ea4b4da9ceef" name="af305d0174aace266dac1ea4b4da9ceef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af305d0174aace266dac1ea4b4da9ceef">&#9670;&#160;</a></span>initPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> initPoly </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00452">452</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad1fe11aca0a5626b5b635d9d3dea5098" name="ad1fe11aca0a5626b5b635d9d3dea5098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1fe11aca0a5626b5b635d9d3dea5098">&#9670;&#160;</a></span>initRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radical.html">Radical</a> initRad </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>up</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>down</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>in</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00011">11</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_ad1fe11aca0a5626b5b635d9d3dea5098_cgraph.png" border="0" usemap="#aradical_8c_ad1fe11aca0a5626b5b635d9d3dea5098_cgraph" alt=""/></div>
+<map name="aradical_8c_ad1fe11aca0a5626b5b635d9d3dea5098_cgraph" id="aradical_8c_ad1fe11aca0a5626b5b635d9d3dea5098_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,67,83"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="124,56,192,83"/>
+<area shape="poly" title=" " alt="" coords="67,67,109,67,109,72,67,72"/>
+<area shape="rect" href="radical_8c.html#ac92f83cca79448c0f05983b11ce12cbd" title=" " alt="" coords="125,107,191,133"/>
+<area shape="poly" title=" " alt="" coords="68,79,112,98,110,103,66,84"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="115,5,201,32"/>
+<area shape="poly" title=" " alt="" coords="66,54,110,36,112,41,68,59"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="249,5,333,32"/>
+<area shape="poly" title=" " alt="" coords="192,54,239,35,241,40,193,59"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="256,56,326,83"/>
+<area shape="poly" title=" " alt="" coords="192,67,241,67,241,72,192,72"/>
+<area shape="poly" title=" " alt="" coords="202,16,234,16,234,21,202,21"/>
+<area shape="poly" title=" " alt="" coords="196,30,243,48,242,53,194,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a117d83b635d90672c837ae76c9418a5a" name="a117d83b635d90672c837ae76c9418a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117d83b635d90672c837ae76c9418a5a">&#9670;&#160;</a></span>insertheadPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> insertheadPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00520">520</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a117d83b635d90672c837ae76c9418a5a_icgraph.png" border="0" usemap="#aradical_8c_a117d83b635d90672c837ae76c9418a5a_icgraph" alt=""/></div>
+<map name="aradical_8c_a117d83b635d90672c837ae76c9418a5a_icgraph" id="aradical_8c_a117d83b635d90672c837ae76c9418a5a_icgraph">
+<area shape="rect" title=" " alt="" coords="232,5,339,32"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="119,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="217,21,185,21,185,16,217,16"/>
+<area shape="rect" href="radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="104,21,71,21,71,16,104,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2110a15dcc49658540eed464df20a476" name="a2110a15dcc49658540eed464df20a476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2110a15dcc49658540eed464df20a476">&#9670;&#160;</a></span>insertPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> insertPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00535">535</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a2110a15dcc49658540eed464df20a476_cgraph.png" border="0" usemap="#aradical_8c_a2110a15dcc49658540eed464df20a476_cgraph" alt=""/></div>
+<map name="aradical_8c_a2110a15dcc49658540eed464df20a476_cgraph" id="aradical_8c_a2110a15dcc49658540eed464df20a476_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,85,32"/>
+<area shape="rect" href="radical_8c.html#acd4cd1ec06aa0382c22fb8c7cabc300f" title=" " alt="" coords="133,5,218,32"/>
+<area shape="poly" title=" " alt="" coords="85,16,118,16,118,21,85,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3b61ede71c4d12bb3033df150c1b3dc" name="af3b61ede71c4d12bb3033df150c1b3dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b61ede71c4d12bb3033df150c1b3dc">&#9670;&#160;</a></span>int2Rad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radical.html">Radical</a> int2Rad </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6ff2c050df4f7eb1166da265707af0cc" name="a6ff2c050df4f7eb1166da265707af0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ff2c050df4f7eb1166da265707af0cc">&#9670;&#160;</a></span>isequalRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isequalRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00292">292</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a6ff2c050df4f7eb1166da265707af0cc_icgraph.png" border="0" usemap="#aradical_8c_a6ff2c050df4f7eb1166da265707af0cc_icgraph" alt=""/></div>
+<map name="aradical_8c_a6ff2c050df4f7eb1166da265707af0cc_icgraph" id="aradical_8c_a6ff2c050df4f7eb1166da265707af0cc_icgraph">
+<area shape="rect" title=" " alt="" coords="121,5,206,32"/>
+<area shape="rect" href="radical_8c.html#a14772a1e4621a0f83156ee3f44eee61d" title=" " alt="" coords="5,5,73,32"/>
+<area shape="poly" title=" " alt="" coords="106,21,73,21,73,16,106,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5292c7884f0dee8331791b569fc48921" name="a5292c7884f0dee8331791b569fc48921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5292c7884f0dee8331791b569fc48921">&#9670;&#160;</a></span>lenPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lenPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00475">475</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a49d672e8edc7598578f9d22149642356" name="a49d672e8edc7598578f9d22149642356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d672e8edc7598578f9d22149642356">&#9670;&#160;</a></span>mulRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radical.html">Radical</a> mulRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00346">346</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a49d672e8edc7598578f9d22149642356_cgraph.png" border="0" usemap="#aradical_8c_a49d672e8edc7598578f9d22149642356_cgraph" alt=""/></div>
+<map name="aradical_8c_a49d672e8edc7598578f9d22149642356_cgraph" id="aradical_8c_a49d672e8edc7598578f9d22149642356_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,71,83"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="119,31,187,57"/>
+<area shape="poly" title=" " alt="" coords="71,60,103,52,104,57,72,65"/>
+<area shape="rect" href="radical_8c.html#ac92f83cca79448c0f05983b11ce12cbd" title=" " alt="" coords="120,81,186,108"/>
+<area shape="poly" title=" " alt="" coords="72,74,106,82,105,87,71,79"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="235,5,319,32"/>
+<area shape="poly" title=" " alt="" coords="187,34,220,28,221,33,188,40"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="242,56,312,83"/>
+<area shape="poly" title=" " alt="" coords="188,48,228,57,227,62,187,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6604043a281955b5a80a0b693b6f6e7a" name="a6604043a281955b5a80a0b693b6f6e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6604043a281955b5a80a0b693b6f6e7a">&#9670;&#160;</a></span>pprintRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pprintRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00087">87</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a6604043a281955b5a80a0b693b6f6e7a_cgraph.png" border="0" usemap="#aradical_8c_a6604043a281955b5a80a0b693b6f6e7a_cgraph" alt=""/></div>
+<map name="aradical_8c_a6604043a281955b5a80a0b693b6f6e7a_cgraph" id="aradical_8c_a6604043a281955b5a80a0b693b6f6e7a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,82,32"/>
+<area shape="rect" href="fraction_8c.html#abe95e092c8a18ab23b80f1804ed41290" title="数的绝对值的长度" alt="" coords="257,5,355,32"/>
+<area shape="poly" title=" " alt="" coords="82,16,242,16,242,21,82,21"/>
+<area shape="rect" href="fraction_8c.html#a3a0378701d8ee5c3dc54827e25f566a4" title="（实验性的）美观打印" alt="" coords="130,31,209,57"/>
+<area shape="poly" title=" " alt="" coords="83,24,115,30,114,36,82,29"/>
+<area shape="poly" title=" " alt="" coords="209,34,242,28,243,33,210,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad4a9c1f8086b6b73af8c9de5c275958b" name="ad4a9c1f8086b6b73af8c9de5c275958b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a9c1f8086b6b73af8c9de5c275958b">&#9670;&#160;</a></span>printPoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00252">252</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9cbf0f42d9c7730e04f17283c5a9f874" name="a9cbf0f42d9c7730e04f17283c5a9f874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cbf0f42d9c7730e04f17283c5a9f874">&#9670;&#160;</a></span>printRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac92f83cca79448c0f05983b11ce12cbd" name="ac92f83cca79448c0f05983b11ce12cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac92f83cca79448c0f05983b11ce12cbd">&#9670;&#160;</a></span>Radsqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radical.html">Radical</a> Radsqrt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>radicand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00220">220</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_ac92f83cca79448c0f05983b11ce12cbd_icgraph.png" border="0" usemap="#aradical_8c_ac92f83cca79448c0f05983b11ce12cbd_icgraph" alt=""/></div>
+<map name="aradical_8c_ac92f83cca79448c0f05983b11ce12cbd_icgraph" id="aradical_8c_ac92f83cca79448c0f05983b11ce12cbd_icgraph">
+<area shape="rect" title=" " alt="" coords="123,56,189,83"/>
+<area shape="rect" href="radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title=" " alt="" coords="9,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="109,52,70,34,72,30,111,47"/>
+<area shape="rect" href="radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="7,56,73,83"/>
+<area shape="poly" title=" " alt="" coords="108,72,73,72,73,67,108,67"/>
+<area shape="rect" href="radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title=" " alt="" coords="5,107,75,133"/>
+<area shape="poly" title=" " alt="" coords="111,92,73,109,71,104,109,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a36d969e44570dbabf1b3e862a1c77341" name="a36d969e44570dbabf1b3e862a1c77341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d969e44570dbabf1b3e862a1c77341">&#9670;&#160;</a></span>sqrtFrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radical.html">Radical</a> sqrtFrac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fraction.html">Fraction</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00243">243</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a36d969e44570dbabf1b3e862a1c77341_cgraph.png" border="0" usemap="#aradical_8c_a36d969e44570dbabf1b3e862a1c77341_cgraph" alt=""/></div>
+<map name="aradical_8c_a36d969e44570dbabf1b3e862a1c77341_cgraph" id="aradical_8c_a36d969e44570dbabf1b3e862a1c77341_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,75,83"/>
+<area shape="rect" href="fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="125,5,187,32"/>
+<area shape="poly" title=" " alt="" coords="71,53,110,36,112,41,73,58"/>
+<area shape="rect" href="fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="237,31,305,57"/>
+<area shape="poly" title=" " alt="" coords="75,63,222,47,223,52,75,68"/>
+<area shape="rect" href="radical_8c.html#ac92f83cca79448c0f05983b11ce12cbd" title=" " alt="" coords="123,107,189,133"/>
+<area shape="poly" title=" " alt="" coords="73,81,111,98,109,103,71,86"/>
+<area shape="poly" title=" " alt="" coords="188,23,223,31,222,36,187,28"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="353,5,438,32"/>
+<area shape="poly" title=" " alt="" coords="305,34,338,28,339,33,306,40"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="360,56,431,83"/>
+<area shape="poly" title=" " alt="" coords="306,48,346,57,345,62,305,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afa2287c6e6f3f7a44154872f73581c97" name="afa2287c6e6f3f7a44154872f73581c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa2287c6e6f3f7a44154872f73581c97">&#9670;&#160;</a></span>squareRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fraction.html">Fraction</a> squareRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00440">440</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_afa2287c6e6f3f7a44154872f73581c97_cgraph.png" border="0" usemap="#aradical_8c_afa2287c6e6f3f7a44154872f73581c97_cgraph" alt=""/></div>
+<map name="aradical_8c_afa2287c6e6f3f7a44154872f73581c97_cgraph" id="aradical_8c_afa2287c6e6f3f7a44154872f73581c97_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,89,57"/>
+<area shape="rect" href="fraction_8c.html#adc31b7b9bb7b17ea51632d1234ed09a4" title="初始化" alt="" coords="137,31,201,57"/>
+<area shape="poly" title=" " alt="" coords="89,41,121,41,121,47,89,47"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="249,31,335,57"/>
+<area shape="poly" title=" " alt="" coords="201,41,234,41,234,47,201,47"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="383,5,468,32"/>
+<area shape="poly" title=" " alt="" coords="335,33,368,27,369,32,336,38"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="390,56,461,83"/>
+<area shape="poly" title=" " alt="" coords="336,50,376,57,375,63,335,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5efd562f0be05a19d1f0c1c0b24089b9" name="a5efd562f0be05a19d1f0c1c0b24089b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5efd562f0be05a19d1f0c1c0b24089b9">&#9670;&#160;</a></span>subRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a> subRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="radical_8h.html#a5551411542979e543b85dc6998c18819">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>ptrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00386">386</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="radical_8c_a5efd562f0be05a19d1f0c1c0b24089b9_cgraph.png" border="0" usemap="#aradical_8c_a5efd562f0be05a19d1f0c1c0b24089b9_cgraph" alt=""/></div>
+<map name="aradical_8c_a5efd562f0be05a19d1f0c1c0b24089b9_cgraph" id="aradical_8c_a5efd562f0be05a19d1f0c1c0b24089b9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,107,71,133"/>
+<area shape="rect" href="radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="119,107,184,133"/>
+<area shape="poly" title=" " alt="" coords="71,117,104,117,104,123,71,123"/>
+<area shape="rect" href="fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="252,56,320,83"/>
+<area shape="poly" title=" " alt="" coords="184,105,236,85,238,90,185,110"/>
+<area shape="rect" href="radical_8c.html#adad0f5c0c53befcdacdba33b7005560e" title=" " alt="" coords="245,107,327,133"/>
+<area shape="poly" title=" " alt="" coords="185,117,230,117,230,123,185,123"/>
+<area shape="rect" href="radical_8c.html#a117d83b635d90672c837ae76c9418a5a" title=" " alt="" coords="232,157,339,184"/>
+<area shape="poly" title=" " alt="" coords="185,130,235,149,234,154,184,135"/>
+<area shape="rect" href="fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="395,5,466,32"/>
+<area shape="poly" title=" " alt="" coords="319,55,381,33,383,38,321,60"/>
+<area shape="rect" href="fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="387,56,474,83"/>
+<area shape="poly" title=" " alt="" coords="320,67,372,67,372,72,320,72"/>
+<area shape="rect" href="fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="529,5,599,32"/>
+<area shape="poly" title=" " alt="" coords="466,16,514,16,514,21,466,21"/>
+<area shape="poly" title=" " alt="" coords="467,53,514,35,516,40,469,58"/>
+<area shape="rect" href="fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="522,56,606,83"/>
+<area shape="poly" title=" " alt="" coords="474,67,507,67,507,72,474,72"/>
+<area shape="rect" href="radical_8c.html#acd4cd1ec06aa0382c22fb8c7cabc300f" title=" " alt="" coords="388,107,473,133"/>
+<area shape="poly" title=" " alt="" coords="327,117,373,117,373,123,327,123"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8de3abbf07b4230b4c5431d136cc23d9" name="a8de3abbf07b4230b4c5431d136cc23d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de3abbf07b4230b4c5431d136cc23d9">&#9670;&#160;</a></span>toStrRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_str.html">Str</a> toStrRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radical.html">Radical</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="radical_8c_source.html">radical.c</a> 第 <a class="el" href="radical_8c_source.html#l00063">63</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="radical_8c.html">radical.c</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
+</body>
+</html>

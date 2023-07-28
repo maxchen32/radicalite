@@ -1,0 +1,13 @@
+<map id="divRad" name="divRad">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,65,83"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="113,5,175,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,53,99,36,101,41,66,58"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="223,56,291,83"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="65,67,208,67,208,72,65,72"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="346,107,417,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="65,71,332,110,331,115,65,76"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="177,30,214,47,211,52,174,35"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="339,56,424,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="292,67,324,67,324,72,292,72"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="293,81,335,98,332,103,291,86"/>
+</map>

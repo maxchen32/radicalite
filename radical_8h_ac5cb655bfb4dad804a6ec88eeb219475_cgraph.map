@@ -1,0 +1,20 @@
+<map id="addRad" name="addRad">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,107,71,133"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="138,56,207,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,105,123,85,125,90,72,110"/>
+<area shape="rect" id="Node000007" href="$radical_8c.html#adad0f5c0c53befcdacdba33b7005560e" title=" " alt="" coords="131,107,214,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="71,117,117,117,117,123,71,123"/>
+<area shape="rect" id="Node000009" href="$radical_8c.html#a117d83b635d90672c837ae76c9418a5a" title=" " alt="" coords="119,157,226,184"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="72,130,122,149,120,154,70,135"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="282,5,352,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="206,55,267,33,269,38,208,60"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="274,56,360,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="207,67,259,67,259,72,207,72"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="415,5,486,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="353,16,400,16,400,21,353,21"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="354,53,401,35,403,40,356,58"/>
+<area shape="rect" id="Node000006" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="408,56,493,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="361,67,393,67,393,72,361,72"/>
+<area shape="rect" id="Node000008" href="$radical_8c.html#acd4cd1ec06aa0382c22fb8c7cabc300f" title=" " alt="" coords="275,107,360,133"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="214,117,260,117,260,123,214,123"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="calcFrac" name="calcFrac">
+<area shape="rect" id="Node000001" title="运算器" alt="" coords="5,88,77,115"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="241,37,309,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,85,87,65,124,48,177,40,226,41,226,47,177,46,125,53,89,69,60,90"/>
+<area shape="rect" id="Node000007" href="$fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="128,164,190,191"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="65,113,126,153,123,158,62,117"/>
+<area shape="rect" id="Node000008" href="$fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="241,145,309,172"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="78,107,227,144,226,149,76,113"/>
+<area shape="rect" id="Node000009" href="$fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="125,63,193,89"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="76,91,109,84,111,89,77,96"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#a1d8c0c8f9619d98eb41aea66e753502d" title="最小公倍数" alt="" coords="365,5,436,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="309,40,350,29,352,34,310,45"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#a0f368f8073aeedffc0fc08e7d22f49ff" title="分数约分" alt="" coords="357,56,444,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="310,53,343,58,342,63,309,58"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="499,56,569,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="437,29,486,48,484,53,435,34"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="444,67,484,67,484,72,444,72"/>
+<area shape="rect" id="Node000006" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="492,132,576,159"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="427,81,498,122,495,127,424,86"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="190,170,226,164,227,169,191,175"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="309,144,484,84,486,89,311,150"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="310,154,477,146,477,151,310,160"/>
+<area shape="poly" id="edge13_Node000009_Node000002" title=" " alt="" coords="193,66,226,59,227,64,194,71"/>
+</map>

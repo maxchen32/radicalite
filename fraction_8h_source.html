@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>radicalite: include/fraction.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">radicalite
+   </div>
+   <div id="projectbrief">Elemental Fractions, Radicals and Polynomials.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('fraction_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">fraction.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="fraction_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef _FRACTION_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define _FRACTION_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="fraction_8h.html#a8d4bd3526c3773f165ff33095c2bc4ce">   13</a></span><span class="preprocessor">#define TYPE_STR_LEN 45 </span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="fraction_8h.html#aacc3ee1a7f283f8ef65cea31f4436a95">   16</a></span><span class="preprocessor">#define MAX(x, y)  ({\</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">typeof(x) _x = x;\</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">typeof(y) _y = y;\</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">(void)(&amp;_x == &amp;_y);\</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">_x &gt; _y ? _x : _y;\</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">})</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="fraction_8h.html#a74e75242132eaabbc1c512488a135926">   24</a></span><span class="preprocessor">#define MIN(x, y)  ({\</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">typeof(x) _x = x;\</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">typeof(y) _y = y;\</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">(void)(&amp;_x == &amp;_y);\</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">_x &lt; _y ? _x : _y;\</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">})</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="fraction_8h.html#aea6ce5b6dc27dc40a90fe0b0453ae567">   31</a></span><span class="preprocessor">#define Fraction0() initFrac(0, 1)</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="fraction_8h.html#a1cd6e3fd8c0a85d9df7b98a6263739e3">   32</a></span><span class="preprocessor">#define FractionN(up) initFrac((up), 1)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="fraction_8h.html#a2961f7b76dce3c9885073184d72a6df2">   33</a></span><span class="preprocessor">#define Fraction(up, down) initFrac((up), (down))</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="fraction_8h.html#af6e396818aa818da767ee2814142aebe">   34</a></span><span class="preprocessor">#define iszeroFrac(a) ((a).up == 0 ? 1 : 0)</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_fraction.html">   37</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_fraction.html">Fraction</a>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_fraction.html#a53fd293fef6a860c8cb2769026e5d4b6">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_fraction.html#a53fd293fef6a860c8cb2769026e5d4b6">up</a>;             </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_fraction.html#aac8fc1be53dcc0753b735f20510be9d4">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_fraction.html#aac8fc1be53dcc0753b735f20510be9d4">down</a>;           </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="fraction_8h.html#ad8205402a45a5d73f31b7d3b66d23fcb">   40</a></span>} <a class="code hl_define" href="fraction_8h.html#a2961f7b76dce3c9885073184d72a6df2">Fraction</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_str.html">   43</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_str.html">Str</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_str.html#ad138d20196ee798479c44e3bc324085f">   44</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_str.html#ad138d20196ee798479c44e3bc324085f">s</a>[<a class="code hl_define" href="fraction_8h.html#a8d4bd3526c3773f165ff33095c2bc4ce">TYPE_STR_LEN</a>];   </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="fraction_8h.html#a839ac354acf276a655aea420f6133406">   45</a></span>}<a class="code hl_struct" href="struct_str.html">Str</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// 数学 math</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">int</span>       <a class="code hl_function" href="fraction_8h.html#ab7f30cc720744dc052d8c2c287b228e7">gcd_frac</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b);                       </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">int</span>       <a class="code hl_function" href="fraction_8h.html#a1d8c0c8f9619d98eb41aea66e753502d">lcm_frac</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b);                       </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a>  <a class="code hl_function" href="fraction_8h.html#a1bc734dd793adf13b48e21d17a29e4f8">qpow_frac</a>(<span class="keywordtype">int</span> base, <span class="keywordtype">int</span> expt);                </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span>      <a class="code hl_function" href="fraction_8h.html#a7a6c894be2e557622d4d93f770600c6b">reduce_num_frac</a>(<span class="keywordtype">int</span>* a, <span class="keywordtype">int</span>* b);      </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">int</span>       <a class="code hl_function" href="fraction_8h.html#abe95e092c8a18ab23b80f1804ed41290">num_len_frac</a>(<span class="keywordtype">int</span> n);                  </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// 工具 tool</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a> <a class="code hl_function" href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a>(<span class="keywordtype">int</span> up ,<span class="keywordtype">int</span> down);       </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a> <a class="code hl_function" href="fraction_8h.html#a5216e2cb92d69f73df24f3030c6978e0">int2Frac</a>(<span class="keywordtype">int</span> up);                  </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span>     <a class="code hl_function" href="fraction_8h.html#a6956d0da839b32d449ade075c2e4fa80">fixsignFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a>* a);              </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span>     <a class="code hl_function" href="fraction_8h.html#a0f368f8073aeedffc0fc08e7d22f49ff">reduceFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a>* a);               </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span>     <a class="code hl_function" href="fraction_8h.html#a0f912db555f7d9a575e26493e4f90e77">printFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a);    </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><a class="code hl_struct" href="struct_str.html">Str</a>      <a class="code hl_function" href="fraction_8h.html#a3c95d6df392c2540284953d695db7cbb">toStrFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a);     </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span>     <a class="code hl_function" href="fraction_8h.html#a3a0378701d8ee5c3dc54827e25f566a4">pprintFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a);   </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">int</span>      <a class="code hl_function" href="fraction_8h.html#a9e671f494de99177fd6a9c7335433ff8">cmpFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a, <a class="code hl_struct" href="struct_fraction.html">Fraction</a> b);       </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a> <a class="code hl_function" href="fraction_8h.html#aa5ac94367d3f94c0293cce94b6ae592b">calcFrac</a>(<span class="keywordtype">char</span> myope, ...);               </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// 运算 operator</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a> <a class="code hl_function" href="fraction_8h.html#a11d78608db5f9250a7a9cee8b037a2fb">addFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a, <a class="code hl_struct" href="struct_fraction.html">Fraction</a> b);   </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a> <a class="code hl_function" href="fraction_8h.html#aa9c8c9d78589ee229be2ec3c5d812a9c">subFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a, <a class="code hl_struct" href="struct_fraction.html">Fraction</a> b);   </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a> <a class="code hl_function" href="fraction_8h.html#a06cbb9a050a38ed45844da8074321b8f">mulFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a, <a class="code hl_struct" href="struct_fraction.html">Fraction</a> b);   </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a> <a class="code hl_function" href="fraction_8h.html#aab15376ccb388421a906012634ef7ef9">divFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a, <a class="code hl_struct" href="struct_fraction.html">Fraction</a> b);   </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><a class="code hl_struct" href="struct_fraction.html">Fraction</a> <a class="code hl_function" href="fraction_8h.html#afc1a426ece13a0a55d0e559dbe42b5e7">powFrac</a>(<a class="code hl_struct" href="struct_fraction.html">Fraction</a> a, <span class="keywordtype">int</span> expt);     </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="ttc" id="afraction_8h_html_a06cbb9a050a38ed45844da8074321b8f"><div class="ttname"><a href="fraction_8h.html#a06cbb9a050a38ed45844da8074321b8f">mulFrac</a></div><div class="ttdeci">Fraction mulFrac(Fraction a, Fraction b)</div><div class="ttdoc">乘法</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00235">fraction.c:235</a></div></div>
+<div class="ttc" id="afraction_8h_html_a0f368f8073aeedffc0fc08e7d22f49ff"><div class="ttname"><a href="fraction_8h.html#a0f368f8073aeedffc0fc08e7d22f49ff">reduceFrac</a></div><div class="ttdeci">void reduceFrac(Fraction *a)</div><div class="ttdoc">分数约分</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00082">fraction.c:82</a></div></div>
+<div class="ttc" id="afraction_8h_html_a0f912db555f7d9a575e26493e4f90e77"><div class="ttname"><a href="fraction_8h.html#a0f912db555f7d9a575e26493e4f90e77">printFrac</a></div><div class="ttdeci">void printFrac(Fraction a)</div><div class="ttdoc">打印</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00093">fraction.c:93</a></div></div>
+<div class="ttc" id="afraction_8h_html_a11d78608db5f9250a7a9cee8b037a2fb"><div class="ttname"><a href="fraction_8h.html#a11d78608db5f9250a7a9cee8b037a2fb">addFrac</a></div><div class="ttdeci">Fraction addFrac(Fraction a, Fraction b)</div><div class="ttdoc">加法</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00224">fraction.c:224</a></div></div>
+<div class="ttc" id="afraction_8h_html_a1bc734dd793adf13b48e21d17a29e4f8"><div class="ttname"><a href="fraction_8h.html#a1bc734dd793adf13b48e21d17a29e4f8">qpow_frac</a></div><div class="ttdeci">Fraction qpow_frac(int base, int expt)</div><div class="ttdoc">快速幂</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00034">fraction.c:34</a></div></div>
+<div class="ttc" id="afraction_8h_html_a1d8c0c8f9619d98eb41aea66e753502d"><div class="ttname"><a href="fraction_8h.html#a1d8c0c8f9619d98eb41aea66e753502d">lcm_frac</a></div><div class="ttdeci">int lcm_frac(int a, int b)</div><div class="ttdoc">最小公倍数</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00031">fraction.c:31</a></div></div>
+<div class="ttc" id="afraction_8h_html_a2961f7b76dce3c9885073184d72a6df2"><div class="ttname"><a href="fraction_8h.html#a2961f7b76dce3c9885073184d72a6df2">Fraction</a></div><div class="ttdeci">#define Fraction(up, down)</div><div class="ttdef"><b>Definition</b> <a href="fraction_8h_source.html#l00033">fraction.h:33</a></div></div>
+<div class="ttc" id="afraction_8h_html_a3a0378701d8ee5c3dc54827e25f566a4"><div class="ttname"><a href="fraction_8h.html#a3a0378701d8ee5c3dc54827e25f566a4">pprintFrac</a></div><div class="ttdeci">void pprintFrac(Fraction a)</div><div class="ttdoc">（实验性的）美观打印</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00119">fraction.c:119</a></div></div>
+<div class="ttc" id="afraction_8h_html_a3c95d6df392c2540284953d695db7cbb"><div class="ttname"><a href="fraction_8h.html#a3c95d6df392c2540284953d695db7cbb">toStrFrac</a></div><div class="ttdeci">Str toStrFrac(Fraction a)</div><div class="ttdoc">转换Fraction类型到Str</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00101">fraction.c:101</a></div></div>
+<div class="ttc" id="afraction_8h_html_a5216e2cb92d69f73df24f3030c6978e0"><div class="ttname"><a href="fraction_8h.html#a5216e2cb92d69f73df24f3030c6978e0">int2Frac</a></div><div class="ttdeci">Fraction int2Frac(int up)</div><div class="ttdoc">转换int类型到Fraction</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00060">fraction.c:60</a></div></div>
+<div class="ttc" id="afraction_8h_html_a6956d0da839b32d449ade075c2e4fa80"><div class="ttname"><a href="fraction_8h.html#a6956d0da839b32d449ade075c2e4fa80">fixsignFrac</a></div><div class="ttdeci">void fixsignFrac(Fraction *a)</div><div class="ttdoc">符号修正、错误处理</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00066">fraction.c:66</a></div></div>
+<div class="ttc" id="afraction_8h_html_a7a6c894be2e557622d4d93f770600c6b"><div class="ttname"><a href="fraction_8h.html#a7a6c894be2e557622d4d93f770600c6b">reduce_num_frac</a></div><div class="ttdeci">void reduce_num_frac(int *a, int *b)</div><div class="ttdoc">数约分</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00088">fraction.c:88</a></div></div>
+<div class="ttc" id="afraction_8h_html_a8d4bd3526c3773f165ff33095c2bc4ce"><div class="ttname"><a href="fraction_8h.html#a8d4bd3526c3773f165ff33095c2bc4ce">TYPE_STR_LEN</a></div><div class="ttdeci">#define TYPE_STR_LEN</div><div class="ttdoc">Str的最大长度</div><div class="ttdef"><b>Definition</b> <a href="fraction_8h_source.html#l00013">fraction.h:13</a></div></div>
+<div class="ttc" id="afraction_8h_html_a9e671f494de99177fd6a9c7335433ff8"><div class="ttname"><a href="fraction_8h.html#a9e671f494de99177fd6a9c7335433ff8">cmpFrac</a></div><div class="ttdeci">int cmpFrac(Fraction a, Fraction b)</div><div class="ttdoc">比较 返回-1 , 0 , 1</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00162">fraction.c:162</a></div></div>
+<div class="ttc" id="afraction_8h_html_aa5ac94367d3f94c0293cce94b6ae592b"><div class="ttname"><a href="fraction_8h.html#aa5ac94367d3f94c0293cce94b6ae592b">calcFrac</a></div><div class="ttdeci">Fraction calcFrac(char myope,...)</div><div class="ttdoc">运算器</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00183">fraction.c:183</a></div></div>
+<div class="ttc" id="afraction_8h_html_aa9c8c9d78589ee229be2ec3c5d812a9c"><div class="ttname"><a href="fraction_8h.html#aa9c8c9d78589ee229be2ec3c5d812a9c">subFrac</a></div><div class="ttdeci">Fraction subFrac(Fraction a, Fraction b)</div><div class="ttdoc">减法</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00231">fraction.c:231</a></div></div>
+<div class="ttc" id="afraction_8h_html_aab15376ccb388421a906012634ef7ef9"><div class="ttname"><a href="fraction_8h.html#aab15376ccb388421a906012634ef7ef9">divFrac</a></div><div class="ttdeci">Fraction divFrac(Fraction a, Fraction b)</div><div class="ttdoc">除法</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00247">fraction.c:247</a></div></div>
+<div class="ttc" id="afraction_8h_html_ab7f30cc720744dc052d8c2c287b228e7"><div class="ttname"><a href="fraction_8h.html#ab7f30cc720744dc052d8c2c287b228e7">gcd_frac</a></div><div class="ttdeci">int gcd_frac(int a, int b)</div><div class="ttdoc">最大公因数</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00023">fraction.c:23</a></div></div>
+<div class="ttc" id="afraction_8h_html_abe95e092c8a18ab23b80f1804ed41290"><div class="ttname"><a href="fraction_8h.html#abe95e092c8a18ab23b80f1804ed41290">num_len_frac</a></div><div class="ttdeci">int num_len_frac(int n)</div><div class="ttdoc">数的绝对值的长度</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00110">fraction.c:110</a></div></div>
+<div class="ttc" id="afraction_8h_html_adc31b7b9bb7b17ea51632d1234ed09a4"><div class="ttname"><a href="fraction_8h.html#adc31b7b9bb7b17ea51632d1234ed09a4">initFrac</a></div><div class="ttdeci">Fraction initFrac(int up, int down)</div><div class="ttdoc">初始化</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00053">fraction.c:53</a></div></div>
+<div class="ttc" id="afraction_8h_html_afc1a426ece13a0a55d0e559dbe42b5e7"><div class="ttname"><a href="fraction_8h.html#afc1a426ece13a0a55d0e559dbe42b5e7">powFrac</a></div><div class="ttdeci">Fraction powFrac(Fraction a, int expt)</div><div class="ttdoc">乘方</div><div class="ttdef"><b>Definition</b> <a href="fraction_8c_source.html#l00254">fraction.c:254</a></div></div>
+<div class="ttc" id="astruct_fraction_html"><div class="ttname"><a href="struct_fraction.html">Fraction</a></div><div class="ttdoc">分数类</div><div class="ttdef"><b>Definition</b> <a href="fraction_8h_source.html#l00037">fraction.h:37</a></div></div>
+<div class="ttc" id="astruct_fraction_html_a53fd293fef6a860c8cb2769026e5d4b6"><div class="ttname"><a href="struct_fraction.html#a53fd293fef6a860c8cb2769026e5d4b6">Fraction::up</a></div><div class="ttdeci">int up</div><div class="ttdoc">分子</div><div class="ttdef"><b>Definition</b> <a href="fraction_8h_source.html#l00038">fraction.h:38</a></div></div>
+<div class="ttc" id="astruct_fraction_html_aac8fc1be53dcc0753b735f20510be9d4"><div class="ttname"><a href="struct_fraction.html#aac8fc1be53dcc0753b735f20510be9d4">Fraction::down</a></div><div class="ttdeci">int down</div><div class="ttdoc">分母</div><div class="ttdef"><b>Definition</b> <a href="fraction_8h_source.html#l00039">fraction.h:39</a></div></div>
+<div class="ttc" id="astruct_str_html"><div class="ttname"><a href="struct_str.html">Str</a></div><div class="ttdoc">Str类，用于接受Fraction或Radical转换成的字符数组</div><div class="ttdef"><b>Definition</b> <a href="fraction_8h_source.html#l00043">fraction.h:43</a></div></div>
+<div class="ttc" id="astruct_str_html_ad138d20196ee798479c44e3bc324085f"><div class="ttname"><a href="struct_str.html#ad138d20196ee798479c44e3bc324085f">Str::s</a></div><div class="ttdeci">char s[TYPE_STR_LEN]</div><div class="ttdoc">长度为TYPE_STR_LEN的字符数组</div><div class="ttdef"><b>Definition</b> <a href="fraction_8h_source.html#l00044">fraction.h:44</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="fraction_8h.html">fraction.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
+</body>
+</html>

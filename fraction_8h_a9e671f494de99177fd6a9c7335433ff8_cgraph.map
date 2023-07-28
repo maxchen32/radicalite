@@ -1,0 +1,7 @@
+<map id="cmpFrac" name="cmpFrac">
+<area shape="rect" id="Node000001" title="比较 返回&#45;1 , 0 , 1" alt="" coords="5,5,78,32"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a7a6c894be2e557622d4d93f770600c6b" title="数约分" alt="" coords="126,5,246,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,16,111,16,111,21,78,21"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="294,5,364,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,16,279,16,279,21,246,21"/>
+</map>

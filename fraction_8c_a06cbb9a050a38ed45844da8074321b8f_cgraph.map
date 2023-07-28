@@ -1,0 +1,7 @@
+<map id="mulFrac" name="mulFrac">
+<area shape="rect" id="Node000001" title="乘法" alt="" coords="5,31,74,57"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="122,5,206,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,34,106,28,108,33,75,40"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="129,56,199,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="75,48,115,57,113,62,74,54"/>
+</map>
