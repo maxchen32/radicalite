@@ -1,14 +1,20 @@
 <map id="lcm_frac" name="lcm_frac">
-<area shape="rect" id="Node000001" title="最小公倍数" alt="" coords="357,56,428,83"/>
-<area shape="rect" id="Node000002" href="$fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="241,56,309,83"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="342,72,310,72,310,67,342,67"/>
-<area shape="rect" id="Node000003" href="$radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="126,5,192,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,52,190,35,192,30,230,47"/>
-<area shape="rect" id="Node000005" href="$fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="5,81,77,108"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="227,77,77,94,77,88,226,72"/>
-<area shape="rect" id="Node000006" href="$fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="125,107,193,133"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="230,92,192,109,190,104,228,87"/>
-<area shape="rect" id="Node000004" href="$radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="8,5,74,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,21,74,21,74,16,112,16"/>
-<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="110,112,77,105,78,100,111,107"/>
+<area shape="rect" id="Node000001" title="最小公倍数" alt="" coords="474,107,544,133"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#a11d78608db5f9250a7a9cee8b037a2fb" title="加法" alt="" coords="357,107,426,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,123,426,123,426,117,459,117"/>
+<area shape="rect" id="Node000003" href="$radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475" title=" " alt="" coords="243,56,308,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="345,103,306,86,309,81,347,98"/>
+<area shape="rect" id="Node000008" href="$fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="122,157,193,184"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="343,129,242,148,194,161,193,156,240,143,342,124"/>
+<area shape="rect" id="Node000009" href="$fraction_8c.html#aa9c8c9d78589ee229be2ec3c5d812a9c" title="减法" alt="" coords="241,157,309,184"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="347,142,309,159,306,154,345,137"/>
+<area shape="rect" id="Node000004" href="$radical_8c.html#ab708027e8db0f302be1e2d9ce5e7d8df" title=" " alt="" coords="123,5,192,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="228,52,189,35,191,30,230,47"/>
+<area shape="rect" id="Node000005" href="$radical_8c.html#a83c1c031b64835dc9f6b80d1a7ae9973" title=" " alt="" coords="123,56,192,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="228,72,192,72,192,67,228,67"/>
+<area shape="rect" id="Node000006" href="$radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9" title=" " alt="" coords="125,107,190,133"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="230,91,191,109,189,104,228,87"/>
+<area shape="rect" id="Node000007" href="$radical_8c.html#a67121161b9bc32a990054f380a12b79c" title=" " alt="" coords="5,107,74,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="110,123,74,123,74,117,110,117"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="226,173,194,173,194,168,226,168"/>
 </map>

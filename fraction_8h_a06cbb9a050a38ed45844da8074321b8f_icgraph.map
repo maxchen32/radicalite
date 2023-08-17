@@ -1,24 +1,30 @@
 <map id="mulFrac" name="mulFrac">
-<area shape="rect" id="Node000001" title="乘法" alt="" coords="364,183,433,209"/>
-<area shape="rect" id="Node000002" href="$fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="131,5,202,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="379,172,351,134,315,97,257,60,201,34,204,29,260,55,318,93,355,131,384,169"/>
-<area shape="rect" id="Node000003" href="$fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="253,107,315,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="363,176,304,136,307,132,366,172"/>
-<area shape="rect" id="Node000006" href="$radical_8c.html#af24a24cfec9515de58fb1a1c5390740e" title=" " alt="" coords="137,157,196,184"/>
-<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="349,193,196,176,197,171,350,188"/>
-<area shape="rect" id="Node000008" href="$radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title=" " alt="" coords="132,208,201,235"/>
-<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="350,204,202,220,201,215,349,199"/>
-<area shape="rect" id="Node000009" href="$radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title=" " alt="" coords="253,259,314,285"/>
-<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="366,220,307,260,304,256,363,216"/>
-<area shape="rect" id="Node000010" href="$radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="251,309,316,336"/>
-<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="382,223,353,260,318,299,305,311,302,307,314,295,349,257,377,220"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="257,98,201,46,187,35,190,31,205,42,261,94"/>
-<area shape="rect" id="Node000004" href="$radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="130,107,203,133"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="238,123,203,123,203,117,238,117"/>
-<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="240,142,197,160,195,156,238,137"/>
-<area shape="rect" id="Node000007" href="$fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="131,56,202,83"/>
-<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="238,103,198,86,200,81,240,98"/>
-<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="261,146,205,198,190,209,187,205,201,194,257,142"/>
-<area shape="rect" id="Node000005" href="$radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="5,107,82,133"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="115,123,82,123,82,117,115,117"/>
+<area shape="rect" id="Node000001" title="乘法" alt="" coords="391,183,460,209"/>
+<area shape="rect" id="Node000002" href="$fraction_8c.html#aa5ac94367d3f94c0293cce94b6ae592b" title="运算器" alt="" coords="149,5,220,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="406,172,378,134,342,97,311,76,279,58,219,33,221,28,281,53,314,71,345,93,383,131,411,169"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="280,107,342,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="390,176,331,136,334,132,393,172"/>
+<area shape="rect" id="Node000006" href="$radical_8c.html#af24a24cfec9515de58fb1a1c5390740e" title=" " alt="" coords="155,157,214,184"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="377,194,214,176,215,171,377,188"/>
+<area shape="rect" id="Node000009" href="$radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title="分数开方" alt="" coords="150,208,219,235"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="377,204,220,220,219,215,376,198"/>
+<area shape="rect" id="Node000010" href="$radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title="初始化一个Radical类型的值（默认在栈中所以不需要手动free）" alt="" coords="280,259,341,285"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="393,220,334,260,331,256,390,216"/>
+<area shape="rect" id="Node000011" href="$radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="278,309,343,336"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="409,223,380,260,345,299,332,311,329,307,341,295,376,257,404,220"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="285,97,228,46,211,35,214,30,232,42,289,94"/>
+<area shape="rect" id="Node000004" href="$radical_8c.html#a20a77eb2101227370e2f591fffd03409" title=" " alt="" coords="148,107,221,133"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="265,123,221,123,221,117,265,117"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="267,140,215,161,213,156,265,135"/>
+<area shape="rect" id="Node000008" href="$fraction_8c.html#afc1a426ece13a0a55d0e559dbe42b5e7" title="乘方" alt="" coords="149,56,220,83"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="265,105,219,86,221,81,267,100"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="289,146,232,198,214,210,211,205,228,194,285,143"/>
+<area shape="rect" id="Node000005" href="$radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9" title=" " alt="" coords="10,107,86,133"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="133,123,87,123,87,117,133,117"/>
+<area shape="rect" id="Node000007" href="$radical_8c.html#a30d286177f319b46cc9e43cac7908e18" title=" " alt="" coords="5,157,91,184"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="140,173,91,173,91,168,140,168"/>
+<area shape="rect" id="Node000012" href="$radical_8c.html#a83c1c031b64835dc9f6b80d1a7ae9973" title=" " alt="" coords="150,335,219,361"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="264,335,220,344,219,339,263,329"/>
+<area shape="rect" id="Node000013" href="$radical_8c.html#aaf447bb88b9c3ab50e765e147be95007" title=" " alt="" coords="139,284,230,311"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="263,316,230,309,231,304,264,311"/>
 </map>

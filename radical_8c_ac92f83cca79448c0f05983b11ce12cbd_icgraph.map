@@ -1,9 +1,13 @@
 <map id="Radsqrt" name="Radsqrt">
-<area shape="rect" id="Node000001" title=" " alt="" coords="123,56,189,83"/>
-<area shape="rect" id="Node000002" href="$radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title=" " alt="" coords="9,5,71,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,52,70,34,72,30,111,47"/>
-<area shape="rect" id="Node000003" href="$radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="7,56,73,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,72,73,72,73,67,108,67"/>
-<area shape="rect" id="Node000004" href="$radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title=" " alt="" coords="5,107,75,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="111,92,73,109,71,104,109,87"/>
+<area shape="rect" id="Node000001" title="把一个int数开根变为二次根式（即in设为int值）" alt="" coords="262,56,328,83"/>
+<area shape="rect" id="Node000002" href="$radical_8c.html#ad1fe11aca0a5626b5b635d9d3dea5098" title="初始化一个Radical类型的值（默认在栈中所以不需要手动free）" alt="" coords="149,5,210,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,52,209,34,211,30,251,47"/>
+<area shape="rect" id="Node000003" href="$radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="147,56,212,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="247,72,212,72,212,67,247,67"/>
+<area shape="rect" id="Node000006" href="$radical_8c.html#a36d969e44570dbabf1b3e862a1c77341" title="分数开方" alt="" coords="145,107,214,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="251,92,213,109,210,104,248,87"/>
+<area shape="rect" id="Node000004" href="$radical_8c.html#a83c1c031b64835dc9f6b80d1a7ae9973" title=" " alt="" coords="17,31,85,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="132,63,85,53,86,48,133,57"/>
+<area shape="rect" id="Node000005" href="$radical_8c.html#aaf447bb88b9c3ab50e765e147be95007" title=" " alt="" coords="5,81,97,108"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="133,81,98,88,97,83,131,76"/>
 </map>

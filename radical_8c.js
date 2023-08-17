@@ -1,12 +1,15 @@
 var radical_8c =
 [
     [ "_PolyIntReduce", "radical_8c.html#afbcc1cdcbecc81aba0999069f688e238", null ],
+    [ "addPoly", "radical_8c.html#ab708027e8db0f302be1e2d9ce5e7d8df", null ],
     [ "addRad", "radical_8c.html#ac5cb655bfb4dad804a6ec88eeb219475", null ],
+    [ "copyPoly", "radical_8c.html#ad913c4df7f666e799a96ebfcf04fcea4", null ],
     [ "deletePoly", "radical_8c.html#adad0f5c0c53befcdacdba33b7005560e", null ],
     [ "destoryPoly", "radical_8c.html#af4f620f1a448fa1bc348f8af8ee85020", null ],
     [ "divintPoly", "radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9", null ],
     [ "divintRad", "radical_8c.html#a20a77eb2101227370e2f591fffd03409", null ],
     [ "divRad", "radical_8c.html#af24a24cfec9515de58fb1a1c5390740e", null ],
+    [ "divRadPoly", "radical_8c.html#a30d286177f319b46cc9e43cac7908e18", null ],
     [ "findkthPoly", "radical_8c.html#acd4cd1ec06aa0382c22fb8c7cabc300f", null ],
     [ "findPoly", "radical_8c.html#a14772a1e4621a0f83156ee3f44eee61d", null ],
     [ "Frac2Rad", "radical_8c.html#ad0d381b2735f4ea3f7b6216a0536bc86", null ],
@@ -18,13 +21,17 @@ var radical_8c =
     [ "int2Rad", "radical_8c.html#af3b61ede71c4d12bb3033df150c1b3dc", null ],
     [ "isequalRad", "radical_8c.html#a6ff2c050df4f7eb1166da265707af0cc", null ],
     [ "lenPoly", "radical_8c.html#a5292c7884f0dee8331791b569fc48921", null ],
+    [ "mulPoly", "radical_8c.html#a83c1c031b64835dc9f6b80d1a7ae9973", null ],
     [ "mulRad", "radical_8c.html#a49d672e8edc7598578f9d22149642356", null ],
+    [ "mulRadPoly", "radical_8c.html#aaf447bb88b9c3ab50e765e147be95007", null ],
     [ "pprintRad", "radical_8c.html#a6604043a281955b5a80a0b693b6f6e7a", null ],
     [ "printPoly", "radical_8c.html#ad4a9c1f8086b6b73af8c9de5c275958b", null ],
     [ "printRad", "radical_8c.html#a9cbf0f42d9c7730e04f17283c5a9f874", null ],
+    [ "Rad2double", "radical_8c.html#ad56b12b93b235dcd4391eded907b4c50", null ],
     [ "Radsqrt", "radical_8c.html#ac92f83cca79448c0f05983b11ce12cbd", null ],
     [ "sqrtFrac", "radical_8c.html#a36d969e44570dbabf1b3e862a1c77341", null ],
     [ "squareRad", "radical_8c.html#afa2287c6e6f3f7a44154872f73581c97", null ],
+    [ "subPoly", "radical_8c.html#a67121161b9bc32a990054f380a12b79c", null ],
     [ "subRad", "radical_8c.html#a5efd562f0be05a19d1f0c1c0b24089b9", null ],
     [ "toStrRad", "radical_8c.html#a8de3abbf07b4230b4c5431d136cc23d9", null ]
 ];

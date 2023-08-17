@@ -135,22 +135,22 @@ Include Header Files</h1>
 <div class="ttc" id="aradical_8h_html"><div class="ttname"><a href="radical_8h.html">radical.h</a></div><div class="ttdoc">radical.c的头文件</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
 Program Body</h1>
-<p>Initialize a variable a of type <a class="el" href="struct_radical.html">Radical</a> to $\frac{1}{2}\sqrt{3}$ .</p>
+<p>Initialize a variable a of type <a class="el" href="struct_radical.html" title="二次根式类">Radical</a> to $\frac{1}{2}\sqrt{3}$ .</p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="struct_radical.html">Radical</a> a = <a class="code hl_function" href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a>(1, 2, 3);</div>
-<div class="ttc" id="aradical_8h_html_ad1fe11aca0a5626b5b635d9d3dea5098"><div class="ttname"><a href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a></div><div class="ttdeci">Radical initRad(int up, int down, int in)</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00011">radical.c:11</a></div></div>
-<div class="ttc" id="astruct_radical_html"><div class="ttname"><a href="struct_radical.html">Radical</a></div><div class="ttdef"><b>Definition</b> <a href="radical_8h_source.html#l00015">radical.h:15</a></div></div>
+<div class="ttc" id="aradical_8h_html_ad1fe11aca0a5626b5b635d9d3dea5098"><div class="ttname"><a href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a></div><div class="ttdeci">Radical initRad(int up, int down, int in)</div><div class="ttdoc">初始化一个Radical类型的值（默认在栈中所以不需要手动free）</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00011">radical.c:11</a></div></div>
+<div class="ttc" id="astruct_radical_html"><div class="ttname"><a href="struct_radical.html">Radical</a></div><div class="ttdoc">二次根式类</div><div class="ttdef"><b>Definition</b> <a href="radical_8h_source.html#l00017">radical.h:17</a></div></div>
 </div><!-- fragment --><p>The three parameters of <code>initRad(1, 2, 3)</code> represent the numerator, denominator, and radicand.</p>
 <p>Declare another variable <code>b</code> :</p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="struct_radical.html">Radical</a> a = <a class="code hl_function" href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a>(1, 2, 3);</div>
 <div class="line"><a class="code hl_struct" href="struct_radical.html">Radical</a> b = <a class="code hl_function" href="radical_8h.html#ad1fe11aca0a5626b5b635d9d3dea5098">initRad</a>(4, 5, 6);</div>
 </div><!-- fragment --><p>Calculate the product of <code>a</code> and <code>b</code> and assign it to <code>c</code> :</p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="struct_radical.html">Radical</a> c = <a class="code hl_function" href="radical_8h.html#a49d672e8edc7598578f9d22149642356">mulRad</a>(a, b);</div>
-<div class="ttc" id="aradical_8h_html_a49d672e8edc7598578f9d22149642356"><div class="ttname"><a href="radical_8h.html#a49d672e8edc7598578f9d22149642356">mulRad</a></div><div class="ttdeci">Radical mulRad(Radical a, Radical b)</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00346">radical.c:346</a></div></div>
+<div class="ttc" id="aradical_8h_html_a49d672e8edc7598578f9d22149642356"><div class="ttname"><a href="radical_8h.html#a49d672e8edc7598578f9d22149642356">mulRad</a></div><div class="ttdeci">Radical mulRad(Radical a, Radical b)</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00350">radical.c:350</a></div></div>
 </div><!-- fragment --><p>Output c and a newline character to the console:</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="radical_8h.html#a9cbf0f42d9c7730e04f17283c5a9f874">printRad</a>(c);</div>
 <div class="line">putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="ttc" id="aradical_8h_html_a9cbf0f42d9c7730e04f17283c5a9f874"><div class="ttname"><a href="radical_8h.html#a9cbf0f42d9c7730e04f17283c5a9f874">printRad</a></div><div class="ttdeci">bool printRad(Radical a)</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00033">radical.c:33</a></div></div>
-</div><!-- fragment --><p><code>printRad(c)</code> prints a variable of type <a class="el" href="struct_radical.html">Radical</a> to the console, but does <b>not</b> add a newline.</p>
+<div class="ttc" id="aradical_8h_html_a9cbf0f42d9c7730e04f17283c5a9f874"><div class="ttname"><a href="radical_8h.html#a9cbf0f42d9c7730e04f17283c5a9f874">printRad</a></div><div class="ttdeci">bool printRad(Radical a)</div><div class="ttdoc">向stdout输出Radical，末尾没有空格或回车</div><div class="ttdef"><b>Definition</b> <a href="radical_8c_source.html#l00037">radical.c:37</a></div></div>
+</div><!-- fragment --><p><code>printRad(c)</code> prints a variable of type <a class="el" href="struct_radical.html" title="二次根式类">Radical</a> to the console, but does <b>not</b> add a newline.</p>
 <h2><a class="anchor" id="autotoc_md21"></a>
 Complete Program:</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>

@@ -1,0 +1,15 @@
+<map id="divRadPoly" name="divRadPoly">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,91,83"/>
+<area shape="rect" id="Node000002" href="$radical_8c.html#af24a24cfec9515de58fb1a1c5390740e" title=" " alt="" coords="139,56,198,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,67,124,67,124,72,91,72"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#aab15376ccb388421a906012634ef7ef9" title="除法" alt="" coords="246,5,308,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="197,53,232,36,235,41,199,58"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="356,56,425,83"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="198,67,341,67,341,72,198,72"/>
+<area shape="rect" id="Node000006" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="480,107,550,133"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="199,71,465,110,465,115,198,76"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="310,30,347,47,345,52,308,35"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="473,56,557,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="425,67,458,67,458,72,425,72"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="426,81,468,98,466,103,424,86"/>
+</map>

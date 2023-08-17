@@ -6,5 +6,6 @@ var searchData=
   ['divintpoly_3',['divintPoly',['../radical_8h.html#acf1abc308c085c5eedaa0bd364825dd9',1,'divintPoly(Polynomial ptrl, int x):&#160;radical.c'],['../radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9',1,'divintPoly(Polynomial ptrl, int x):&#160;radical.c']]],
   ['divintrad_4',['divintRad',['../radical_8h.html#a20a77eb2101227370e2f591fffd03409',1,'divintRad(Radical a, int b):&#160;radical.c'],['../radical_8c.html#a20a77eb2101227370e2f591fffd03409',1,'divintRad(Radical a, int b):&#160;radical.c']]],
   ['divrad_5',['divRad',['../radical_8h.html#af24a24cfec9515de58fb1a1c5390740e',1,'divRad(Radical a, Radical b):&#160;radical.c'],['../radical_8c.html#af24a24cfec9515de58fb1a1c5390740e',1,'divRad(Radical a, Radical b):&#160;radical.c']]],
-  ['down_6',['down',['../struct_fraction.html#aac8fc1be53dcc0753b735f20510be9d4',1,'Fraction']]]
+  ['divradpoly_6',['divRadPoly',['../radical_8h.html#a30d286177f319b46cc9e43cac7908e18',1,'divRadPoly(Polynomial ptrl, Radical a):&#160;radical.c'],['../radical_8c.html#a30d286177f319b46cc9e43cac7908e18',1,'divRadPoly(Polynomial ptrl, Radical a):&#160;radical.c']]],
+  ['down_7',['down',['../struct_fraction.html#aac8fc1be53dcc0753b735f20510be9d4',1,'Fraction']]]
 ];

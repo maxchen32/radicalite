@@ -5,5 +5,6 @@ var searchData=
   ['divfrac_2',['divFrac',['../fraction_8h.html#aab15376ccb388421a906012634ef7ef9',1,'divFrac(Fraction a, Fraction b):&#160;fraction.c'],['../fraction_8c.html#aab15376ccb388421a906012634ef7ef9',1,'divFrac(Fraction a, Fraction b):&#160;fraction.c']]],
   ['divintpoly_3',['divintPoly',['../radical_8h.html#acf1abc308c085c5eedaa0bd364825dd9',1,'divintPoly(Polynomial ptrl, int x):&#160;radical.c'],['../radical_8c.html#acf1abc308c085c5eedaa0bd364825dd9',1,'divintPoly(Polynomial ptrl, int x):&#160;radical.c']]],
   ['divintrad_4',['divintRad',['../radical_8h.html#a20a77eb2101227370e2f591fffd03409',1,'divintRad(Radical a, int b):&#160;radical.c'],['../radical_8c.html#a20a77eb2101227370e2f591fffd03409',1,'divintRad(Radical a, int b):&#160;radical.c']]],
-  ['divrad_5',['divRad',['../radical_8h.html#af24a24cfec9515de58fb1a1c5390740e',1,'divRad(Radical a, Radical b):&#160;radical.c'],['../radical_8c.html#af24a24cfec9515de58fb1a1c5390740e',1,'divRad(Radical a, Radical b):&#160;radical.c']]]
+  ['divrad_5',['divRad',['../radical_8h.html#af24a24cfec9515de58fb1a1c5390740e',1,'divRad(Radical a, Radical b):&#160;radical.c'],['../radical_8c.html#af24a24cfec9515de58fb1a1c5390740e',1,'divRad(Radical a, Radical b):&#160;radical.c']]],
+  ['divradpoly_6',['divRadPoly',['../radical_8h.html#a30d286177f319b46cc9e43cac7908e18',1,'divRadPoly(Polynomial ptrl, Radical a):&#160;radical.c'],['../radical_8c.html#a30d286177f319b46cc9e43cac7908e18',1,'divRadPoly(Polynomial ptrl, Radical a):&#160;radical.c']]]
 ];

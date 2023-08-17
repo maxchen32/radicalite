@@ -1,0 +1,13 @@
+<map id="mulRadPoly" name="mulRadPoly">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,97,83"/>
+<area shape="rect" id="Node000002" href="$radical_8c.html#a49d672e8edc7598578f9d22149642356" title=" " alt="" coords="145,56,210,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,67,130,67,130,72,97,72"/>
+<area shape="rect" id="Node000003" href="$fraction_8c.html#a06cbb9a050a38ed45844da8074321b8f" title="乘法" alt="" coords="258,31,326,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,60,243,52,244,57,211,65"/>
+<area shape="rect" id="Node000006" href="$radical_8c.html#ac92f83cca79448c0f05983b11ce12cbd" title="把一个int数开根变为二次根式（即in设为int值）" alt="" coords="259,81,325,108"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="211,74,245,82,244,87,210,79"/>
+<area shape="rect" id="Node000004" href="$fraction_8c.html#a6956d0da839b32d449ade075c2e4fa80" title="符号修正、错误处理" alt="" coords="374,5,459,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="326,34,359,28,360,33,327,40"/>
+<area shape="rect" id="Node000005" href="$fraction_8c.html#ab7f30cc720744dc052d8c2c287b228e7" title="最大公因数" alt="" coords="381,56,452,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="327,48,367,57,366,62,326,54"/>
+</map>
