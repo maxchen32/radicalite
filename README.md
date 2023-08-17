@@ -56,9 +56,10 @@ sudo cmake --install .
 
 [入门](docs/入门.md)  
 [Getting Started](docs/getting_started.md)
+[参考手册](https://maxchen32.codeberg.page/radicalite)
 
 正在编写更多的文档，敬请期待......  
-Please stay tuned for more documentation.
+More documentation coming soon...
 
 或者你可以先看看头文件：  
 Or you can take a look at the header file first:  
