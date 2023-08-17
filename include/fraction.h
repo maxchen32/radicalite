@@ -39,7 +39,7 @@ typedef struct Fraction{
 	int down;			//!< 分母
 } Fraction;
 
-/// Str类，用于接受Fraction或Radical转换成的字符数组
+/// 字符串类，用于接受Fraction或Radical转换成的字符数组
 typedef struct Str {
     char s[TYPE_STR_LEN];	///< 长度为TYPE_STR_LEN的字符数组
 }Str;

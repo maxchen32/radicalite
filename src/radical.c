@@ -9,11 +9,11 @@
 
 //tool
 Radical initRad(int up, int down, int in){
-	Radical tmp = {{ up , down }, in};
+	Radical tmp = {{up, down}, in};
 	if (down != 0){
 		reduceFrac(&(tmp.out));
 	}
-	Radical res = Radsqrt( tmp.in );
+	Radical res = Radsqrt(tmp.in);
 	res.out = mulFrac(res.out, tmp.out);
 	if (res.out.up == 0) {
 		res.in = 1;
@@ -28,6 +28,10 @@ Radical Frac2Rad(Fraction a) {
 Radical int2Rad(int a) {
 	Radical num = {{a, 1}, 1};
 	return num;
+}
+
+double Rad2double(Radical a) {
+	return (double)a.out.up / a.out.down * sqrt(a.in);
 }
 
 bool printRad(Radical a) {
@@ -354,10 +358,10 @@ Radical mulRad(Radical a, Radical b){
 
 Polynomial addRad(Polynomial ptrl, Radical b) {
 	Polynomial p = ptrl;
-	if (p == NULL){
+	if (p == NULL) {
 		return NULL;
 	}
-	else if (p->next == NULL){
+	else if (p->next == NULL) {
 		insertheadPoly(b, ptrl);
 		return ptrl;
 	}
@@ -366,7 +370,7 @@ Polynomial addRad(Polynomial ptrl, Radical b) {
 	int i = 1;
 	do {
 		p = p->next;
-		if (p->num.in == b.in){
+		if (p->num.in == b.in) {
 			p->num.out = addFrac(p->num.out, b.out);
 			flag = true;
 			//if (p->num.out.up == 0 && lenPoly(ptrl) != 1) {
@@ -376,7 +380,7 @@ Polynomial addRad(Polynomial ptrl, Radical b) {
 			break;
 		}
 		i++;
-	}while (p->next != NULL);
+	} while (p->next != NULL);
 
 	if (!flag) {
 		insertheadPoly(b, ptrl);
@@ -416,7 +420,7 @@ Polynomial _PolyIntReduce(Polynomial ptrl, int* x){
 	do {
 		p = p->next;
 		p->num.out.up /= gcdn;
-	}while (p->next != NULL);
+	} while (p->next != NULL);
 	return ptrl;
 }
 
@@ -433,7 +437,7 @@ Polynomial divintPoly(Polynomial ptrl, int x) {
 	do {
 		p = p->next;
 		p->num = divintRad(p->num, x);
-	}while (p->next != NULL);
+	} while (p->next != NULL);
 	return ptrl;
 }
 
@@ -444,6 +448,80 @@ Fraction squareRad(Radical a) {
 		res = initFrac(a.out.up * a.out.up * a.in, a.out.down);
 	} else {
 		res = initFrac(a.out.up * a.out.up * a.in, a.out.down * a.out.down);
+	}
+	return res;
+}
+
+Polynomial mulRadPoly(Polynomial ptrl, Radical a) {
+	Polynomial p = ptrl;
+	if (p) {
+		while ((p = p->next)) {
+			p->num = mulRad(p->num, a);
+		}
+	}
+	return ptrl;
+}
+
+Polynomial divRadPoly(Polynomial ptrl, Radical a) {
+	Polynomial p = ptrl;
+	if (p) {
+		while ((p = p->next)) {
+			p->num = divRad(p->num, a);
+		}
+	}
+	return ptrl;
+}
+
+/*
+Polynomial  mapRRPoly(Polynomial ptrl, 
+						Radical (*Cb_rad_rad)(Radical, Radical), 
+						Radical a) {
+	Polynomial p = ptrl;
+	if (p) {
+		while ((p = p->next)) {
+			p->num = Cb_rad_rad(p->num, a);
+		}
+	}
+	return ptrl;
+}
+*/
+
+Polynomial mulPoly(Polynomial ptrla, Polynomial ptrlb) {
+	if (ptrla == NULL || ptrla->next == NULL || ptrlb == NULL || ptrlb->next == NULL ){
+		return NULL;
+	}
+	Polynomial pa = ptrla;
+	Polynomial pb;
+	Polynomial res = initPoly();
+	while ((pa = pa->next)) {
+		pb = ptrlb;
+		while ((pb = pb->next)) {
+			addRad(res, mulRad(pa->num, pb->num));
+		}
+	}
+	return res;
+}
+
+Polynomial addPoly(Polynomial ptrla, Polynomial ptrlb) {
+	if (ptrla == NULL || ptrla->next == NULL || ptrlb == NULL || ptrlb->next == NULL ){
+		return NULL;
+	}
+	Polynomial res = copyPoly(ptrla);
+	Polynomial pb = ptrlb;
+	while ((pb = pb->next)) {
+		addRad(res, pb->num);
+	}
+	return res;
+}
+
+Polynomial subPoly(Polynomial ptrla, Polynomial ptrlb) {
+	if (ptrla == NULL || ptrla->next == NULL || ptrlb == NULL || ptrlb->next == NULL ){
+		return NULL;
+	}
+	Polynomial res = copyPoly(ptrla);
+	Polynomial pb = ptrlb;
+	while ((pb = pb->next)) {
+		subRad(res, pb->num);
 	}
 	return res;
 }
@@ -546,6 +624,30 @@ Polynomial insertPoly(Radical x, int i, Polynomial ptrl) {
 		p->next = s;
 		return ptrl;
 	}
+}
+
+Polynomial copyPoly(Polynomial ptrl) {
+	if (ptrl == NULL) {
+		return NULL;
+	}
+	Polynomial pnew = initPoly();
+	if (ptrl->next == NULL) {
+		return pnew;
+	}
+	
+	Polynomial former = pnew, p = ptrl, s;
+	while ((p = p->next)) {
+		s = (Node *)malloc(sizeof(Node));
+		if (s == NULL) {
+			fprintf(stderr, "copyPoly: allocate memory failed.\n");
+			return pnew;
+		}
+		s->num = p->num;
+		s->next = NULL;
+		former->next = s;
+		former = s;
+	}
+	return pnew;
 }
 
 Polynomial deletePoly(int i, Polynomial ptrl){

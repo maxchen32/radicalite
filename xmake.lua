@@ -8,7 +8,9 @@ elseif is_mode("release") then
 	set_strip("all")
 end
 
-add_syslinks("m")
+if not is_os("windows") then
+	add_syslinks("m")
+end
 
 target("objs")
 	set_kind("object")

@@ -47,12 +47,7 @@ Radical normSvec(Svector a) {
 Polynomial cosSvec(Svector a, Svector b) {
 	Polynomial mul_res = innerSvec(a, b);
 	Radical norms_product = mulRad(normSvec(a), normSvec(b));
-	Polynomial ptrl = mul_res;
-	if (ptrl) {
-		while ((ptrl = ptrl->next)) {
-			ptrl->num = divRad(ptrl->num, norms_product);
-		}
-	}
+	divRadPoly(mul_res, norms_product);
 	return mul_res;
 }
 
@@ -97,6 +92,47 @@ Svector normalSvec(Svector a, Svector b) {
 	}
 }
 
+// 两点距离的平方
+// distance^2 = (x1^2 + y1^2 + z1^2) + (x2^2 + y2^2 + z2^2) - 2*(x1*x2 + y1*y2 + z1*z2)
+Polynomial point_point_distSvec(Svector a, Svector b) {
+	Fraction square_sum_a = addFrac(addFrac(squareRad(a.x), squareRad(a.y)),
+								  squareRad(a.z));
+	Fraction square_sum_b = addFrac(addFrac(squareRad(b.x), squareRad(b.y)),
+								  squareRad(b.z));
+	Radical  square_sum   = Frac2Rad(addFrac(square_sum_a, square_sum_b));
+	Polynomial mul_res = innerSvec(a, b);
+	const Radical ntwo = int2Rad(-2);
+	mulRadPoly(mul_res, ntwo);
+	//mapRRPoly(mul_res, mulRad, ntwo);
+	addRad(mul_res, square_sum);
+	return mul_res;
+}
+
+// 点到平面距离
+/*
+	p: 所给出点
+	a: 平面内一点
+	n: 平面法向量
+ */
+Polynomial point_plane_distSvec(Svector p, Svector a, Svector n) {
+	Polynomial ap_x = initPoly();
+	Polynomial ap_y = initPoly();
+	Polynomial ap_z = initPoly();
+	Polynomial res = NULL;
+	
+	subRad(addRad(ap_x, p.x), a.x);
+	subRad(addRad(ap_x, p.y), a.y);
+	subRad(addRad(ap_x, p.z), a.z);
+	if (lenPoly(ap_x) == 1 && lenPoly(ap_y) == 1 && lenPoly(ap_z) == 1) {
+		Svector ap = {ap_x->next->num, ap_y->next->num, ap_z->next->num};
+		res = innerSvec(ap, n);
+		divRadPoly(res, normSvec(n));
+	}
+	destoryPoly(ap_x);
+	destoryPoly(ap_y);
+	destoryPoly(ap_z);
+	return res;
+}
 
 Svector input_Svector() {
 	Svector vec;
@@ -117,8 +153,20 @@ void inner_product_calc() {
 	num1 = input_Svector();
 	num2 = input_Svector();
 	
-	Polynomial mulres = innerSvec(num1, num2);
+	Polynomial mulres = innerSvec(num1, num2);	
 	wprintf(L"内积：");
+	printPoly(mulres);
+	destoryPoly(mulres);
+	putchar('\n');
+}
+
+void square_distance_calc() {
+	Svector num1, num2;
+	num1 = input_Svector();
+	num2 = input_Svector();
+	
+	Polynomial mulres = point_point_distSvec(num1, num2);
+	wprintf(L"两点距离的平方：");
 	printPoly(mulres);
 	destoryPoly(mulres);
 	putchar('\n');
@@ -241,12 +289,15 @@ choose_mode:
 	wprintf(L"2. 取模\n");
 	wprintf(L"3. 角度的cos值\n");
 	wprintf(L"4. 法向量\n");
-	wprintf(L"请选择模式：[1,2,3,4] ");
+	wprintf(L"5. 两点距离的平方\n");
+	
+	wprintf(L"请选择模式：[1,2,3,4,5] ");
 	char op;
 	scanf("%c", &op);
 	
 	flush_stdin();
 	
+	/*
 	if (op == '1') {
 		inner_product_calc();
 	} else if (op == '2') {
@@ -255,10 +306,31 @@ choose_mode:
 		cos_calc();
 	} else if (op == '4') {
 		normal_calc();
+	} else if (op == '5') {
+		square_distance_calc();
 	} else if (op == 'q' || op == 'Q') {
 		exit(0);
 	}else {
 		goto choose_mode;
+	}
+	*/
+	
+	switch (op) {
+		case '1':
+			inner_product_calc(); break;
+		case '2':
+			norm_calc(); break;
+		case '3':
+			cos_calc(); break;
+		case '4':
+			normal_calc(); break;
+		case '5':
+			square_distance_calc(); break;
+		case 'q': 
+		case 'Q':
+			exit(0);
+		default:
+			goto choose_mode; break;
 	}
 	
 	flush_stdin();

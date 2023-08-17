@@ -1,16 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-//#include <wchar.h>
-//#include <locale.h>
 #include "radical.h"
 
 int main() {
-	//setlocale(LC_ALL, "chs");
-#ifdef _WIN32
-    putchar(' ');
-#endif
-	puts("         _");
     puts("Please input the 3 arguments of (a/b)sqrt(c)");
     fflush(stdout);
     int a, b, c;

@@ -9,8 +9,8 @@ radicalite is a library written in C for elemental Fractions, Radicals, and Poly
 
 ## 编译 Compilation
 
-确保你安装了GCC，如果没有的话，Windows用户建议使用[这个编译好的GCC](https://winlibs.com/)，Linux用户请通过所用发行版的包管理器安装。  
-Make sure you have GCC installed. If not, Windows users are recommended to use [this precompiled GCC](https://winlibs.com/), and Linux users can install it through the distribution's package manager.
+确保你安装了C编译器（GCC/MinGW，Clang，MSVC……），如果没有的话，Windows用户建议使用[这个编译好的 MinGW-gcc](https://winlibs.com/)，Linux用户请通过所用发行版的包管理器安装。  
+Make sure you have a C compiler (GCC/MinGW，Clang，MSVC...) installed. If not, Windows users are recommended to use [this precompiled MinGW-gcc](https://winlibs.com/), and Linux users can install it through the distribution's package manager.
 
 建议使用 **[xmake](https://xmake.io/#/)** ，但是我们也提供 **[CMake](https://cmake.org/)** 支持。  
 It is recommended to use **[xmake](https://xmake.io/#/)**, but we also provide support for **[CMake](https://cmake.org/)**.
