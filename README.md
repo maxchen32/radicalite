@@ -55,7 +55,7 @@ sudo cmake --install .
 ## Usage
 
 [入门](docs/入门.md)  
-[Getting Started](docs/getting_started.md)
+[Getting Started](docs/getting_started.md)  
 [参考手册](https://maxchen32.codeberg.page/radicalite)
 
 正在编写更多的文档，敬请期待......  

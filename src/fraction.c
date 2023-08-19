@@ -245,6 +245,10 @@ Fraction mulFrac(Fraction a, Fraction b){
 	return a;
 }
 Fraction divFrac(Fraction a, Fraction b){
+	if (!cmpFrac(b, int2Frac(0))) {
+		error_print_frac("divFrac", "division by zero.");
+		exit(EDOM);
+	}
 	int temp = b.up;
 	//b.up ^= b.down ^= b.up ^= b.down;
 	b.up = b.down;

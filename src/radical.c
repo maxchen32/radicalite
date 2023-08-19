@@ -260,6 +260,7 @@ void printPoly(Polynomial ptrl){
 		return;
 	} else if (p->next == NULL) {
 		printf("0");
+		return;
 	} else {
 		p = p->next;
 	}
