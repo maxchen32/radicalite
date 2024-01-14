@@ -55,6 +55,7 @@ dkms.conf
 testffi.lua
 build/
 .xmake/
+.vscode/
 
 examples/test.c
 docs/html
