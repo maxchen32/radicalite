@@ -52,45 +52,9 @@ Polynomial cosSvec(Svector a, Svector b) {
 }
 
 // 法向量
-Svector normalSvec(Svector a, Svector b) {
-	Svector res;
-	Polynomial normal_x = initPoly();
-	Polynomial normal_y = initPoly();
-	Polynomial normal_z = initPoly();
-	normal_x = subRad(addRad(normal_x, mulRad(a.y, b.z)), mulRad(a.z, b.y));
-	normal_y = subRad(addRad(normal_y, mulRad(a.z, b.x)), mulRad(a.x, b.z));
-	normal_z = subRad(addRad(normal_z, mulRad(a.x, b.y)), mulRad(a.y, b.x));
-	if (lenPoly(normal_x) == 1 && lenPoly(normal_y) == 1 && lenPoly(normal_z) == 1) {
-		res.x = findkthPoly(1, normal_x)->num;
-		res.y = findkthPoly(1, normal_y)->num;
-		res.z = findkthPoly(1, normal_z)->num;
-		int dlcm = lcm_frac(lcm_frac(res.x.out.down, res.y.out.down), res.z.out.down);
-		//printf("dlcm: %d\n", dlcm);
-		res.x.out.up *= dlcm / res.x.out.down;
-		res.y.out.up *= dlcm / res.y.out.down;
-		res.z.out.up *= dlcm / res.z.out.down;
-		res.x.out.down = res.y.out.down = res.z.out.down = 1;
-		destoryPoly(normal_x);
-		destoryPoly(normal_y);
-		destoryPoly(normal_z);
-		return res;
-	} else {
-		wprintf(L"法向量: ");
-		putchar('(');
-		printPoly(normal_x); 
-		printf(", ");
-		printPoly(normal_y);
-		printf(", ");
-		printPoly(normal_z);
-		putchar(')');
-		putchar('\n');
-		wprintf(L"坐标为多项根式的向量的其他运算尚未实现，退出……\n");
-		destoryPoly(normal_x);
-		destoryPoly(normal_y);
-		destoryPoly(normal_z);
-		exit(0);
-	}
-}
+//Svector normalSvec(Svector a, Svector b) {
+	
+//}
 
 // 两点距离的平方
 // distance^2 = (x1^2 + y1^2 + z1^2) + (x2^2 + y2^2 + z2^2) - 2*(x1*x2 + y1*y2 + z1*z2)
@@ -195,14 +159,44 @@ void cos_calc() {
 }
 
 void normal_calc() {
-	Svector num1, num2;
-	num1 = input_Svector();
-	num2 = input_Svector();
+	Svector a, b;
+	a = input_Svector();
+	b = input_Svector();
+	Svector res;
+	Polynomial normal_x = initPoly();
+	Polynomial normal_y = initPoly();
+	Polynomial normal_z = initPoly();
+	normal_x = subRad(addRad(normal_x, mulRad(a.y, b.z)), mulRad(a.z, b.y));
+	normal_y = subRad(addRad(normal_y, mulRad(a.z, b.x)), mulRad(a.x, b.z));
+	normal_z = subRad(addRad(normal_z, mulRad(a.x, b.y)), mulRad(a.y, b.x));
 	
-	Svector vec = normalSvec(num1, num2);
 	wprintf(L"法向量：");
-	printf("(%s, %s, %s)\n", toStrRad(vec.x).s,
-			toStrRad(vec.y).s, toStrRad(vec.z).s);
+	if (lenPoly(normal_x) == 1 && lenPoly(normal_y) == 1 && lenPoly(normal_z) == 1) {
+		res.x = findkthPoly(1, normal_x)->num;
+		res.y = findkthPoly(1, normal_y)->num;
+		res.z = findkthPoly(1, normal_z)->num;
+		int dlcm = lcm_frac(lcm_frac(res.x.out.down, res.y.out.down), res.z.out.down);
+		//printf("dlcm: %d\n", dlcm);
+		res.x.out.up *= dlcm / res.x.out.down;
+		res.y.out.up *= dlcm / res.y.out.down;
+		res.z.out.up *= dlcm / res.z.out.down;
+		res.x.out.down = res.y.out.down = res.z.out.down = 1;
+		printf("(%s, %s, %s)\n", toStrRad(res.x).s,
+						toStrRad(res.y).s, toStrRad(res.z).s);
+	} else {
+		putchar('(');
+		printPoly(normal_x); 
+		printf(", ");
+		printPoly(normal_y);
+		printf(", ");
+		printPoly(normal_z);
+		putchar(')');
+		putchar('\n');
+	}
+	//Svector vec = normalSvec(num1, num2);
+	destoryPoly(normal_x);
+	destoryPoly(normal_y);
+	destoryPoly(normal_z);
 }
 
 int scan_rad(int argcnt, ...) {
@@ -291,7 +285,7 @@ choose_mode:
 	wprintf(L"4. 法向量\n");
 	wprintf(L"5. 两点距离的平方\n");
 	
-	wprintf(L"请选择模式：[1,2,3,4,5] ");
+	wprintf(L"请选择模式：[1,2,3,4,5,q] ");
 	char op;
 	scanf("%c", &op);
 	
@@ -334,11 +328,14 @@ choose_mode:
 	}
 	
 	flush_stdin();
+	goto choose_mode;
+	/*
 	wprintf(L"\n按下回车开始下一次计算: ");
 	char if_next = getchar();
 	if (if_next == '\n') {
 		goto choose_mode;
 	}
+	*/
 	
 	return 0;
 }
