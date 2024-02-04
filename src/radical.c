@@ -358,6 +358,10 @@ Radical mulRad(Radical a, Radical b){
 }
 
 Polynomial addRad(Polynomial ptrl, Radical b) {
+	if (b.out.up == 0) {
+		return ptrl;
+	}
+	
 	Polynomial p = ptrl;
 	if (p == NULL) {
 		return NULL;

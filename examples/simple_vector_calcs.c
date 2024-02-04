@@ -105,9 +105,11 @@ Svector input_Svector() {
 	do {
 		wprintf(L"输入x,y,z坐标，以空格分隔，回车提交（分数：形如 1/2 ；二次根式：形如 1/2sqrt3 或 2sqrt3 或 sqrt3）：\n");
 		f = scan_rad(3, &vec.x, &vec.y, &vec.z);
+		//flush_stdin();
 	} while (f != 3);
 	
-	wprintf(L"读入的向量：(%s, %s, %s)\n", toStrRad(vec.x).s,
+	wprintf(L"读入的向量：");
+	printf("(%s, %s, %s)\n", toStrRad(vec.x).s,
 			toStrRad(vec.y).s, toStrRad(vec.z).s);
 	return vec;
 }
@@ -166,9 +168,10 @@ void normal_calc() {
 	Polynomial normal_x = initPoly();
 	Polynomial normal_y = initPoly();
 	Polynomial normal_z = initPoly();
-	normal_x = subRad(addRad(normal_x, mulRad(a.y, b.z)), mulRad(a.z, b.y));
-	normal_y = subRad(addRad(normal_y, mulRad(a.z, b.x)), mulRad(a.x, b.z));
-	normal_z = subRad(addRad(normal_z, mulRad(a.x, b.y)), mulRad(a.y, b.x));
+	
+	subRad(addRad(normal_x, mulRad(a.y, b.z)), mulRad(a.z, b.y));
+	subRad(addRad(normal_y, mulRad(a.z, b.x)), mulRad(a.x, b.z));
+	subRad(addRad(normal_z, mulRad(a.x, b.y)), mulRad(a.y, b.x));	
 	
 	wprintf(L"法向量：");
 	if (lenPoly(normal_x) == 1 && lenPoly(normal_y) == 1 && lenPoly(normal_z) == 1) {
@@ -233,7 +236,7 @@ int scan_rad(int argcnt, ...) {
 						*radptr = initRad(t, u, v);
 					} else {
 						fprintf(stderr, "Input Error: Incorrect \"sqrt\" sign, got \"%s\" . Please check your input.\n", sqrt_sign);
-						//flush_stdin();
+						flush_stdin();
 						return i;
 					}
 				} else {
@@ -242,7 +245,7 @@ int scan_rad(int argcnt, ...) {
 				}
 			} else {
 				fprintf(stderr, "Input Error: Can't get denominator. Please check your input.\n");
-				//flush_stdin();
+				flush_stdin();
 				return i;
 			}
 		} else if (isspace(ch)) {
@@ -255,18 +258,29 @@ int scan_rad(int argcnt, ...) {
 			*radptr = initRad(t, 1, v);
 		} else {			
 			fprintf(stderr, "Input Error: Incorrect separator. Please check your input.\n");
-			//flush_stdin();
+			flush_stdin();
 			return i;
 		}
 	} else {
+		bool neg = false;
+		ch = getchar();
+		if (ch == '-') {
+			neg	= true;
+		} else {
+			ungetc(ch, stdin);
+		}
 		if (scanf("%4s", sqrt_sign) && !strcmp(sqrt_sign ,"sqrt")) {
 			scanf("%d", &v);
 			//printf("v = %d\n", v);
 			//printf("read: %s%d\n\n", sqrt_sign, v);
-			*radptr = initRad(1, 1, v);
+			if (!neg) {
+				*radptr = initRad(1, 1, v);
+			} else {
+				*radptr = initRad(-1, 1, v);
+			}
 		} else {
 			fprintf(stderr, "Input Error: Incorrect \"sqrt\" sign, got \"%s\". Please check your input.\n", sqrt_sign);
-			//flush_stdin();
+			flush_stdin();
 			return i;
 		}
 	}
@@ -290,25 +304,7 @@ choose_mode:
 	scanf("%c", &op);
 	
 	flush_stdin();
-	
-	/*
-	if (op == '1') {
-		inner_product_calc();
-	} else if (op == '2') {
-		norm_calc();
-	} else if (op == '3') {
-		cos_calc();
-	} else if (op == '4') {
-		normal_calc();
-	} else if (op == '5') {
-		square_distance_calc();
-	} else if (op == 'q' || op == 'Q') {
-		exit(0);
-	}else {
-		goto choose_mode;
-	}
-	*/
-	
+
 	switch (op) {
 		case '1':
 			inner_product_calc(); break;
