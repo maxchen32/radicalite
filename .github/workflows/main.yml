@@ -10,6 +10,7 @@ jobs:
   radicalite-win-build:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v4.1.4
       - name: setup xmake
         uses: xmake-io/github-action-setup-xmake@v1
         with:
@@ -21,5 +22,5 @@ jobs:
           xmake f -m release --toolchain=mingw
       - name: build
         run:
-          xmake -a -w
+          xmake -a -v
           
