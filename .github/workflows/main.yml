@@ -15,6 +15,7 @@ jobs:
         with:
           xmake-version: latest
       - run: pwd
+      - run: ls
       - name: config
         run:
           xmake f -m release --toolchain=mingw
