@@ -14,9 +14,10 @@ jobs:
         uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: latest
+      - run: pwd
       - name: config
         run:
-          xmake f --toolchain=mingw
+          xmake f -m release --toolchain=mingw
       - name: build
         run:
           xmake -a -w
