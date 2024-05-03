@@ -1,7 +1,7 @@
 name: radicalite-win
 
-on:
-  workflow_dispatch:
+on: [workflow_dispatch, push, pull_request]
+  
 
 permissions:
   contents: read
@@ -15,12 +15,14 @@ jobs:
         uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: latest
-      - run: pwd
-      - run: ls
       - name: config
         run:
           xmake f -m release --toolchain=mingw
       - name: build
         run:
-          xmake -a -v
+          xmake pack
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v4
+        with:
+          path: build/xpack/pack/radicalite-windows.zip
           
