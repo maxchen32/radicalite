@@ -4,7 +4,7 @@
  * @details 包含Fraction结构体、Str结构体、通用的宏和各种处理Fraction的函数。
  * @author maxchen32
  * @version 1.0.2
- * @copyright 2020-2023 maxchen32
+ * @copyright 2020-2024 maxchen32
  */
 
 #ifndef _FRACTION_H
@@ -48,16 +48,16 @@ typedef struct Str {
 int       gcd_frac(int a, int b);						//!< 最大公因数
 int       lcm_frac(int a, int b);						//!< 最小公倍数
 Fraction  qpow_frac(int base, int expt);				//!< 快速幂
-void      reduce_num_frac(int* a, int* b);		//!< 数约分
+void      reduce_num_frac(int* a, int* b);		//!< 两个整数约分（会改变传入的参数）
 int       num_len_frac(int n);					//!< 数的绝对值的长度
 
 // 工具 tool
-Fraction initFrac(int up ,int down);       //!< 初始化
+Fraction initFrac(int up ,int down);       //!< 初始化一个Fraction
 Fraction int2Frac(int up);					///< 转换int类型到Fraction
 void     fixsignFrac(Fraction* a);				//!< 符号修正、错误处理
 void     reduceFrac(Fraction* a);				//!< 分数约分
 void     printFrac(Fraction a);    //!< 打印
-Str      toStrFrac(Fraction a);		///< 转换Fraction类型到Str
+Str      toStrFrac(Fraction a);		///< 转换Fraction类型到Str字符串
 void     pprintFrac(Fraction a);   //!< （实验性的）美观打印
 int      cmpFrac(Fraction a, Fraction b);       //!< 比较 返回-1 , 0 , 1
 Fraction calcFrac(char myope, ...);               //!< 运算器
