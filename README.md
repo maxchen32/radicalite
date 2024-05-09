@@ -5,15 +5,21 @@ Hopefully a better version of maxchen32/radical.
 ## 介绍 Intruductions
 
 C语言编写的基础分数、二次根式和多项式类库。  
-radicalite is a library written in C for elemental Fractions, Radicals, and Polynomials.
+radicalite is a library written in C for elemental Fractions, Radicals, 
+and Polynomials.
 
 ## 编译 Compilation
 
-确保你安装了C编译器（GCC/MinGW，Clang，MSVC……），如果没有的话，Windows用户建议使用[这个编译好的 MinGW-gcc](https://winlibs.com/)，Linux用户请通过所用发行版的包管理器安装。  
-Make sure you have a C compiler (GCC/MinGW，Clang，MSVC...) installed. If not, Windows users are recommended to use [this precompiled MinGW-gcc](https://winlibs.com/), and Linux users can install it through the distribution's package manager.
+确保你安装了C编译器（GCC/MinGW，Clang，MSVC……），如果没有的话，Windows用户建议
+使用[这个编译好的 MinGW-gcc](https://winlibs.com/)，Linux用户请通过所用发行版
+的包管理器安装。  
+Make sure you have a C compiler (GCC/MinGW，Clang，MSVC...) installed. If not, 
+Windows users are recommended to use [this precompiled MinGW-gcc](https://winlibs.com/), 
+and Linux users can install it through the distribution's package manager.
 
 建议使用 **[xmake](https://xmake.io/#/)** ，但是我们也提供 **[CMake](https://cmake.org/)** 支持。  
-It is recommended to use **[xmake](https://xmake.io/#/)**, but we also provide support for **[CMake](https://cmake.org/)**.
+It is recommended to use **[xmake](https://xmake.io/#/)**, but we also provide
+ support for **[CMake](https://cmake.org/)**.
 
 ### xmake:  
 
@@ -64,6 +70,21 @@ More documentation coming soon...
 或者你可以先看看头文件：  
 Or you can take a look at the header file first:  
 
-[fraction.h](include/fraction.h)
++ [fraction.h](include/fraction.h)
++ [radical.h](include/radical.h)
 
-[radical.h](include/radical.h)
+### 加法
+|ADD       |Fraction        |Radical        |Polynomial     |int             |
+|----------|----------------|---------------|---------------|----------------|
+|Fraction  |addFrac         |Frac2Rad+addRad|Frac2Rad+addRad|int2Frac+addFrac|
+|Radical   |Frac2Rad+addRad |addRad         |addRad         |int2Rad+addRad  |
+|Polynomial|Frac2Rad+addRad |addRad         |addPoly        |int2Rad+addRad  |
+|int       |int2Frac+addFrac|int2Rad+addRad |int2Rad+addRad |       +        |
+
+### 减法
+|SUBTRATION|Fraction        |Radical        |Polynomial     |int             |
+|----------|----------------|---------------|---------------|----------------|
+|Fraction  |subFrac         |Frac2Rad+subRad|Frac2Rad+subRad|int2Frac+subFrac|
+|Radical   |Frac2Rad+subRad |subRad         |subRad         |int2Rad+subRad  |
+|Polynomial|Frac2Rad+subRad |subRad         |subPoly        |int2Rad+subRad  |
+|int       |int2Frac+subFrac|int2Rad+subRad |int2Rad+subRad |       -        |

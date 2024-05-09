@@ -178,6 +178,8 @@ int cmpFrac(Fraction a, Fraction b){
 		return -1;
 	else if (resup > resdown)
 		return 1;
+	error_print_frac("cmpFrac", "Unknown error.");
+	exit(1);
 }
 
 Fraction calcFrac(char myope, ...){

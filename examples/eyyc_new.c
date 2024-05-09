@@ -20,7 +20,7 @@ void eyyc(int a, int b, int c){	                                          // ax^
 
 	if (delta >= 0){                                                      // Δ >= 0，有解
 		Radical sqrtDelta = Radsqrt(delta);                               // sqrtDelta: √Δ
-		Radical bRad = initRad(-b, 1, 1);                                 // 把 -b 转换成二次根式 (-b/1)sqrt(1)
+		Radical bRad = int2Rad(-b);                                       // 把 -b 转换成二次根式 (-b/1)sqrt(1)
 
 		Polynomial list = initPoly();                                     // 初始化一个算式
 		list = divintPoly(addRad(addRad(list, bRad), sqrtDelta), 2 * a);  // (-b + √Δ) / (2 * a)
