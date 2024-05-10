@@ -58,11 +58,11 @@ If you want to install into the system (default is `/usr/local/lib` ):
 sudo cmake --install .
 ```
 
-## Usage
+## 用法 Usage
 
-[入门](docs/入门.md)  
-[Getting Started](docs/getting_started.md)  
-[参考手册](https://maxchen32.codeberg.page/radicalite)
++ [入门](docs/入门.md)  
+  [Getting Started](docs/getting_started.md)
++ [参考手册](https://maxchen32.codeberg.page/radicalite)
 
 正在编写更多的文档，敬请期待......  
 More documentation coming soon...
@@ -73,7 +73,10 @@ Or you can take a look at the header file first:
 + [fraction.h](include/fraction.h)
 + [radical.h](include/radical.h)
 
-### 加法
+下面这些表说明了在不同类型之间运算应该使用什么函数  
+These tables describe what functions should be used to operate between different types.
+
+### 加法 add
 |ADD       |Fraction        |Radical        |Polynomial     |int             |
 |----------|----------------|---------------|---------------|----------------|
 |Fraction  |addFrac         |Frac2Rad+addRad|Frac2Rad+addRad|int2Frac+addFrac|
@@ -81,10 +84,40 @@ Or you can take a look at the header file first:
 |Polynomial|Frac2Rad+addRad |addRad         |addPoly        |int2Rad+addRad  |
 |int       |int2Frac+addFrac|int2Rad+addRad |int2Rad+addRad |       +        |
 
-### 减法
-|SUBTRATION|Fraction        |Radical        |Polynomial     |int             |
+### 减法 sub
+|SUBTRAT   |Fraction        |Radical        |Polynomial     |int             |
 |----------|----------------|---------------|---------------|----------------|
 |Fraction  |subFrac         |Frac2Rad+subRad|Frac2Rad+subRad|int2Frac+subFrac|
 |Radical   |Frac2Rad+subRad |subRad         |subRad         |int2Rad+subRad  |
 |Polynomial|Frac2Rad+subRad |subRad         |subPoly        |int2Rad+subRad  |
 |int       |int2Frac+subFrac|int2Rad+subRad |int2Rad+subRad |       -        |
+
+### 乘法 mul
+|multiply  |Fraction           |Radical        |Polynomial         |int               |
+|----------|-------------------|---------------|-------------------|------------------|
+|Fraction  |mulFrac            |Frac2Rad+mulRad|Frac2Rad+mulRadPoly|int2Frac+mulFrac  |
+|Radical   |Frac2Rad+mulRad    |mulRad         |mulRadPoly         |int2Rad+mulRad    |
+|Polynomial|Frac2Rad+mulRadPoly|mulRadPoly     |mulPoly            |int2Rad+mulRadPoly|
+|int       |int2Frac+mulFrac   |int2Rad+mulRad |int2Rad+mulRadPoly |         *        |
+
+### 除法 div
+|divide    |Fraction           |Radical        |Polynomial         |int               |
+|----------|-------------------|---------------|-------------------|------------------|
+|Fraction  |divFrac            |Frac2Rad+divRad|Frac2Rad+divRadPoly|int2Frac+divFrac  |
+|Radical   |Frac2Rad+divRad    |divRad         |divRadPoly         |divintRad         |
+|Polynomial|Frac2Rad+divRadPoly|divRadPoly     |Not implemented    |divintPoly        |
+|int       |int2Frac+divFrac   |divintRad      |divintPoly         |         /        |
+
+### 乘方 pow
+|power     |Fraction   |Radical     |Polynomial     |int        |
+|----------|-----------|------------|---------------|-----------|
+|int       |powFrac    |powRad      |Not implemented|qpow_frac  |
+
+P.S.: Radical类型还有一个squareRad专门用于平方，比powRad效率高。
+
+### 开方 sqrt
+|sqrt      |Fraction   |Radical     |Polynomial  |int        |
+|----------|-----------|------------|------------|-----------|
+|          |sqrtFrac   |N/A         |N/A         |Radsqrt    |
+
+

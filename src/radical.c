@@ -457,6 +457,16 @@ Fraction squareRad(Radical a) {
 	return res;
 }
 
+Radical powRad(Radical a, int expt) {
+	a.out = powFrac(a.out, expt);
+	Fraction tmp = qpow_frac(a.in, (expt-1)/2);
+	a.out = mulFrac(a.out, tmp);
+	if (!(expt & 1)) {
+		a.in = 1;
+	}
+	return a;
+}
+
 Polynomial mulRadPoly(Polynomial ptrl, Radical a) {
 	Polynomial p = ptrl;
 	if (p) {
