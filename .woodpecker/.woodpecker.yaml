@@ -1,0 +1,14 @@
+steps:
+  build:
+    image: windows-latest
+    # this step gets ran on "master" branch.
+    # also runs on pull requests targeting these branch.
+    when:
+      branch: [master]
+      event: [push, pull_request, manual]
+    commands: |
+      dir
+      mkdir build
+      cd build
+      cmake .. -G "MinGW Makefiles"
+      cmake --build .
