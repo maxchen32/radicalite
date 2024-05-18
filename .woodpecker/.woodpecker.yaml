@@ -12,5 +12,4 @@ steps:
       cd build
       cmake ..
       cmake --build .
-      ls examples
-      ls lib
+      ls Release
