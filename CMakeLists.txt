@@ -7,8 +7,8 @@
 cmake_minimum_required(VERSION 3.15.0)
 cmake_policy(SET CMP0091 NEW)
 project(radical LANGUAGES C)
-set(CMAKE_C_COMPILER "gcc")
-set(CMAKE_CXX_COMPILER "g++")
+#set(CMAKE_C_COMPILER "gcc")
+#set(CMAKE_CXX_COMPILER "g++")
 
 if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Release")
@@ -29,9 +29,11 @@ set_target_properties(radical PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURC
 target_include_directories(radical PRIVATE
     include
 )
+if(NOT CMAKE_C_COMPILER_ID STREQUAL "TinyCC")
 target_link_libraries(radical PRIVATE
     m
 )
+endif()
 set_target_properties(radical PROPERTIES PUBLIC_HEADER 
     "${CMAKE_SOURCE_DIR}/include/fraction.h;${CMAKE_SOURCE_DIR}/include/radical.h"
 )
@@ -53,9 +55,11 @@ set_target_properties(radical_shared PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAK
 target_include_directories(radical_shared PRIVATE
     include
 )
+if(NOT CMAKE_C_COMPILER_ID STREQUAL "TinyCC")
 target_link_libraries(radical_shared PRIVATE
     m
 )
+endif()
 set_target_properties(radical_shared PROPERTIES PUBLIC_HEADER 
     "${CMAKE_SOURCE_DIR}/include/fraction.h;${CMAKE_SOURCE_DIR}/include/radical.h"
 )

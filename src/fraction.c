@@ -123,7 +123,7 @@ void pprintFrac(Fraction a) {
 	}
 	int len_up   = num_len_frac(a.up);
 	int len_down = num_len_frac(a.down);
-	int len_max  = MAX(len_up, len_down);
+	int len_max  = len_up > len_down ? len_up: len_down;
 	
 	bool sym = false;   // >0
 	if (a.up < 0) { 

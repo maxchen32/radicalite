@@ -9,7 +9,7 @@
 #include <stdarg.h>
 #include "radical.h"
 
-#define flush_stdin() {while(getchar()!='\n');}
+#define flush_stdin() { while (getchar()!='\n'); }
 
 typedef struct Svector {
 	Radical x, y, z;
@@ -164,7 +164,7 @@ void normal_calc() {
 	Svector a, b;
 	a = input_Svector();
 	b = input_Svector();
-	Svector res;
+	//Svector res;
 	Polynomial normal_x = initPoly();
 	Polynomial normal_y = initPoly();
 	Polynomial normal_z = initPoly();
@@ -174,6 +174,7 @@ void normal_calc() {
 	subRad(addRad(normal_z, mulRad(a.x, b.y)), mulRad(a.y, b.x));	
 	
 	wprintf(L"法向量：");
+	/*
 	if (lenPoly(normal_x) == 1 && lenPoly(normal_y) == 1 && lenPoly(normal_z) == 1) {
 		res.x = findkthPoly(1, normal_x)->num;
 		res.y = findkthPoly(1, normal_y)->num;
@@ -187,6 +188,7 @@ void normal_calc() {
 		printf("(%s, %s, %s)\n", toStrRad(res.x).s,
 						toStrRad(res.y).s, toStrRad(res.z).s);
 	} else {
+	*/
 		putchar('(');
 		printPoly(normal_x); 
 		printf(", ");
@@ -195,7 +197,7 @@ void normal_calc() {
 		printPoly(normal_z);
 		putchar(')');
 		putchar('\n');
-	}
+	//}
 	//Svector vec = normalSvec(num1, num2);
 	destoryPoly(normal_x);
 	destoryPoly(normal_y);
@@ -292,39 +294,43 @@ int scan_rad(int argcnt, ...) {
 int main() {
 	setlocale(LC_ALL, "");
 
-choose_mode:
-	wprintf(L"1. 内积\n");
-	wprintf(L"2. 取模\n");
-	wprintf(L"3. 角度的cos值\n");
-	wprintf(L"4. 法向量\n");
-	wprintf(L"5. 两点距离的平方\n");
-	
-	wprintf(L"请选择模式：[1,2,3,4,5,q] ");
-	char op;
-	scanf("%c", &op);
-	
-	flush_stdin();
+	while (true) {
+		wprintf(L"1. 内积\n");
+		wprintf(L"2. 取模\n");
+		wprintf(L"3. 角度的cos值\n");
+		wprintf(L"4. 法向量\n");
+		wprintf(L"5. 两点距离的平方\n");
+		
+		wprintf(L"q. 退出\n");
+		
+		wprintf(L"请选择模式：[1,2,3,4,5,q] ");
+		char op;
+		scanf("%c", &op);
+		
+		flush_stdin();
 
-	switch (op) {
-		case '1':
-			inner_product_calc(); break;
-		case '2':
-			norm_calc(); break;
-		case '3':
-			cos_calc(); break;
-		case '4':
-			normal_calc(); break;
-		case '5':
-			square_distance_calc(); break;
-		case 'q': 
-		case 'Q':
-			exit(0);
-		default:
-			goto choose_mode; break;
+		switch (op) {
+			case '1':
+				inner_product_calc(); break;
+			case '2':
+				norm_calc(); break;
+			case '3':
+				cos_calc(); break;
+			case '4':
+				normal_calc(); break;
+			case '5':
+				square_distance_calc(); break;
+			case 'q': 
+			case 'Q':
+				return 0;
+			default:
+				continue;
+		}
+		
+		//flush_stdin();
+		putchar('\n');
 	}
 	
-	flush_stdin();
-	goto choose_mode;
 	/*
 	wprintf(L"\n按下回车开始下一次计算: ");
 	char if_next = getchar();

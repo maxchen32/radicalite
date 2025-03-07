@@ -1,12 +1,11 @@
 # radicalite
 
-Hopefully a better version of maxchen32/radical.
+A better version of maxchen32/radical.
 
 ## 介绍 Intruductions
 
 C语言编写的基础分数、二次根式和多项式类库。  
-radicalite is a library written in C for elemental Fractions, Radicals, 
-and Polynomials.
+radicalite is a library written in C for Fractions, Radicals, and Polynomials.
 
 ## 编译 Compilation
 
@@ -24,14 +23,14 @@ It is recommended to use **[xmake](https://xmake.io/#/)**, but we also provide
 ### xmake:  
 
 ```bash
-xmake f --m release
+xmake f -m release
 xmake
 ```
 
 如果你在windows上使用MinGW，第一行得写成：  
 If you are using MinGW on windows, the first line should be written as:
 
-	xmake f --m release --toolchain=mingw
+	xmake f -m release --toolchain=mingw
 
 如果你想要安装到系统的话（默认 `/usr/local/lib` ）：  
 If you want to install into the system (default is `/usr/local/lib` ):  
@@ -113,7 +112,8 @@ These tables describe what functions should be used to operate between different
 |----------|-----------|------------|---------------|-----------|
 |int       |powFrac    |powRad      |Not implemented|qpow_frac  |
 
-P.S.: Radical类型还有一个squareRad专门用于平方，比powRad效率高。
+P.S.: Radical类型还有一个squareRad专门用于平方，比powRad效率高。  
+P.S.: The Radical type also has a `squareRad` specialized for calculating squares, which performs better than `powRad`.
 
 ### 开方 sqrt
 |sqrt      |Fraction   |Radical     |Polynomial  |int        |

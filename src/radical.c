@@ -177,7 +177,7 @@ void pprintRad(Radical a){
 			++len_up;
 	#endif
 			int len_down = num_len_frac(a.out.down);
-			int len_max  = MAX(len_up, len_down);
+			int len_max  = len_up > len_down ? len_up: len_down;
 			
 			int* aptr = &(a.in);
 			int len_aptr;
